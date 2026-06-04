@@ -1,0 +1,21 @@
+{
+  "name": "朝聖之路 · 法國之路規劃手冊",
+  "short_name": "Camino",
+  "description": "西班牙朝聖之路（Camino Francés）裝備清單、路線、庇護所、打卡座標、儀式與美食一站式手冊。",
+  "lang": "zh-Hant",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#faf7f0",
+  "theme_color": "#1b3a5b",
+  "categories": ["travel", "lifestyle", "navigation"],
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

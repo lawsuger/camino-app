@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#1b3a5b">
+<title>Camino 朝聖之路 · 法國之路規劃手冊</title>
+<meta name="description" content="西班牙朝聖之路（法國之路 Camino Francés）裝備採購清單、品牌推薦、逐日路線與庇護所、拍照打卡座標、宗教儀式與在地美食一站式規劃手冊。">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/svg+xml" href="icon.svg">
+<link rel="apple-touch-icon" href="icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- 非阻塞載入字型：離線（鄉間無網路）時直接用系統字型，永遠不卡畫面 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&family=Playfair+Display:ital,wght@0,600;1,500&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&family=Playfair+Display:ital,wght@0,600;1,500&display=swap"></noscript>
+<style>
+:root{
+  --navy:#1b3a5b; --navy2:#244e78; --blue:#2c5f8a;
+  --gold:#e0a400; --gold-soft:#f2b705; --gold-tint:#fbf2d4;
+  --cream:#faf7f0; --paper:#ffffff; --stone:#ece4d4; --stone2:#ddd2bd;
+  --ink:#2b2620; --muted:#7b7264; --line:#e7ddca;
+  --easy:#4a7c59; --easy-bg:#e8f1ea;
+  --med:#c98a18;  --med-bg:#fbf0d8;
+  --hard:#bb472f; --hard-bg:#f8e4dd;
+  --shadow:0 2px 10px rgba(40,30,10,.06),0 8px 28px rgba(40,30,10,.05);
+  --radius:16px;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--cream);color:var(--ink);
+  font-family:'Noto Sans TC',system-ui,-apple-system,"Segoe UI",sans-serif;
+  line-height:1.65;font-size:16px;
+  background-image:radial-gradient(circle at 12% -8%,rgba(44,95,138,.06),transparent 40%),radial-gradient(circle at 95% 0,rgba(224,164,0,.07),transparent 38%);
+}
+h1,h2,h3,.serif{font-family:'Noto Serif TC',serif}
+a{color:var(--blue);text-decoration:none}
+
+/* Header */
+header{
+  position:sticky;top:0;z-index:50;
+  background:linear-gradient(180deg,var(--navy),var(--navy2));
+  color:#fff;box-shadow:0 2px 16px rgba(0,0,0,.18);
+  padding:env(safe-area-inset-top) 0 0;
+}
+.bar{display:flex;align-items:center;gap:12px;max-width:960px;margin:0 auto;padding:13px 18px 12px}
+.logo{width:38px;height:38px;flex:0 0 auto;filter:drop-shadow(0 1px 2px rgba(0,0,0,.3))}
+.brand h1{margin:0;font-size:18px;font-weight:900;letter-spacing:.5px;line-height:1.15}
+.brand p{margin:1px 0 0;font-size:11.5px;color:#bcd0e6;letter-spacing:2px;font-family:'Playfair Display',serif;font-style:italic}
+nav{max-width:960px;margin:0 auto;display:flex;gap:4px;overflow-x:auto;padding:0 10px 0;scrollbar-width:none;-ms-overflow-style:none}
+nav::-webkit-scrollbar{display:none}
+nav button{
+  flex:0 0 auto;background:none;border:none;color:#c4d6e9;cursor:pointer;
+  font-family:inherit;font-size:14px;font-weight:500;padding:11px 13px 13px;
+  border-bottom:3px solid transparent;white-space:nowrap;transition:.15s;
+}
+nav button .ico{font-size:15px;margin-right:5px}
+nav button:hover{color:#fff}
+nav button.on{color:#fff;border-bottom-color:var(--gold-soft);font-weight:700}
+
+/* Layout */
+main{max-width:960px;margin:0 auto;padding:22px 16px 90px}
+section{display:none;animation:fade .35s ease}
+section.on{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.sec-head{margin:4px 0 18px}
+.sec-head h2{font-size:24px;margin:0 0 4px;display:flex;align-items:center;gap:9px}
+.sec-head .ln{font-size:13.5px;color:var(--muted);margin:0}
+.kicker{display:inline-block;font-family:'Playfair Display',serif;font-style:italic;color:var(--gold);font-size:13px;letter-spacing:1px;margin-bottom:2px}
+
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+.pad{padding:18px}
+
+/* Overview */
+.hero{background:linear-gradient(135deg,#1b3a5b,#2c5f8a);color:#fff;border-radius:20px;padding:26px 22px;position:relative;overflow:hidden;margin-bottom:18px}
+.hero::after{content:"➤";position:absolute;right:-10px;bottom:-26px;font-size:150px;color:rgba(242,183,5,.13);transform:rotate(-20deg)}
+.hero h2{margin:0 0 8px;font-size:23px;color:#fff}
+.hero p{margin:0;color:#d6e3f0;font-size:14.5px;max-width:62ch}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0}
+.stat{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px 10px;text-align:center;box-shadow:var(--shadow)}
+.stat b{display:block;font-family:'Playfair Display',serif;font-size:26px;color:var(--navy);line-height:1.1}
+.stat span{font-size:12px;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.info h3{font-size:16px;margin:0 0 8px;color:var(--navy);display:flex;align-items:center;gap:7px}
+.info h3 .ico{font-size:18px}
+.regions{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:13.5px}
+.rg{padding:4px 10px;border-radius:20px;font-weight:500;color:#fff}
+.arrow{color:var(--gold);font-weight:700}
+.hard-list{margin:0;padding-left:2px;list-style:none;font-size:14px}
+.hard-list li{padding:7px 0;border-bottom:1px dashed var(--line);display:flex;gap:9px;align-items:flex-start}
+.hard-list li:last-child{border:none}
+.hard-list .n{flex:0 0 auto;width:22px;height:22px;border-radius:50%;background:var(--hard-bg);color:var(--hard);font-weight:700;font-size:12px;display:grid;place-items:center;margin-top:2px}
+.note-box{background:var(--gold-tint);border-left:4px solid var(--gold-soft);border-radius:10px;padding:12px 14px;font-size:13.5px;margin-top:6px}
+table.cmp{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:6px}
+table.cmp th,table.cmp td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+table.cmp th{background:var(--stone);color:var(--navy);font-weight:700;font-size:13px}
+table.cmp tr:last-child td{border-bottom:none}
+
+/* Checklist */
+.tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:16px}
+.prog-wrap{flex:1 1 240px;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:12px 15px;box-shadow:var(--shadow)}
+.prog-top{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin-bottom:7px}
+.prog-top b{color:var(--navy);font-size:15px;font-family:'Playfair Display',serif}
+.bar{height:9px;background:var(--stone);border-radius:6px;overflow:hidden}
+.bar>i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold-soft),var(--gold));border-radius:6px;transition:width .4s}
+.wt-wrap{flex:1 1 240px;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:12px 15px;box-shadow:var(--shadow)}
+.wt-wrap .big{font-family:'Playfair Display',serif;font-size:22px;color:var(--navy)}
+.wt-wrap .tg{font-size:12.5px;color:var(--muted)}
+.wt-wrap input{width:54px;border:1px solid var(--line);border-radius:8px;padding:3px 6px;font-family:inherit;font-size:14px;text-align:center}
+.btns{display:flex;gap:8px;flex-wrap:wrap}
+.btn{background:var(--paper);border:1px solid var(--stone2);color:var(--ink);border-radius:20px;padding:8px 15px;font-family:inherit;font-size:13.5px;cursor:pointer;font-weight:500;transition:.15s;display:inline-flex;align-items:center;gap:6px}
+.btn:hover{background:var(--stone);border-color:var(--gold)}
+.btn.act{background:var(--navy);color:#fff;border-color:var(--navy)}
+.cat{margin-bottom:14px;overflow:hidden}
+.cat-h{display:flex;align-items:center;gap:10px;padding:14px 16px;cursor:pointer;background:linear-gradient(90deg,var(--stone),#f3ecdd)}
+.cat-h .ico{font-size:20px}
+.cat-h h3{margin:0;font-size:16px;flex:1;color:var(--navy)}
+.cat-h .cnt{font-size:12.5px;color:var(--muted);background:var(--paper);padding:2px 9px;border-radius:12px;border:1px solid var(--line)}
+.items{padding:4px 0}
+.item{display:flex;gap:11px;padding:11px 16px;border-bottom:1px solid var(--line);align-items:flex-start;cursor:pointer;transition:.12s}
+.item:last-child{border:none}
+.item:hover{background:#fcfaf4}
+.item.opt-hide{display:none}
+.chk{flex:0 0 auto;width:22px;height:22px;border:2px solid var(--stone2);border-radius:7px;margin-top:2px;display:grid;place-items:center;transition:.15s}
+.item.ck .chk{background:var(--gold);border-color:var(--gold)}
+.item.ck .chk::after{content:"✓";color:#fff;font-size:14px;font-weight:700}
+.item.ck .nm{text-decoration:line-through;color:var(--muted)}
+.it-body{flex:1;min-width:0}
+.nm{font-weight:500;font-size:15px}
+.nm .en{color:var(--muted);font-weight:400;font-size:12.5px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:3px 0 2px}
+.tag{font-size:11px;padding:1px 8px;border-radius:10px;font-weight:500}
+.t-ess{background:var(--hard-bg);color:var(--hard)}
+.t-opt{background:var(--stone);color:var(--muted)}
+.t-qty{background:#e7eef5;color:var(--blue)}
+.t-wt{background:var(--easy-bg);color:var(--easy)}
+.tip{font-size:12.8px;color:var(--muted);margin-top:1px}
+
+/* Route */
+.filterbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;align-items:center}
+.legend{display:flex;gap:7px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin:2px 0 14px}
+.legend span{display:inline-flex;align-items:center;gap:4px}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+.stage{margin-bottom:9px;overflow:hidden}
+.stage.hide{display:none}
+.st-h{display:flex;align-items:center;gap:11px;padding:13px 15px;cursor:pointer}
+.st-day{flex:0 0 auto;width:44px;text-align:center}
+.st-day b{display:block;font-family:'Playfair Display',serif;font-size:19px;color:var(--navy);line-height:1}
+.st-day span{font-size:10px;color:var(--muted)}
+.st-route{flex:1;min-width:0}
+.st-route .tt{font-weight:700;font-size:15px}
+.st-route .sub{font-size:12.5px;color:var(--muted);display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:1px}
+.km{font-weight:600;color:var(--blue)}
+.badge{font-size:11px;padding:2px 9px;border-radius:11px;font-weight:700;flex:0 0 auto}
+.b1{background:var(--easy-bg);color:var(--easy)}
+.b2{background:var(--med-bg);color:var(--med)}
+.b3{background:var(--hard-bg);color:var(--hard)}
+.chev{flex:0 0 auto;color:var(--muted);transition:.25s;font-size:13px}
+.stage.open .chev{transform:rotate(90deg)}
+.st-body{display:none;padding:0 15px 15px 15px;border-top:1px solid var(--line)}
+.stage.open .st-body{display:block}
+.st-note{font-size:13.5px;background:#fcfaf4;border-radius:10px;padding:10px 13px;margin:13px 0}
+.st-note b{color:var(--navy)}
+.alb{display:flex;gap:10px;padding:9px 0;border-bottom:1px dashed var(--line);font-size:13.5px}
+.alb:last-child{border:none}
+.alb .ab-ico{flex:0 0 auto;font-size:15px;margin-top:1px}
+.alb .ab-n{font-weight:600}
+.alb .ab-meta{font-size:12px;color:var(--muted)}
+.alb .price{color:var(--easy);font-weight:600}
+.star{color:var(--gold)}
+.alb-none{font-size:13px;color:var(--muted);padding:9px 0}
+
+/* Spots */
+.spot{display:flex;gap:13px;padding:15px;margin-bottom:11px;align-items:flex-start}
+.spot .num{flex:0 0 auto;width:34px;height:34px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-family:'Playfair Display',serif;font-weight:600;font-size:16px}
+.spot .sp-b{flex:1;min-width:0}
+.spot h3{margin:0 0 2px;font-size:16px}
+.spot h3 .en{font-weight:400;font-size:12.5px;color:var(--muted)}
+.spot .where{font-size:12.5px;color:var(--blue);margin-bottom:5px}
+.spot .shot{font-size:13.5px;color:var(--ink)}
+.sp-act{display:flex;gap:8px;margin-top:9px;flex-wrap:wrap}
+.geo{font-size:11.5px;color:var(--muted);font-family:'Playfair Display',serif}
+.mini{font-size:12.5px;padding:5px 12px;border-radius:18px;border:1px solid var(--stone2);background:var(--paper);cursor:pointer;color:var(--ink);font-family:inherit;display:inline-flex;gap:5px;align-items:center}
+.mini:hover{background:var(--stone);border-color:var(--gold)}
+.mini.gmap{background:var(--navy);color:#fff;border-color:var(--navy)}
+
+/* Religion / Food */
+.block{margin-bottom:16px}
+.block h3{font-size:17px;color:var(--navy);margin:0 0 6px;display:flex;align-items:center;gap:8px}
+.block .ico{font-size:19px}
+.ritem{display:flex;gap:10px;padding:9px 0;border-bottom:1px dashed var(--line);font-size:14px}
+.ritem:last-child{border:none}
+.ritem .lab{flex:0 0 auto;font-weight:600;color:var(--navy);min-width:96px}
+.ti{display:inline-block;background:#e7eef5;color:var(--blue);font-weight:700;font-size:12.5px;padding:1px 8px;border-radius:8px;font-family:'Playfair Display',serif}
+.food-cat{margin-bottom:14px}
+.food-cat>.fc-h{font-size:16px;font-weight:700;color:#fff;padding:9px 15px;border-radius:11px 11px 0 0}
+.food-cat .fc-body{border:1px solid var(--line);border-top:none;border-radius:0 0 12px 12px;background:var(--paper)}
+.dish{display:flex;gap:10px;padding:11px 15px;border-bottom:1px solid var(--line);font-size:13.8px}
+.dish:last-child{border:none}
+.dish .em{flex:0 0 auto;font-size:18px}
+.dish b{color:var(--ink)}
+.dish .wh{color:var(--blue);font-size:12.5px}
+
+.callout{background:var(--gold-tint);border:1px solid #ecd98f;border-radius:14px;padding:15px 17px;font-size:13.8px;margin:8px 0 16px}
+.callout b{color:#8a6a00}
+.footer{text-align:center;color:var(--muted);font-size:12px;padding:26px 10px 10px;line-height:1.9}
+.footer a{color:var(--muted);text-decoration:underline}
+.src{font-size:11px;color:#a59c8c;margin-top:6px}
+.toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(20px);background:var(--navy);color:#fff;padding:10px 20px;border-radius:30px;font-size:13.5px;opacity:0;pointer-events:none;transition:.3s;z-index:99;box-shadow:0 6px 20px rgba(0,0,0,.25)}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+@media(max-width:720px){
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .grid2{grid-template-columns:1fr}
+  .brand h1{font-size:16px}
+  main{padding:18px 12px 90px}
+  .ritem{flex-wrap:wrap}
+}
+@media print{
+  header,nav,.tools,.footer,.filterbar,.legend{display:none!important}
+  section{display:none!important}
+  section.on{display:block!important}
+  body{background:#fff}
+  .item.opt-hide{display:flex!important}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="bar">
+    <svg class="logo" viewBox="0 0 512 512" aria-hidden="true"><rect width="512" height="512" rx="110" fill="#163049"/><path fill="#f2b705" d="M256 412 L150 188 A132 132 0 0 1 362 188 Z"/><g stroke="#163049" stroke-width="11" stroke-linecap="round"><line x1="256" y1="404" x2="158" y2="196"/><line x1="256" y1="404" x2="200" y2="158"/><line x1="256" y1="404" x2="256" y2="146"/><line x1="256" y1="404" x2="312" y2="158"/><line x1="256" y1="404" x2="354" y2="196"/></g></svg>
+    <div class="brand">
+      <h1>朝聖之路 · 法國之路</h1>
+      <p>CAMINO FRANCÉS · SJPP → SANTIAGO</p>
+    </div>
+  </div>
+  <nav id="nav"></nav>
+</header>
+
+<main>
+  <!-- 總覽 -->
+  <section id="s-home" class="on">
+    <div class="hero">
+      <h2>Buen Camino, 修哥！</h2>
+      <p>從法國 Saint-Jean-Pied-de-Port 翻越庇里牛斯山，穿過 Navarra 酒鄉、Meseta 大平原、加利西亞綠林，抵達 Santiago de Compostela 主教座堂，再走到大西洋邊的「世界盡頭」Finisterre。這份手冊整合了裝備、品牌、逐日路線、庇護所、打卡座標、儀式與美食 —— 規劃與帶著走兩用。</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>~790</b><span>總公里 km</span></div>
+      <div class="stat"><b>33–38</b><span>天（不含世界盡頭）</span></div>
+      <div class="stat"><b>30+</b><span>城鎮庇護所</span></div>
+      <div class="stat"><b>11</b><span>必拍打卡點</span></div>
+    </div>
+
+    <div class="grid2">
+      <div class="card pad info">
+        <h3><span class="ico">🗺️</span>會經過的四大區</h3>
+        <div class="regions" id="regions"></div>
+        <div class="note-box">Castilla y León 占最長（含 Burgos / Palencia / León 三省），也就是著名的 <b>Meseta 大平原</b> —— 不陡但酷熱、單調、無遮蔭，最磨心志。</div>
+      </div>
+      <div class="card pad info">
+        <h3><span class="ico">⛰️</span>最辛苦的 5 段</h3>
+        <ul class="hard-list">
+          <li><span class="n">1</span><div><b>Day 1–2 翻庇里牛斯山</b>　爬升約 1,400m，公認全程最硬</div></li>
+          <li><span class="n">2</span><div><b>下 Roncesvalles 石頭路</b>　雨後最滑，傷膝</div></li>
+          <li><span class="n">3</span><div><b>Astorga→Foncebadón→Cruz de Ferro</b>　長上坡 +600m，鐵十字後陡下傷膝</div></li>
+          <li><span class="n">4</span><div><b>翻 O Cebreiro</b>　入加利西亞陡上 +600–700m</div></li>
+          <li><span class="n">5</span><div><b>Meseta 高原</b>（Burgos→León）　酷熱單調，心理戰</div></li>
+        </ul>
+      </div>
+      <div class="card pad info">
+        <h3><span class="ico">🎫</span>最後 100 公里規定</h3>
+        <p style="font-size:14px;margin:2px 0 0">從 <b>Sarria</b> 起算（→Santiago 約 113km）。需步行滿 100km、且最後 100km 內<b>每天至少蓋 2 個章</b>，才能在 Pilgrim's Office 領朝聖證書 <b>Compostela</b>。約 6 成朝聖者由 Sarria 出發，人潮與訂床壓力從此最大，務必提早抵達。</p>
+      </div>
+      <div class="card pad info">
+        <h3><span class="ico">🥾</span>第一天翻山：兩條路線</h3>
+        <table class="cmp">
+          <tr><th></th><th>Route Napoléon</th><th>Valcarlos</th></tr>
+          <tr><td><b>風景</b></td><td>360° 雲海稜線，經典必走</td><td>河谷林蔭，較多柏油</td></tr>
+          <tr><td><b>爬升</b></td><td>~1,398m</td><td>~1,359m</td></tr>
+          <tr><td><b>封閉</b></td><td>11月–3月底封閉</td><td>全年可走</td></tr>
+        </table>
+        <div class="note-box">天氣好、體能足 → 走 <b>Napoléon</b>（風景無可取代）；冬季封閉、大雨濃霧或沒把握 → 走 <b>Valcarlos</b> 較安全。</div>
+      </div>
+    </div>
+    <div class="callout">📱 <b>建議下載的 App</b>：Buen Camino（離線路線神器）、Wise Pilgrim（逐段地圖）、Gronze（最詳盡里程爬升）、Booking／WhatsApp（訂床）、Google Translate（菜單翻譯）、Organic Maps（離線地圖備援）。詳見「品牌推薦」分頁。</div>
+  </section>
+
+  <!-- 裝備清單 -->
+  <section id="s-gear">
+    <div class="sec-head"><span class="kicker">Packing List</span><h2>🎒 裝備採購清單</h2><p class="ln">可勾選、自動記住進度、即時估算背包總重。黃金法則：背重 ≤ 體重 10%（約 6–8 kg）。</p></div>
+    <div class="tools">
+      <div class="prog-wrap">
+        <div class="prog-top"><span>打包進度</span><span><b id="pg-n">0</b> / <span id="pg-t">0</span> 項</span></div>
+        <div class="bar"><i id="pg-bar"></i></div>
+      </div>
+      <div class="wt-wrap">
+        <span class="big" id="wt-now">0.0 kg</span>
+        <span class="tg"> / 目標 <span id="wt-target">6.0</span> kg　體重 <input id="bw" type="number" value="60" min="30" max="150"> kg</span>
+      </div>
+    </div>
+    <div class="btns" style="margin-bottom:16px">
+      <button class="btn" id="f-all">全部顯示</button>
+      <button class="btn" id="f-ess">只看必備</button>
+      <button class="btn" id="exp-g">展開全部</button>
+      <button class="btn" onclick="window.print()">🖨 列印 / 存 PDF</button>
+      <button class="btn" id="reset-g">↺ 重設勾選</button>
+    </div>
+    <div id="gear"></div>
+  </section>
+
+  <!-- 品牌推薦 -->
+  <section id="s-brand">
+    <div class="sec-head"><span class="kicker">Gear Brands</span><h2>🏷️ 品牌推薦分析表</h2><p class="ln">針對 Camino 33–47 天、每日 20–25km 健行的 2025–2026 推薦。鞋與背包請在台灣先試穿磨合；雨披、Compeed、轉接頭可當地補貨。</p></div>
+    <div id="brands"></div>
+    <div class="block card pad" style="margin-top:18px">
+      <h3><span class="ico">📱</span>該裝哪些手機 App</h3>
+      <div id="apps"></div>
+    </div>
+  </section>
+
+  <!-- 路線庇護所 -->
+  <section id="s-route">
+    <div class="sec-head"><span class="kicker">Route &amp; Albergues</span><h2>🥾 路線 &amp; 庇護所</h2><p class="ln">逐日行程（含世界盡頭），每站推薦 2–3 間庇護所。點任一段展開詳情。⭐ = 過來人特別推薦。</p></div>
+    <div class="filterbar">
+      <button class="btn act" data-df="0">全部</button>
+      <button class="btn" data-df="1">🟢 輕鬆</button>
+      <button class="btn" data-df="2">🟡 中等</button>
+      <button class="btn" data-df="3">🔴 辛苦</button>
+      <button class="btn" id="exp-r" style="margin-left:auto">展開全部</button>
+    </div>
+    <div class="legend">
+      <span><i class="dot" style="background:var(--easy)"></i>輕鬆</span>
+      <span><i class="dot" style="background:var(--med)"></i>中等</span>
+      <span><i class="dot" style="background:var(--hard)"></i>辛苦</span>
+      <span>｜🏛 公立／⛪ 教會修道院／🏨 私立</span>
+    </div>
+    <div id="stages"></div>
+  </section>
+
+  <!-- 打卡地圖 -->
+  <section id="s-spots">
+    <div class="sec-head"><span class="kicker">Photo Spots</span><h2>📸 必訪城鎮 &amp; 打卡座標</h2><p class="ln">給自媒體的拍攝清單。點「開地圖」直接導航，或「複製座標」存進你的拍攝筆記。★ 標記者建議清晨／日落＋無人才出大景。</p></div>
+    <div id="spots"></div>
+  </section>
+
+  <!-- 儀式聖餐 -->
+  <section id="s-faith">
+    <div class="sec-head"><span class="kicker">Rituals &amp; Mass</span><h2>⛪ 宗教儀式 &amp; 聖餐</h2><p class="ln">朝聖者彌撒、大香爐 Botafumeiro、朝聖證書，以及給非天主教徒的領聖體禮儀。</p></div>
+    <div id="faith"></div>
+  </section>
+
+  <!-- 美食人文 -->
+  <section id="s-food">
+    <div class="sec-head"><span class="kicker">Food &amp; Culture</span><h2>🍷 特色美食 &amp; 人文</h2><p class="ln">依地區整理的必吃與在地體驗。一路從巴斯克 pintxos、Rioja 紅酒，吃到加利西亞章魚與聖地牙哥杏仁蛋糕。</p></div>
+    <div class="callout">🍽 <b>朝聖者套餐 Menú del Peregrino</b>：沿途餐廳／庇護所的固定套餐 —— 前菜＋主菜＋甜點＋麵包，多含一瓶（或半瓶）餐酒或水，通常 <b>€10–15</b>。份量足、最省錢的正餐選擇。</div>
+    <div id="food"></div>
+  </section>
+</main>
+
+<div class="footer">
+  Camino Francés 規劃手冊 · 為修哥的自媒體朝聖之旅而做<br>
+  可「加到主畫面」當離線 App 使用｜資料整合自 buencaminoinfo / gotokm0 / prosabrina / cherstravel 等實走遊記與 Gronze
+  <div class="src">※ 庇護所價格與彌撒時間逐年微調，出發前請再次確認；公立庇護所多為先到先得、不可預訂。</div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+/* ============ DATA ============ */
+const REGIONS=[
+ {n:"庇里牛斯",c:"#5a6e7e"},{n:"Navarra 納瓦拉",c:"#7a8c3f"},{n:"La Rioja 拉里奧哈",c:"#9c4f3f"},
+ {n:"Castilla y León 卡斯提亞-雷昂",c:"#c98a18"},{n:"Galicia 加利西亞",c:"#3f7c6a"}
+];
+
+const GEAR=[
+ {cat:"背包 & 收納",ico:"🎒",items:[
+  {n:"登山背包",en:"backpack 35–45L",ess:1,qty:1,w:1300,wt:"1,000–1,500g",tip:"全程夥伴，輕量＞容量；新手選 35L 逼自己少帶。實體店試背、調背負系統。"},
+  {n:"防雨背包套",en:"rain cover",ess:0,qty:1,w:100,wt:"~100g",tip:"用斗篷雨衣可省略。"},
+  {n:"隨身小包／腰包",en:"day pack",ess:1,qty:1,w:150,wt:"~150g",tip:"裝護照、錢、手機；洗澡採買時帶著，大背包不離視線。"},
+  {n:"防水收納／夾鏈袋",en:"dry / zip bags",ess:1,qty:"數個",w:40,wt:"輕",tip:"分裝乾淨／髒衣、防雨滲入；裝食物也好用。"},
+  {n:"收納分類袋",en:"packing cubes",ess:0,qty:"2–3",w:60,wt:"輕",tip:"衣物分類，打包快。"}
+ ]},
+ {cat:"鞋襪 & 足部護理",ico:"👟",items:[
+  {n:"中筒登山鞋／越野跑鞋",en:"hiking shoes",ess:1,qty:1,w:800,wt:"~800g/雙",tip:"出發前先穿去爬幾次山磨合，別在路上第一次上腳；買大半號（腳會腫）。"},
+  {n:"羊毛健行襪",en:"merino socks",ess:1,qty:"2–3",w:120,wt:"~60g/雙",tip:"快乾不臭；穿一帶一輪替，每天手洗。"},
+  {n:"涼鞋／拖鞋",en:"sandals",ess:1,qty:1,w:250,wt:"~250g",tip:"庇護所、洗澡、走完放鬆腳；可當第二雙鞋。"},
+  {n:"凡士林",en:"Vaseline",ess:1,qty:"1小罐",w:50,wt:"~50g",tip:"上路前擦腳趾縫防摩擦水泡，過來人神技；兼護唇。"}
+ ]},
+ {cat:"衣物（洋蔥式分層）",ico:"👕",items:[
+  {n:"快乾短袖上衣",en:"base layer tee",ess:1,qty:2,w:300,wt:"~150g/件",tip:"排汗快乾；穿一洗一，別帶棉質。"},
+  {n:"保暖長袖／中層",en:"mid layer",ess:1,qty:1,w:250,wt:"~250g",tip:"早晚涼、十月後必備。"},
+  {n:"輕量羽絨外套",en:"down jacket",ess:1,qty:1,w:300,wt:"~300g",tip:"高海拔、清晨、加利西亞保暖核心。"},
+  {n:"防風防水外套",en:"shell / windbreaker",ess:1,qty:1,w:300,wt:"~300g",tip:"兼防曬防潑水；山上強風必擋。"},
+  {n:"斗篷式雨衣",en:"rain poncho",ess:1,qty:1,w:250,wt:"~250g",tip:"一件罩住人和背包、穿脫快，勝兩截式。Camino 經典神物。"},
+  {n:"運動長褲",en:"hiking pants",ess:1,qty:"1–2",w:300,wt:"~300g",tip:"主力下著；可選速乾款或兩截式。"},
+  {n:"短褲",en:"shorts",ess:1,qty:1,w:150,wt:"~150g",tip:"洗澡換穿、夏天走路。"},
+  {n:"快乾內衣褲",en:"underwear",ess:1,qty:"2–3",w:90,wt:"輕",tip:"每天手洗，2–3 套輪替即可。"},
+  {n:"遮陽帽 / 毛帽",en:"sun hat / beanie",ess:1,qty:"各1",w:80,wt:"輕",tip:"Meseta 大平原曬、高海拔冷。"},
+  {n:"Buff 頭巾",en:"buff",ess:0,qty:1,w:40,wt:"~40g",tip:"防曬防風，有朝聖款。"},
+  {n:"泳衣",en:"swimwear",ess:0,qty:1,w:100,wt:"輕",tip:"夏天庇護所／小鎮泳池，沒帶會後悔。"}
+ ]},
+ {cat:"睡眠",ico:"🛏️",items:[
+  {n:"絲質睡袋內套",en:"sleeping bag liner",ess:1,qty:1,w:135,wt:"120–150g",tip:"核心功能：隔絕床蟲 bed bugs；夏天單帶即可。不能省。"},
+  {n:"保暖睡袋",en:"sleeping bag 0–5°C",ess:0,qty:1,w:750,wt:"600–900g",tip:"冬／早春晚秋必備（庇護所不一定有暖氣）；盡量選輕量羽絨。"}
+ ]},
+ {cat:"盥洗 & 個人衛生",ico:"🧼",items:[
+  {n:"速乾毛巾",en:"microfiber towel",ess:1,qty:1,w:125,wt:"100–150g",tip:"掛背包上邊走邊乾。"},
+  {n:"盥洗包（牙刷/洗髮/沐浴）",en:"toiletry kit",ess:1,qty:"1組",w:300,wt:"—",tip:"小包裝帶 1–2 週量，路上藥妝補充。"},
+  {n:"旅行肥皂",en:"soap bar",ess:1,qty:1,w:50,wt:"~50g",tip:"洗澡＋洗衣兩用，減少瓶罐。"},
+  {n:"防曬乳（高係數）",en:"sunscreen",ess:1,qty:1,w:100,wt:"~100g",tip:"平原無遮蔭，務必高 SPF。"},
+  {n:"曬衣繩 / 夾",en:"clothes line",ess:0,qty:1,w:50,wt:"~50g",tip:"手洗衣物晾乾必備。"},
+  {n:"衛生紙 / 濕紙巾",en:"tissues",ess:1,qty:"少量",w:50,wt:"輕",tip:"路上廁所不一定有。"}
+ ]},
+ {cat:"電子 & 充電",ico:"🔌",items:[
+  {n:"行動電源 10000mAh",en:"power bank",ess:1,qty:1,w:200,wt:"~200g",tip:"庇護所插座少又遠；回床位用行動電源充手機較安全。"},
+  {n:"歐規轉接頭",en:"EU adapter",ess:1,qty:"1–2",w:50,wt:"~50g",tip:"萬國轉接頭最保險；不同年代建築插座規格不同。"},
+  {n:"充電線",en:"USB cables",ess:1,qty:"1–2",w:40,wt:"輕",tip:"自帶線行動電源可減線。"},
+  {n:"eSIM / 網卡",en:"eSIM",ess:1,qty:1,w:5,wt:"—",tip:"訂床、查路況、報平安每天用；下機即用免換卡。"},
+  {n:"頭燈",en:"headlamp",ess:0,qty:1,w:80,wt:"~80g",tip:"清晨摸黑出發/夜起用；不少人實際沒用到，列選配。紅光不擾室友。"}
+ ]},
+ {cat:"證件 / 金錢 / 文件",ico:"🛂",items:[
+  {n:"朝聖者護照 credencial",en:"credential",ess:1,qty:1,w:20,wt:"輕",tip:"抵 SJPP 朝聖者辦公室先領；沿途蓋章，最後 100km 每天至少蓋 2 章。"},
+  {n:"護照（效期6個月+）",en:"passport",ess:1,qty:1,w:40,wt:"—",tip:"影本＋大頭照數張另存，以防遺失。"},
+  {n:"信用卡＋提款卡＋現金€",en:"cards & cash",ess:1,qty:"—",w:50,wt:"—",tip:"小鎮／公立庇護所常只收現金；分散放不同袋。"},
+  {n:"旅遊保險單（英文）",en:"insurance",ess:1,qty:1,w:20,wt:"—",tip:"含醫療／救援；列印一份。"},
+  {n:"機票/住宿訂單（英文）",en:"tickets",ess:1,qty:"—",w:20,wt:"—",tip:"入境備查。"},
+  {n:"防水證件夾",en:"document holder",ess:1,qty:1,w:30,wt:"輕",tip:"credencial 用夾鏈袋防雨。"}
+ ]},
+ {cat:"醫藥 & 急救（重點：水泡）",ico:"🩹",items:[
+  {n:"Compeed 水泡貼",en:"blister plasters",ess:1,qty:"多片",w:30,wt:"輕",tip:"人手一盒的神器；水泡不刺破直接貼隔離。台灣先備好，當地藥局也有。"},
+  {n:"OK繃＋醫療膠帶",en:"Leukotape",ess:1,qty:"一包",w:50,wt:"輕",tip:"熱點先貼預防，勝過長泡才處理。"},
+  {n:"消毒棉片",en:"antiseptic wipes",ess:1,qty:"數片",w:20,wt:"輕",tip:"破皮清潔。"},
+  {n:"止痛/消炎藥",en:"ibuprofen",ess:1,qty:"少量",w:30,wt:"輕",tip:"肌肉痠痛、發燒。"},
+  {n:"腸胃藥",en:"stomach meds",ess:1,qty:"少量",w:30,wt:"輕",tip:"換水土飲食。"},
+  {n:"彈性繃帶",en:"elastic bandage",ess:0,qty:1,w:50,wt:"~50g",tip:"扭傷、護膝。"},
+  {n:"個人處方藥",en:"prescription",ess:1,qty:"全程量",w:50,wt:"—",tip:"帶足，小鎮買不到。"}
+ ]},
+ {cat:"其他雜項",ico:"🧰",items:[
+  {n:"登山杖",en:"trekking poles",ess:1,qty:"1–2",w:400,wt:"~200g/支",tip:"Pyrenees 與上下坡省膝蓋；飛機需託運，當地也買得到木杖。"},
+  {n:"水壺／水袋 1–1.5L",en:"water bottle",ess:1,qty:1,w:150,wt:"~150g",tip:"沿途有飲水點補給；可折疊款減重。"},
+  {n:"行動糧（堅果/巧克力）",en:"snacks",ess:1,qty:"少量",w:200,wt:"—",tip:"店常沒開或趕路，應急用。"},
+  {n:"環保餐盒（可微波）",en:"food container",ess:0,qty:1,w:100,wt:"~100g",tip:"裝吃不完餐點、庇護所微波加熱。"},
+  {n:"折疊購物袋",en:"shopping bag",ess:0,qty:1,w:30,wt:"輕",tip:"超市採買。"},
+  {n:"小掛鎖／密碼鎖",en:"lock",ess:0,qty:1,w:50,wt:"~50g",tip:"庇護所置物櫃。"},
+  {n:"安全別針／曬衣夾",en:"pins / clips",ess:0,qty:"數個",w:20,wt:"輕",tip:"別濕衣在背包上邊走邊乾。"},
+  {n:"扇貝殼",en:"scallop shell",ess:0,qty:1,w:20,wt:"輕",tip:"朝聖者象徵，掛背包上。"},
+  {n:"耳塞＋眼罩",en:"earplugs",ess:1,qty:1,w:20,wt:"輕",tip:"多人房打呼必備，保命好眠。"}
+ ]}
+];
+
+const BRANDS=[
+ {cat:"🎒 背包 Backpack（30–40L）",rows:[
+  {name:"Osprey Stratos 36 / Sirrus 36(女)",price:"中階",pros:"背負網架通風佳、含雨套、Camino 最常見",cons:"比超輕款重約 100g",why:"通風背板長日散熱關鍵，幾乎萬用"},
+  {name:"Deuter Futura Pro 40",price:"中高階",pros:"Aircomfort 懸吊極穩、適合多日",cons:"體積偏大、易裝太多",why:"背負舒適度頂級，撐得起 40 天"},
+  {name:"Gregory Citro 30 / Juno 30(女)",price:"中階",pros:"面開式好拿、透氣懸吊",cons:"30L 對冬季偏小",why:"春夏輕裝最佳、取物方便"}
+ ]},
+ {cat:"👟 健行鞋 / 越野跑鞋",rows:[
+  {name:"Hoka Speedgoat 6",price:"中高階",pros:"厚軟避震、抓地強、朝聖者最愛",cons:"鞋楦偏窄、需試穿",why:"柏油＋碎石長距離最舒適"},
+  {name:"Altra Lone Peak 8",price:"中階",pros:"零落差、寬楦、腳趾空間大",cons:"零落差需先適應",why:"寬腳/易腫腳者首選，散熱佳"},
+  {name:"Salomon X Ultra 5(低筒)",price:"中階",pros:"側向支撐強、耐操、防滑",cons:"楦頭較窄",why:"路況混雜、需穩定支撐者"},
+  {name:"Merrell Moab 3",price:"平價",pros:"CP值高、排水快、好穿",cons:"重量稍重",why:"預算有限、寬楦入門款"}
+ ]},
+ {cat:"🧦 健行襪 Socks",rows:[
+  {name:"Darn Tough Hiker Micro Crew",price:"中高階",pros:"終身保固、超耐磨、美麗諾",cons:"台灣不易買、偏貴",why:"耐操＋排汗，40 天不爛"},
+  {name:"Smartwool Hike Light Cushion",price:"中階",pros:"不滑動防摩擦、舒適",cons:"壽命略短",why:"貼合系統防起水泡"},
+  {name:"Injinji 五趾襪(內襯)",price:"中階",pros:"隔絕趾間摩擦",cons:"穿脫較慢",why:"搭外襪雙層防水泡"}
+ ]},
+ {cat:"🌧️ 雨披 / 雨衣 Poncho",rows:[
+  {name:"Altus Atmospheric H30 / J30",price:"中階 €37–50",pros:"罩住人＋背包、30秒穿好、可邊走邊開",cons:"大風會飄、需通風",why:"Camino 經典神物，論壇常年第一"},
+  {name:"Decathlon Forclaz 雨披",price:"平價",pros:"當地可買、便宜",cons:"耐久度普通",why:"預算取向、抵達後補購方便"},
+  {name:"Frogg Toggs 輕量雨衣",price:"平價",pros:"超輕、可當外層",cons:"不罩背包需另加雨套",why:"多雨季搭背包套使用"}
+ ]},
+ {cat:"🧥 保暖 & 防風外層",rows:[
+  {name:"Patagonia Nano Puff / Arc'teryx Atom(化纖)",price:"高階",pros:"潮濕仍保暖、可壓縮",cons:"價格高",why:"西北部多雨，化纖比羽絨可靠"},
+  {name:"Mont-bell / Decathlon 羽絨外套",price:"中階",pros:"極輕、暖度重量比高",cons:"濕掉失效",why:"春秋早晚與清晨保暖"},
+  {name:"Patagonia Houdini(防風層)",price:"中階",pros:"40g 超輕、擋風",cons:"不完全防水",why:"稜線陣風與微雨薄外層"}
+ ]},
+ {cat:"🐑 美麗諾排汗底層",rows:[
+  {name:"Icebreaker Merino 150/200 Oasis",price:"高階",pros:"抗臭、調溫、貼身舒適",cons:"偏貴、耐磨稍弱",why:"連穿數日不臭，易乾"},
+  {name:"Smartwool Classic All-Season",price:"中高階",pros:"全季可用、暖度適中",cons:"同上",why:"早晚溫差大最實用"},
+  {name:"Patagonia Capilene(化纖替代)",price:"中階",pros:"更耐磨、快乾、便宜",cons:"不如美麗諾抗臭",why:"預算/重訓量大者替代"}
+ ]},
+ {cat:"🛏️ 睡袋內套 / 睡袋 Liner",rows:[
+  {name:"Sea to Summit Reactor Liner",price:"中階",pros:"輕、增溫、衛生",cons:"純絲款貴",why:"庇護所有毯，內套即足夠"},
+  {name:"Cocoon Silk Mummy Liner",price:"中高階",pros:"絲質親膚、超輕",cons:"價格高",why:"夏季最佳、防床蝨隔層"},
+  {name:"Sea to Summit Spark 30°F(冷季睡袋)",price:"高階",pros:"輕量保暖",cons:"夏季過熱",why:"11–3 月或冬季才需要"}
+ ]},
+ {cat:"🥢 登山杖 Trekking Poles",rows:[
+  {name:"Black Diamond Trail Ergo Cork",price:"中階",pros:"FlickLock 鎖定可靠、軟木握把",cons:"鋁桿略重",why:"久走可靠、護膝下坡"},
+  {name:"Leki Khumbu / Cross Trail",price:"中高階",pros:"快扣調整、耐用",cons:"偏貴",why:"進階舒適、減膝蓋負擔"},
+  {name:"BD Distance(碳纖折疊)",price:"高階",pros:"超輕、收納小",cons:"碳桿較脆",why:"在意重量者"}
+ ]},
+ {cat:"🔦 頭燈 Headlamp",rows:[
+  {name:"Petzl Bindi / Tikkina",price:"中階",pros:"35g 超輕、USB 充電",cons:"流明中等",why:"清晨出發＋宿舍夠用"},
+  {name:"Black Diamond Spot / Astro",price:"平價–中階",pros:"紅光不擾人、亮度足",cons:"略重",why:"多人房紅光體貼室友"},
+  {name:"Nitecore NU25",price:"中階",pros:"輕量高流明、可充電",cons:"介面較複雜",why:"黑暗山路需高亮度"}
+ ]},
+ {cat:"🩹 水泡 / 足部護理",rows:[
+  {name:"Compeed 水泡貼",price:"平價",pros:"人手一盒、二次皮膚保護",cons:"貼上勿硬撕",why:"Camino 最普遍水泡救星"},
+  {name:"羊毛脂 Lanolin / 凡士林",price:"平價",pros:"預防摩擦、潤滑",cons:"量多悶腳",why:"出發前抹腳防水泡"},
+  {name:"Leukotape ＋ 優碘",price:"平價",pros:"預貼熱點防摩擦",cons:"需練貼法",why:"已知摩擦點預先保護"}
+ ]},
+ {cat:"🧴 快乾毛巾 / 其他小物",rows:[
+  {name:"Sea to Summit DryLite / PackTowl",price:"中階",pros:"吸水快乾、體積小",cons:"觸感不如棉",why:"宿舍共浴後快乾"},
+  {name:"行動電源 10000mAh ＋ EU 轉接頭",price:"平價",pros:"補電必備",cons:"注意容量別超標",why:"多日無固定插座"},
+  {name:"eSIM(Holafly / Airalo)",price:"平價",pros:"落地即上網",cons:"認綁定方式",why:"導航/訂房不斷線"},
+  {name:"矽膠耳塞 ＋ 眼罩",price:"平價",pros:"多人房好眠",cons:"—",why:"albergue 打呼必備"}
+ ]}
+];
+
+const APPS=[
+ {n:"Buen Camino",d:"離線路線＋住宿與設施導航，朝聖第一神器。"},
+ {n:"Wise Pilgrim",d:"法國之路逐段地圖、albergue 與服務點，離線可用。"},
+ {n:"Gronze (Maps)",d:"西語權威路線資料庫，每日里程與爬升最詳盡。"},
+ {n:"Camino Ninja",d:"清楚區分公立/私人庇護所的路線 App。"},
+ {n:"Booking.com / Agoda",d:"旺季預訂私人 albergue 與旅館。"},
+ {n:"WhatsApp",d:"聯絡庇護所訂床、與沿途朝聖者保持聯繫（歐洲必備）。"},
+ {n:"Google Translate",d:"西語即時翻譯＋相機翻菜單，可離線。"},
+ {n:"Organic Maps / Maps.me",d:"離線地圖備援，無訊號也能定位。"},
+ {n:"AEMET",d:"西班牙官方氣象，加利西亞多雨先查天氣。"},
+ {n:"Jascostamp",d:"數位收集 sello 朝聖印章、記錄每日足跡。"}
+];
+
+// region index: 0庇里牛斯 1Navarra 2Rioja 3Castilla 4Galicia
+const STAGES=[
+ {d:1,from:"Saint-Jean-Pied-de-Port",to:"Orisson",rg:0,km:"8.7",diff:2,note:"上坡起步暖身。Orisson 是拿破崙路線唯一中繼站，黃昏全體共餐看庇里牛斯山日落。",alb:[
+   {n:"Gîte de la Porte Saint-Jacques",t:"🏨",p:"€25–30",tip:"8人膠囊房含早餐，近朝聖者辦公室，可預訂。"},
+   {n:"Refuge Orisson",t:"🏨",p:"€40 含早晚餐",s:1,tip:"山腰唯一中繼站，黃昏共餐看日落；極熱門，務必提早數週預訂。"}
+ ]},
+ {d:2,from:"Orisson",to:"Roncesvalles",rg:1,km:"~19",diff:3,note:"全程最硬！累積爬升約 1,400m，經 Col de Lepoeder 1,450m，下坡 500m 山毛櫸林。翻越庇里牛斯山、進入西班牙。山路 11月–3月底封閉只能走 Valcarlos；雨霧低溫，帶防風雨衣。",alb:[
+   {n:"Albergue de Roncesvalles",t:"⛪",p:"€14 ＋晚餐€12",s:2,tip:"法國之路最具代表的大型修道院庇護所，約 183–250 床，傍晚有朝聖者彌撒與祝福。可線上預訂。"}
+ ]},
+ {d:3,from:"Roncesvalles / Burguete",to:"Zubiri",rg:1,km:"~22",diff:3,note:"下坡石頭路，雨後最滑（作者公認最難）。護膝、登山杖。",alb:[
+   {n:"Albergue Segunda Etapa",t:"🏨",p:"€15 含早餐",tip:"小型乾淨，可預訂。"},
+   {n:"Albergue Municipal de Zubiri",t:"🏛",p:"€8–10",tip:"先到先得。"}
+ ]},
+ {d:4,from:"Zubiri",to:"Pamplona",rg:1,km:"17",diff:1,note:"海明威奔牛城、主教座堂。大城補給點，可休整、逛 Decathlon 補裝備。",alb:[
+   {n:"Albergue Jesús y María",t:"⛪",p:"€10–12",s:1,tip:"16 世紀古教堂改建、逾百床、氣勢恢宏、位置極佳；旺季先到先得。"},
+   {n:"Casa Ibarrola / Plaza Catedral",t:"🏨",p:"€18–20",tip:"膠囊床設計新穎，可預訂。"}
+ ]},
+ {d:5,from:"Pamplona",to:"Uterga / Puente la Reina",rg:1,km:"~17",diff:2,note:"上 Alto del Perdón 寬恕之峰（17 尊鐵雕朝聖者剪影＋風車稜線），下坡碎石。Puente la Reina 有中世紀六拱石橋。",alb:[
+   {n:"Padres Reparadores(Puente la Reina)",t:"⛪",p:"€5–8",tip:"傳統修會庇護所，先到先得。"},
+   {n:"Albergue Estrella Guía",t:"🏨",p:"~€15",tip:"4 人房，可預訂。"}
+ ]},
+ {d:6,from:"Puente la Reina",to:"Estella",rg:1,km:"~22",diff:2,note:"Estella 古城，教堂與石橋。",alb:[
+   {n:"Albergue Municipal de Peregrinos",t:"🏛",p:"€6–8",tip:"先到先得。"},
+   {n:"Alda Estella Hostel",t:"🏨",p:"~€20",s:1,tip:"家庭房／雙人房，性價比佳，可預訂。"}
+ ]},
+ {d:7,from:"Estella",to:"Los Arcos",rg:1,km:"~23",diff:2,note:"出 Estella 不遠即 Irache 免費酒泉 Fuente de Vino（8:00–20:00）。後段長距離少村莊，備水。",alb:[
+   {n:"Albergue Casa de la Abuela",t:"🏨",p:"€25/人(雙人)",tip:"私人衛浴，可預訂。"},
+   {n:"Isaac Santiago (Municipal)",t:"🏛",p:"~€7",tip:"大型，先到先得。"}
+ ]},
+ {d:8,from:"Los Arcos",to:"Logroño",rg:2,km:"~28",diff:2,note:"進入 La Rioja 酒鄉。大城，可半日觀光，傍晚到 Calle Laurel tapas 酒街。",alb:[
+   {n:"Albergue de Peregrinos de Logroño",t:"🏛",p:"€7–8",tip:"先到先得。"},
+   {n:"Check In Rioja / Cálfred",t:"🏨",p:"€15–18",tip:"乾淨設備新，旺季建議預訂。"}
+ ]},
+ {d:9,from:"Logroño",to:"Navarrete / Nájera",rg:2,km:"~13–23",diff:1,note:"陶藝小鎮 Navarrete、紅土葡萄園。輕鬆日。",alb:[
+   {n:"Albergue Municipal de Nájera",t:"🏛",p:"隨喜 donativo",s:1,tip:"河畔大通鋪、氣氛純樸、志工經營；先到先得不可預訂。"},
+   {n:"Albergue Puerta de Nájera",t:"🏨",p:"€13–15",tip:"隔間床位品質佳，可預訂。"}
+ ]},
+ {d:10,from:"Nájera",to:"Santo Domingo de la Calzada",rg:2,km:"~21",diff:1,note:"大教堂內有「活雞」傳奇（聖人顯靈故事）。",alb:[
+   {n:"Albergue Abadía Cisterciense",t:"⛪",p:"~€10",s:1,tip:"熙篤會修女院經營，莊嚴安靜。"},
+   {n:"Cofradía del Santo",t:"⛪",p:"~€8",tip:"超大型約 200 床，緊鄰大教堂，先到先得。"}
+ ]},
+ {d:11,from:"Santo Domingo",to:"Belorado",rg:2,km:"~23",diff:2,note:"離開 La Rioja，準備進入 Castilla y León。",alb:[
+   {n:"Albergue Cuatro Cantones",t:"🏨",p:"€10–12",s:1,tip:"有泳池、庭院、晚餐，氣氛輕鬆，可預訂。"},
+   {n:"Albergue Parroquial de Belorado",t:"⛪",p:"隨喜",tip:"共餐氛圍，先到先得。"}
+ ]},
+ {d:12,from:"Belorado",to:"San Juan de Ortega",rg:3,km:"~24",diff:2,note:"橡樹林緩上、偏遠山村。補給少，先備糧。",alb:[
+   {n:"Albergue Parroquial San Juan de Ortega",t:"⛪",p:"€10 上下",tip:"修道院旁，氛圍安靜；先到先得。"}
+ ]},
+ {d:13,from:"San Juan de Ortega",to:"Burgos",rg:3,km:"~26",diff:1,note:"Burgos 主教座堂（世界遺產）必看。大城建議休整。",alb:[
+   {n:"Casa del Cubo (Municipal)",t:"🏛",p:"€10",s:1,tip:"120 床、16 世紀古宅、緊鄰大教堂，位置品質俱佳；先到先得。"},
+   {n:"Albergue Emaús",t:"⛪",p:"隨喜/€7",tip:"含共餐、溫馨，先到先得。"}
+ ]},
+ {d:14,from:"Burgos",to:"Hornillos del Camino",rg:3,km:"21",diff:2,note:"進入 Meseta 高原麥田台地：無遮蔭、酷熱、無水，務必備水防曬。",alb:[
+   {n:"Albergue Municipal de Hornillos",t:"🏛",p:"€13–15",tip:"約 30 床、教堂旁，先到先得。"},
+   {n:"Albergue El Alfar",t:"🏨",p:"~€12",tip:"可預訂。"}
+ ]},
+ {d:15,from:"Hornillos",to:"Castrojeriz",rg:3,km:"~20",diff:2,note:"Alto Mostelares 陡上陡下、城堡山村。",alb:[
+   {n:"San Esteban (Municipal)",t:"🏛",p:"€7",tip:"35 床、古建築，先到先得。"},
+   {n:"Rosalía / A Cien Leguas",t:"🏨",p:"€12–14",tip:"可預訂。"}
+ ]},
+ {d:16,from:"Castrojeriz",to:"Frómista",rg:3,km:"~25",diff:1,note:"運河步道平緩、11 世紀羅馬式教堂 San Martín。",alb:[
+   {n:"Albergue Municipal de Frómista",t:"🏛",p:"€15",tip:"56 床（2–11月），先到先得。"},
+   {n:"Estrella del Camino / Luz",t:"🏨",p:"€12–14",tip:"可預訂。"}
+ ]},
+ {d:17,from:"Frómista",to:"Carrión de los Condes",rg:3,km:"~19",diff:1,note:"Carrión 修道院。注意：下一站 17km 無村莊，先補給。",alb:[
+   {n:"Espíritu Santo(修女院)",t:"⛪",p:"€6–8",s:1,tip:"修女經營、乾淨溫暖。"},
+   {n:"Parroquial Santa María",t:"⛪",p:"隨喜",s:1,tip:"年輕修女帶動共餐與歌唱，氣氛動人。"}
+ ]},
+ {d:18,from:"Carrión",to:"Calzadilla / Sahagún",rg:3,km:"~23",diff:1,note:"筆直羅馬古道，單調無遮蔭無補給；Sahagún 是法國之路中點。",alb:[
+   {n:"Municipal Cluny (Sahagún)",t:"🏛",p:"€9",tip:"64 床、全年開放，先到先得。"},
+   {n:"Albergue de la Santa Cruz",t:"⛪",p:"€10",tip:"修女院經營。"}
+ ]},
+ {d:19,from:"Sahagún",to:"El Burgo Ranero",rg:3,km:"18",diff:1,note:"Meseta 田園、輕鬆日。",alb:[]},
+ {d:20,from:"El Burgo Ranero",to:"Mansilla de las Mulas",rg:3,km:"~19",diff:1,note:"城牆古鎮。",alb:[]},
+ {d:21,from:"Mansilla",to:"León",rg:3,km:"~19",diff:1,note:"León 主教座堂彩繪玻璃必看。大城建議休整一天。",alb:[
+   {n:"Benedictinas(Santa María del Carbajal)",t:"⛪",p:"~€8",s:1,tip:"本篤會修女院、傍晚有晚禱祝福，氛圍莊嚴；先到先得。"},
+   {n:"La Madriguera Hostel",t:"🏨",p:"€12",s:1,tip:"環境好性價比高，可預訂。"}
+ ]},
+ {d:22,from:"León",to:"Hospital de Órbigo",rg:3,km:"~33",diff:1,note:"光榮之橋（中世紀最長石橋）。可拆成兩天。",alb:[]},
+ {d:23,from:"Hospital de Órbigo",to:"Astorga",rg:3,km:"~17",diff:1,note:"高第設計的主教宮、羅馬遺跡、巧克力博物館；名菜 cocido maragato。",alb:[
+   {n:"Albergue San Javier",t:"🏨",p:"€10–12",s:1,tip:"木造老屋、溫馨有廚房，近主教座堂；可預訂。"},
+   {n:"Siervas de María (Municipal)",t:"🏛",p:"€7",tip:"大型現代，先到先得。"}
+ ]},
+ {d:24,from:"Astorga",to:"Rabanal / Foncebadón",rg:3,km:"~25",diff:3,note:"長上坡 +600m 進山、廢村重生的山村。山上低溫、住宿少先訂。Rabanal 有最受推崇的奉茶＋葛利果聖歌晚禱。",alb:[
+   {n:"Refugio Gaucelmo (Rabanal)",t:"⛪",p:"隨喜",s:2,tip:"英國聖雅各兄弟會經營，抵達奉下午茶、可參加葛利果聖歌晚禱與祝福；先到先得。"},
+   {n:"Ntra. Sra. del Pilar (Rabanal)",t:"🏨",p:"€8–10",tip:"含餐選項。"}
+ ]},
+ {d:25,from:"Foncebadón",to:"Ponferrada",rg:3,km:"~27",diff:3,note:"過 Cruz de Ferro 鐵十字（1,504m，全程最高點，放下心石許願）後陡下石頭路，極傷膝，護膝＋杖。Ponferrada 有聖殿騎士城堡。",alb:[
+   {n:"San Nicolás de Flüe",t:"⛪",p:"隨喜",s:1,tip:"大型、安靜、志工經營，先到先得。"},
+   {n:"Albergue Guiana",t:"🏨",p:"~€15",tip:"設備新、近城堡，可預訂。"}
+ ]},
+ {d:26,from:"Ponferrada",to:"Villafranca del Bierzo",rg:3,km:"~25",diff:2,note:"Bierzo 酒鄉、美村。",alb:[
+   {n:"San Nicolás el Real",t:"⛪",p:"€5–6",s:1,tip:"17 世紀古修道院，氣氛古樸，先到先得。"},
+   {n:"Albergue Leo",t:"🏨",p:"€13",s:1,tip:"6 人房、乾淨溫馨、口碑極佳，可預訂。"}
+ ]},
+ {d:27,from:"Villafranca",to:"La Laguna / Las Herrerías",rg:3,km:"~25",diff:2,note:"河谷村，為隔日翻 O Cebreiro 暖身。睡飽。",alb:[]},
+ {d:28,from:"Las Herrerías",to:"O Cebreiro",rg:4,km:"~9",diff:3,note:"陡上約 +600–700m 進入加利西亞。O Cebreiro 凱爾特圓石屋村、雲海日出絕景、聖杯傳說教堂。入 Galicia 天氣轉濕冷多雨。",alb:[
+   {n:"Albergue de O Cebreiro (Municipal)",t:"🏛",p:"€10",s:1,tip:"約 104 床、海拔 1,300m 山頂石村、雲海日出；不可預訂、先到先得、旺季要早到。"},
+   {n:"Albergue Casa Campelo",t:"🏨",p:"€12–15",tip:"可預訂。"}
+ ]},
+ {d:29,from:"O Cebreiro",to:"Triacastela",rg:4,km:"~18",diff:2,note:"長下坡、山區牧野，雨後濕滑。",alb:[
+   {n:"Triacastela (Municipal)",t:"🏛",p:"€10",tip:"大型，先到先得。"},
+   {n:"Complexo Xacobeo / Aitzenea",t:"🏨",p:"€10–12",tip:"可預訂。"}
+ ]},
+ {d:30,from:"Triacastela",to:"Sarria",rg:4,km:"18",diff:2,note:"最後 100 公里起點！由此走滿 100km 才可領證書。人潮從此暴增。",alb:[
+   {n:"Monasterio de la Magdalena",t:"⛪",p:"~€12",s:1,tip:"梅塞德會修道院、花園迴廊優美，可預訂。"},
+   {n:"Pensión-Albergue Don Álvaro",t:"🏨",p:"€9 / 雙人€55",tip:"主街上、設備佳，可預訂。"}
+ ]},
+ {d:31,from:"Sarria",to:"Portomarín",rg:4,km:"22",diff:2,note:"下坡後過水庫，水底之城 Portomarín（教堂逐石遷移重建）。人潮多，提早訂床。",alb:[
+   {n:"Portomarín (Municipal)",t:"🏛",p:"€10",tip:"114 床，先到先得。"},
+   {n:"Albergue Ferramenteiro",t:"🏨",p:"€14",tip:"130 床大型、隔間整齊；旺季提早一兩天預訂。"}
+ ]},
+ {d:32,from:"Portomarín",to:"Palas de Rei",rg:4,km:"~25",diff:2,note:"連續小起伏、加利西亞綠林。",alb:[
+   {n:"Palas de Rei (Municipal)",t:"🏛",p:"~€8",tip:"大型，先到先得。"},
+   {n:"Albergue O Cabalo Verde",t:"🏨",p:"€25/人(雙人)",tip:"安靜舒適，可預訂。"}
+ ]},
+ {d:33,from:"Palas de Rei",to:"Melide / Arzúa",rg:4,km:"~30",diff:2,note:"Melide 是加利西亞章魚 pulpo 重鎮，老店 Pulpería Ezequiel 必吃。",alb:[
+   {n:"Arzúa (Municipal)",t:"🏛",p:"€8",tip:"先到先得。"},
+   {n:"Pensión Cima do Lugar (Arzúa)",t:"🏨",p:"€30/人(雙人)",tip:"私人衛浴，可預訂。"}
+ ]},
+ {d:34,from:"Arzúa",to:"O Pedrouzo (Arca)",rg:4,km:"~19",diff:2,note:"尤加利森林、最後衝刺。距聖城僅約 20km。",alb:[
+   {n:"Arca-O Pino (Municipal)",t:"🏛",p:"~€8",tip:"大型，先到先得。"},
+   {n:"Porta de Santiago / Edreira",t:"🏨",p:"€12–14",tip:"乾淨，可預訂。"}
+ ]},
+ {d:35,from:"O Pedrouzo",to:"Santiago de Compostela",rg:4,km:"~20",diff:1,note:"抵達聖城！Praza do Obradoiro 主教座堂。中午 12:00 前到 Pilgrim's Office 領 Compostela，參加 12:00 朝聖者彌撒。",alb:[
+   {n:"Albergue Seminario Menor",t:"⛪",p:"€12–15",s:1,tip:"舊神學院改建、超大型、露台遠眺，性價比高，可預訂。"},
+   {n:"The Last Stamp / Hostel SCQ",t:"🏨",p:"€17–22",tip:"近大教堂、設計感佳；旺季務必提早預訂。"}
+ ]},
+ {d:"+1",from:"Santiago",to:"Negreira",rg:4,km:"~21",diff:2,note:"【世界盡頭之路】出城後起伏，人潮驟減、庇護所變少。",alb:[]},
+ {d:"+2",from:"Negreira",to:"Olveiroa",rg:4,km:"~33",diff:2,note:"高原牧野、補給點稀疏，可拆兩天。",alb:[]},
+ {d:"+3",from:"Olveiroa",to:"Cee / Corcubión",rg:4,km:"~20",diff:2,note:"下到海岸線，首見大西洋。",alb:[]},
+ {d:"+4",from:"Cee",to:"Fisterra (Km 0)",rg:4,km:"~15",diff:2,note:"真正的世界盡頭！Faro de Fisterra 燈塔＋0.00km 路標，燒鞋看落日的儀式地。日落是唯一正解。",alb:[]},
+ {d:"+5",from:"Fisterra",to:"Muxía",rg:4,km:"~29",diff:2,note:"可步行或搭公車。Muxía 礁岩上的船之聖母海岸教堂，最荒涼壯麗的收尾。多數人由此搭公車回 Santiago。",alb:[]}
+];
+
+const SPOTS=[
+ {n:"Porte Saint-Jacques & 城堡石板街",en:"Rue de la Citadelle, SJPP",town:"起點 Saint-Jean-Pied-de-Port",lat:43.1646,lng:-1.2364,star:0,shot:"15 世紀城門＋鵝卵石窄街，朝聖第一張定裝照。清晨出發前光線柔、無人。"},
+ {n:"庇里牛斯牧場稜線",en:"Route de Napoléon",town:"Day 1–2（Orisson 一帶）",lat:43.123,lng:-1.310,star:1,shot:"綿羊、雲海、翻山稜線，入山史詩感。日出後逆光雲海最美。"},
+ {n:"寬恕之峰 鐵雕朝聖者群像",en:"Monumento al Peregrino, Alto del Perdón",town:"Day 5（Pamplona 後）",lat:42.73572,lng:-1.742832,star:1,shot:"17 尊鏽鐵朝聖者剪影＋風車稜線，全程最具代表的逆光剪影。日出／日落側光最戲劇。"},
+ {n:"王后橋 中世紀六拱石橋",en:"Puente la Reina",town:"Day 5 Puente la Reina",lat:42.671117,lng:-1.818736,star:0,shot:"11 世紀羅馬式拱橋倒映 Arga 河，明信片畫面。清晨平靜水面有倒影。"},
+ {n:"Irache 免費酒泉",en:"Fuente del Vino, Bodegas Irache",town:"Day 7 Ayegui（Estella 旁）",lat:42.650826,lng:-2.043587,star:0,shot:"牆上紅酒水龍頭＋扇貝裝杯，互動畫面超吸睛。8:00–20:00，早到人少。"},
+ {n:"Logroño 舊城 tapas 街",en:"Calle Laurel, Logroño",town:"Day 8 La Rioja 首府",lat:42.4661,lng:-2.4449,star:0,shot:"老城石巷與 tapas 酒吧街夜景，人文煙火氣。傍晚 tapeo 時段最熱鬧。"},
+ {n:"Cruz de Ferro 鐵十字",en:"全程最高十字 1,504 m",town:"Day 25 Foncebadón 後",lat:42.489,lng:-6.36167,star:1,shot:"木樁鐵十字＋朝聖者堆石丘，放下心石的儀式畫面。日出時逆光最動人、人最少。"},
+ {n:"O Cebreiro 凱爾特石屋村",en:"pallozas 圓形茅頂石屋",town:"Day 28 加利西亞入口",lat:42.708,lng:-7.0436,star:1,shot:"凱爾特圓石屋＋山嵐，進入 Galicia 的門戶。清晨常有雲海漫過村莊。"},
+ {n:"大教堂 & 奧布拉多伊羅廣場",en:"Catedral & Praza do Obradoiro",town:"終點 Santiago de Compostela",lat:42.880596,lng:-8.544641,star:1,shot:"巴洛克大教堂正立面＋抵達朝聖者癱坐廣場，旅程高潮。清晨無人或藍調夜景。"},
+ {n:"Fisterra 燈塔 & K.M. 0,00",en:"Faro de Fisterra",town:"世界盡頭 Cabo Finisterre",lat:42.882362,lng:-9.271849,star:1,shot:"世界盡頭燈塔＋大西洋＋0.00km 扇貝石碑，燒鞋看夕陽的儀式地。日落為唯一正解。"},
+ {n:"船之聖母海岸教堂",en:"Santuario da Virxe da Barca",town:"Muxía",lat:43.11194,lng:-9.21944,star:1,shot:"礁岩上孤教堂＋拍岸浪花，最荒涼壯麗的收尾。日落或大浪天氣最震撼。"}
+];
+
+const FAITH=[
+ {h:"朝聖者彌撒 Pilgrim's Mass",ico:"🙏",rows:[
+  {lab:"Roncesvalles",v:"<span class='ti'>20:00</span>（週六/假日前夕較早）入山首夜的「朝聖者祝福」，必參加。"},
+  {lab:"Santiago 大教堂",v:"每日 <span class='ti'>07:30 / 09:30 / 12:00 / 19:30</span>，其中 <b>12:00 與 19:30</b> 為兩場主要 Pilgrim's Mass，會唸出當日抵達者的出發地與國籍。"},
+  {lab:"沿途教會",v:"O Cebreiro 聖杯教堂、各地教會庇護所（Grañón、Rabanal 等）常有晚禱／共融祈福，氣氛親密。"}
+ ]},
+ {h:"大香爐 Botafumeiro 何時擺盪",ico:"💨",rows:[
+  {lab:"固定擺盪日",v:"重大節慶才保證：主顯節(1/6)、復活節、5/23、聖神降臨、<b>聖雅各日 7/25</b>、聖母升天(8/15)、諸聖(11/1)、基督君王節、聖母無染(12/8)、聖誕(12/25)、12/30。"},
+  {lab:"非節慶",v:"須由團體預約並捐獻（約 €450），寫信至 botafumeiro@catedraldesantiago.es。平日彌撒能否看到全憑當天有無人贊助，不保證。"},
+  {lab:"自媒體提醒",v:"想拍到擺盪，最穩是對準 <b>7/25 聖雅各日</b>，或事先去信確認當天有無贊助場。"}
+ ]},
+ {h:"朝聖證書 & 護照規則",ico:"🎫",rows:[
+  {lab:"Compostela",v:"抵達後憑蓋滿章的 credencial 到 Pilgrim's Office（Rúa Carretas 33）免費領取。"},
+  {lab:"credencial",v:"朝聖者護照，沿途在庇護所、教堂、酒吧、餐廳蓋 sello 印章。"},
+  {lab:"最後 100km",v:"步行最後 100km（單車 200km）才符資格；最後 100km 內<b>每天至少蓋 2 個章</b>並記錄日期。Sarria 出發是常見起點。"}
+ ]},
+ {h:"領聖體 Communion（給非天主教徒）",ico:"✝️",rows:[
+  {lab:"能否領",v:"依羅馬天主教規矩，<b>只有受洗且符合條件的天主教徒可領聖體</b>。非天主教徒不宜上前領，但完全歡迎留在座位參與整場彌撒。"},
+  {lab:"接受祝福",v:"想被祝福可上前，但<b>雙手交叉抱胸</b>示意，神父會改給你「祝福」而非聖體，禮儀上完全得體。"},
+  {lab:"拍攝",v:"彌撒可自由參加；主祭/領聖體時段請收斂、勿擾，先觀察當地氛圍再拍。"}
+ ]}
+];
+
+const FOOD=[
+ {rg:"Navarra / Basque 巴斯克–納瓦拉",c:"#7a8c3f",dishes:[
+  {em:"🍢",n:"Pintxos",d:"巴斯克版精緻 tapas，麵包串小點，按籤計價。",wh:"Pamplona 老城（San Nicolás 街）"},
+  {em:"🍖",n:"Jamón Ibérico 伊比利火腿",d:"配紅酒最對味。",wh:"全程酒吧皆有"}
+ ]},
+ {rg:"La Rioja 拉里奧哈",c:"#9c4f3f",dishes:[
+  {em:"🍷",n:"Rioja 紅酒",d:"西班牙最知名紅酒產區，當地產 €6–8/瓶即有水準。",wh:"Logroño 的 Calle Laurel 酒街"},
+  {em:"⛲",n:"Fuente del Vino 免費酒泉",d:"Bodegas Irache 牆上紅酒龍頭，免費啜飲，適量勿浪費。",wh:"Ayegui（Estella 旁）8:00–20:00"}
+ ]},
+ {rg:"Castilla y León 卡斯提亞–萊昂",c:"#c98a18",dishes:[
+  {em:"🍲",n:"Cocido maragato",d:"反著吃的名菜：先肉、再菜、最後湯，份量極大。",wh:"Astorga 餐館"},
+  {em:"🍢",n:"Tapas 文化",d:"點飲料常免費送一份 tapa，CP 值極高。",wh:"León 的 Barrio Húmedo（濕區）"},
+  {em:"🩸",n:"Morcilla de Burgos 米血腸",d:"加米與洋蔥、香料濃。",wh:"Burgos 各酒吧"}
+ ]},
+ {rg:"Galicia 加利西亞",c:"#3f7c6a",dishes:[
+  {em:"🐙",n:"Pulpo a la Gallega 章魚",d:"水煮章魚撒紅椒粉＋橄欖油，最後 100km 必吃。",wh:"Melide 老店 Pulpería Ezequiel"},
+  {em:"🌶️",n:"Pimientos de Padrón 青椒",d:"油煎撒鹽，十個有一個辣的賭運小點。",wh:"加利西亞各餐館"},
+  {em:"🍰",n:"Tarta de Santiago 杏仁蛋糕",d:"表面糖粉印聖雅各十字。",wh:"Santiago 城內甜點店"},
+  {em:"🥂",n:"Albariño 白酒",d:"加利西亞海鮮絕配白葡萄酒。",wh:"Galicia 全區"}
+ ]}
+];
+
+/* ============ RENDER ============ */
+const $=s=>document.querySelector(s), $$=s=>document.querySelectorAll(s);
+const TABS=[["s-home","🏠 總覽"],["s-gear","🎒 裝備清單"],["s-brand","🏷️ 品牌推薦"],["s-route","🥾 路線庇護所"],["s-spots","📸 打卡地圖"],["s-faith","⛪ 儀式聖餐"],["s-food","🍷 美食人文"]];
+
+function buildNav(){
+  const nav=$("#nav");
+  TABS.forEach(([id,label],i)=>{
+    const b=document.createElement("button");
+    b.innerHTML=`<span class="ico">${label.split(" ")[0]}</span>${label.split(" ")[1]}`;
+    b.onclick=()=>show(id);
+    b.dataset.t=id; if(i===0)b.classList.add("on");
+    nav.appendChild(b);
+  });
+}
+function show(id){
+  $$("section").forEach(s=>s.classList.toggle("on",s.id===id));
+  $$("#nav button").forEach(b=>b.classList.toggle("on",b.dataset.t===id));
+  window.scrollTo({top:0,behavior:"smooth"});
+  try{localStorage.setItem("camino_tab",id)}catch(e){}
+}
+
+function renderRegions(){
+  const el=$("#regions");
+  REGIONS.forEach((r,i)=>{
+    const s=document.createElement("span");s.className="rg";s.style.background=r.c;s.textContent=r.n;
+    el.appendChild(s);
+    if(i<REGIONS.length-1){const a=document.createElement("span");a.className="arrow";a.textContent="→";el.appendChild(a);}
+  });
+}
+
+/* --- Checklist --- */
+let CK={};
+try{CK=JSON.parse(localStorage.getItem("camino_check")||"{}")}catch(e){CK={}}
+function saveCK(){try{localStorage.setItem("camino_check",JSON.stringify(CK))}catch(e){}}
+function renderGear(){
+  const root=$("#gear");root.innerHTML="";
+  GEAR.forEach((cat,ci)=>{
+    const card=document.createElement("div");card.className="cat card";
+    let items="";
+    cat.items.forEach((it,ii)=>{
+      const id="g"+ci+"_"+ii;
+      const ck=CK[id]?" ck":"";
+      const opt=it.ess?"":" optional";
+      const tags=`<span class="tag ${it.ess?'t-ess':'t-opt'}">${it.ess?'必備':'選配'}</span>`+
+        `<span class="tag t-qty">×${it.qty}</span>`+
+        `<span class="tag t-wt">${it.wt}</span>`;
+      items+=`<div class="item${ck}${opt}" data-id="${id}" data-w="${it.w}" data-ess="${it.ess}">
+        <div class="chk"></div>
+        <div class="it-body">
+          <div class="nm">${it.n} <span class="en">${it.en}</span></div>
+          <div class="tags">${tags}</div>
+          <div class="tip">${it.tip}</div>
+        </div></div>`;
+    });
+    card.innerHTML=`<div class="cat-h"><span class="ico">${cat.ico}</span><h3>${cat.cat}</h3><span class="cnt" data-c="${ci}"></span><span class="chev">▶</span></div><div class="items">${items}</div>`;
+    root.appendChild(card);
+  });
+  // collapse logic
+  $$(".cat-h").forEach(h=>h.onclick=()=>h.parentElement.classList.toggle("open"));
+  $$(".cat").forEach(c=>c.classList.add("open"));
+  $$("#gear .item").forEach(it=>it.onclick=e=>{
+    const id=it.dataset.id; CK[id]=!CK[id];
+    it.classList.toggle("ck",CK[id]); saveCK(); updateStats();
+  });
+  updateStats();
+}
+function updateStats(){
+  let total=0,done=0,w=0;
+  $$("#gear .item").forEach(it=>{
+    total++; if(CK[it.dataset.id]){done++; w+=+it.dataset.w;}
+  });
+  $("#pg-n").textContent=done; $("#pg-t").textContent=total;
+  $("#pg-bar").style.width=(total?done/total*100:0)+"%";
+  $("#wt-now").textContent=(w/1000).toFixed(1)+" kg";
+  const bw=+$("#bw").value||60;
+  $("#wt-target").textContent=(bw*0.1).toFixed(1);
+  $("#wt-now").style.color = (w/1000>bw*0.1)?"var(--hard)":"var(--navy)";
+  // per-cat count
+  GEAR.forEach((cat,ci)=>{
+    let t=0,d=0; cat.items.forEach((it,ii)=>{t++; if(CK["g"+ci+"_"+ii])d++;});
+    const el=document.querySelector('.cnt[data-c="'+ci+'"]'); if(el)el.textContent=d+" / "+t;
+  });
+}
+
+/* --- Brands --- */
+function renderBrands(){
+  const root=$("#brands");
+  BRANDS.forEach(b=>{
+    const card=document.createElement("div");card.className="card pad info";card.style.marginBottom="14px";
+    let rows=b.rows.map(r=>`<tr><td><b>${r.name}</b></td><td>${r.price}</td><td>${r.pros}</td><td style="color:var(--muted)">${r.cons}</td><td>${r.why}</td></tr>`).join("");
+    card.innerHTML=`<h3>${b.cat}</h3><div style="overflow-x:auto"><table class="cmp"><tr><th>推薦品牌與型號</th><th>價位</th><th>優點</th><th>缺點</th><th>適合 Camino 的理由</th></tr>${rows}</table></div>`;
+    root.appendChild(card);
+  });
+  const apps=$("#apps");
+  apps.innerHTML=APPS.map(a=>`<div class="ritem"><span class="lab">${a.n}</span><span>${a.d}</span></div>`).join("");
+}
+
+/* --- Route --- */
+function renderStages(){
+  const root=$("#stages");root.innerHTML="";
+  STAGES.forEach((st,i)=>{
+    const rg=REGIONS[st.rg];
+    const bcls=["b1","b2","b3"][st.diff-1], blabel=["輕鬆","中等","辛苦"][st.diff-1];
+    let alb = st.alb && st.alb.length
+      ? st.alb.map(a=>`<div class="alb"><span class="ab-ico">${a.t}</span><div><div class="ab-n">${a.n} ${a.s?'<span class="star">'+'★'.repeat(a.s)+'</span>':''}</div><div class="ab-meta"><span class="price">${a.p}</span> · ${a.tip}</div></div></div>`).join("")
+      : `<div class="alb-none">此為中繼小站，以沿途公立庇護所為主，先到先得。</div>`;
+    const dnum = (""+st.d).startsWith("+") ? st.d.replace("+","") : st.d;
+    const dlab = (""+st.d).startsWith("+") ? "盡頭" : "Day";
+    const div=document.createElement("div");div.className="stage card";div.dataset.diff=st.diff;
+    div.innerHTML=`
+      <div class="st-h">
+        <div class="st-day"><b>${dnum}</b><span>${dlab}</span></div>
+        <div class="st-route">
+          <div class="tt">${st.from} <span style="color:var(--gold)">➤</span> ${st.to}</div>
+          <div class="sub"><span class="dot" style="background:${rg.c}"></span>${rg.n}<span class="km">${st.km} km</span><span class="badge ${bcls}">${blabel}</span></div>
+        </div>
+        <span class="chev">▶</span>
+      </div>
+      <div class="st-body">
+        <div class="st-note"><b>📍 重點／注意：</b>${st.note}</div>
+        <div style="font-size:13px;color:var(--muted);font-weight:700;margin-bottom:2px">🛏 推薦庇護所</div>
+        ${alb}
+      </div>`;
+    div.querySelector(".st-h").onclick=()=>div.classList.toggle("open");
+    root.appendChild(div);
+  });
+}
+function filterStages(d){
+  $$("#stages .stage").forEach(s=>s.classList.toggle("hide", d!=0 && s.dataset.diff!=d));
+}
+
+/* --- Spots --- */
+function renderSpots(){
+  const root=$("#spots");
+  SPOTS.forEach((sp,i)=>{
+    const div=document.createElement("div");div.className="spot card";
+    div.innerHTML=`
+      <div class="num">${i+1}</div>
+      <div class="sp-b">
+        <h3>${sp.star?'★ ':''}${sp.n} <span class="en">${sp.en}</span></h3>
+        <div class="where">📍 ${sp.town}</div>
+        <div class="shot">${sp.shot}</div>
+        <div class="sp-act">
+          <span class="geo">${sp.lat.toFixed(5)}, ${sp.lng.toFixed(5)}</span>
+          <a class="mini gmap" href="https://www.google.com/maps/search/?api=1&query=${sp.lat},${sp.lng}" target="_blank" rel="noopener">🗺 開地圖</a>
+          <button class="mini" onclick="copyGeo(${sp.lat},${sp.lng})">📋 複製座標</button>
+        </div>
+      </div>`;
+    root.appendChild(div);
+  });
+}
+function copyGeo(lat,lng){
+  const t=lat+","+lng;
+  navigator.clipboard?.writeText(t).then(()=>toast("已複製座標 "+t)).catch(()=>toast("座標："+t));
+}
+
+/* --- Faith --- */
+function renderFaith(){
+  const root=$("#faith");
+  FAITH.forEach(b=>{
+    const card=document.createElement("div");card.className="card pad block";
+    card.innerHTML=`<h3><span class="ico">${b.ico}</span>${b.h}</h3>`+
+      b.rows.map(r=>`<div class="ritem"><span class="lab">${r.lab}</span><span>${r.v}</span></div>`).join("");
+    root.appendChild(card);
+  });
+}
+
+/* --- Food --- */
+function renderFood(){
+  const root=$("#food");
+  FOOD.forEach(f=>{
+    const card=document.createElement("div");card.className="food-cat";
+    card.innerHTML=`<div class="fc-h" style="background:${f.c}">${f.rg}</div><div class="fc-body">`+
+      f.dishes.map(d=>`<div class="dish"><span class="em">${d.em}</span><div><b>${d.n}</b> — ${d.d}<div class="wh">📍 ${d.wh}</div></div></div>`).join("")+`</div>`;
+    root.appendChild(card);
+  });
+}
+
+/* --- Toast --- */
+let tT;
+function toast(msg){const t=$("#toast");t.textContent=msg;t.classList.add("show");clearTimeout(tT);tT=setTimeout(()=>t.classList.remove("show"),1900);}
+
+/* ============ INIT ============ */
+buildNav();renderRegions();renderGear();renderBrands();renderStages();renderSpots();renderFaith();renderFood();
+
+// restore last tab
+try{const lt=localStorage.getItem("camino_tab");if(lt&&document.getElementById(lt))show(lt);}catch(e){}
+
+// gear controls
+$("#bw").value=(()=>{try{return localStorage.getItem("camino_bw")||60}catch(e){return 60}})();
+$("#bw").oninput=()=>{try{localStorage.setItem("camino_bw",$("#bw").value)}catch(e){}; updateStats();};
+$("#f-all").onclick=function(){$$("#gear .item").forEach(it=>it.classList.remove("opt-hide"));setAct(this,["#f-all","#f-ess"]);};
+$("#f-ess").onclick=function(){$$("#gear .item").forEach(it=>{if(it.dataset.ess==="0")it.classList.add("opt-hide");else it.classList.remove("opt-hide");});setAct(this,["#f-all","#f-ess"]);};
+function setAct(btn,grp){grp.forEach(g=>$(g).classList.remove("act"));btn.classList.add("act");}
+$("#f-all").classList.add("act");
+let gExp=true;
+$("#exp-g").onclick=function(){gExp=!gExp;$$(".cat").forEach(c=>c.classList.toggle("open",gExp));this.textContent=gExp?"收合全部":"展開全部";};
+$("#reset-g").onclick=function(){if(confirm("確定清除所有勾選？")){CK={};saveCK();$$("#gear .item").forEach(it=>it.classList.remove("ck"));updateStats();toast("已重設勾選");}};
+
+// route controls
+$$(".filterbar [data-df]").forEach(b=>b.onclick=function(){
+  $$(".filterbar [data-df]").forEach(x=>x.classList.remove("act"));this.classList.add("act");
+  filterStages(this.dataset.df);
+});
+let rExp=false;
+$("#exp-r").onclick=function(){rExp=!rExp;$$(".stage").forEach(s=>s.classList.toggle("open",rExp));this.textContent=rExp?"收合全部":"展開全部";};
+
+// service worker (only over http/https)
+if('serviceWorker' in navigator && location.protocol.startsWith('http')){
+  navigator.serviceWorker.register('sw.js').catch(()=>{});
+}
+</script>
+</body>
+</html>
