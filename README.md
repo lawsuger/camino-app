@@ -46,6 +46,11 @@ camino-app/
 
 整合自 buencaminoinfo、gotokm0、prosabrina、cherstravel 等中文實走遊記，以及 Gronze、CaminoWays、American Pilgrims 等英文權威站與官方禮儀頁。
 
+分享卡（`qr/` 資料夾）：
+- `qr-card-photo*`：底圖為 Alto del Perdón 寬恕之峰鐵雕朝聖者，照片來自 [Unsplash](https://unsplash.com/)（免費授權 Unsplash License）。
+- `qr-card-illust*`：程式繪製插畫（`make-qr.py`），版權自有。
+- QR 皆指向本站、ECC-H 容錯、已用 zxing-cpp 解碼驗證可掃。
+
 > ⚠️ 庇護所價格與彌撒時間逐年微調，出發前請再次確認；公立庇護所多為先到先得、不可預訂。
 
 ---
