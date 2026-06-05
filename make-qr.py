@@ -27,6 +27,8 @@ IG_TEXT = "@harbor.__.0618 · @sugarlee0129"
 
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "qr")
 BG = os.path.join(OUT, "bg-pilgrims.jpg")
+BG_MIST = os.path.join(OUT, "bg-mist.jpg")
+BG_CRUZ = os.path.join(OUT, "bg-cruz.jpg")
 os.makedirs(OUT, exist_ok=True)
 
 NAVY = (22, 48, 73); NAVY2 = (27, 48, 73)
@@ -149,8 +151,13 @@ clean_card(1080, 1080).save(os.path.join(OUT, "qr-card-square.png"))
 
 
 # ---------- 場景版（真實照片 / 插畫共用版型）----------
-def scene_photo(W, H):
-    return ImageOps.fit(Image.open(BG).convert("RGB"), (W, H), method=Image.LANCZOS, centering=(0.42, 0.46))
+def make_scene_photo(path, centering):
+    def fn(W, H):
+        return ImageOps.fit(Image.open(path).convert("RGB"), (W, H), method=Image.LANCZOS, centering=centering)
+    return fn
+
+
+scene_photo = make_scene_photo(BG, (0.42, 0.46))
 
 
 def scene_card(W, H, sq, scene_fn):
@@ -183,6 +190,15 @@ def scene_card(W, H, sq, scene_fn):
 
 scene_card(1080, 1350, False, scene_photo).save(os.path.join(OUT, "qr-card-photo.png"))
 scene_card(1080, 1080, True, scene_photo).save(os.path.join(OUT, "qr-card-photo-square.png"))
+
+# 備案照片 1：晨霧單人朝聖者
+mist = make_scene_photo(BG_MIST, (0.54, 0.46))
+scene_card(1080, 1350, False, mist).save(os.path.join(OUT, "qr-card-mist.png"))
+scene_card(1080, 1080, True, mist).save(os.path.join(OUT, "qr-card-mist-square.png"))
+
+# 備案照片 2：Cruz de Ferro 鐵十字日落（直式偏顧人群、方形偏顧十字）
+scene_card(1080, 1350, False, make_scene_photo(BG_CRUZ, (0.5, 0.32))).save(os.path.join(OUT, "qr-card-cruz.png"))
+scene_card(1080, 1080, True, make_scene_photo(BG_CRUZ, (0.5, 0.16))).save(os.path.join(OUT, "qr-card-cruz-square.png"))
 
 
 # ---------- 插畫版場景 ----------
@@ -246,7 +262,8 @@ scene_card(1080, 1350, False, poster_scene).save(os.path.join(OUT, "qr-card-illu
 scene_card(1080, 1080, True, poster_scene).save(os.path.join(OUT, "qr-card-illust-square.png"))
 
 for fn in ("qr-plain.png", "qr-logo.png", "qr.svg", "qr-card.png", "qr-card-square.png",
-           "qr-card-photo.png", "qr-card-photo-square.png", "qr-card-illust.png", "qr-card-illust-square.png"):
+           "qr-card-photo.png", "qr-card-photo-square.png", "qr-card-mist.png", "qr-card-mist-square.png",
+           "qr-card-cruz.png", "qr-card-cruz-square.png", "qr-card-illust.png", "qr-card-illust-square.png"):
     p = os.path.join(OUT, fn)
     print(f"{fn:26} {os.path.getsize(p):>8,} bytes")
 print("OK ->", OUT)
