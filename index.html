@@ -210,10 +210,81 @@ table.cmp tr:last-child td{border-bottom:none}
 .toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(20px);background:var(--navy);color:#fff;padding:10px 20px;border-radius:30px;font-size:13.5px;opacity:0;pointer-events:none;transition:.3s;z-index:99;box-shadow:0 6px 20px rgba(0,0,0,.25)}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
+/* Eco links（三站互連） */
+.eco{margin-left:auto;display:flex;gap:6px;flex:0 0 auto}
+.eco a{font-size:11.5px;color:#cfe0f2;border:1px solid rgba(255,255,255,.28);padding:4px 10px;border-radius:14px;white-space:nowrap;transition:.15s}
+.eco a:hover{color:#fff;border-color:var(--gold-soft)}
+
+/* 我的 40 天 */
+.today-banner{background:linear-gradient(135deg,#1b3a5b,#2c5f8a);color:#fff;border-radius:18px;padding:18px 20px;margin-bottom:16px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.today-banner .big-d{font-family:'Playfair Display',serif;font-size:36px;line-height:1;color:var(--gold-soft);flex:0 0 auto}
+.today-banner .tb-t{flex:1;min-width:200px}
+.today-banner .tb-t b{font-size:16.5px;display:block;color:#fff}
+.today-banner .tb-t span{font-size:13px;color:#d6e3f0}
+.blk-h{display:flex;align-items:baseline;gap:9px;margin:22px 2px 9px}
+.blk-h h3{margin:0;font-size:16.5px;color:var(--navy)}
+.blk-h .rng{font-size:12px;color:var(--muted);font-family:'Playfair Display',serif}
+.day{margin-bottom:8px;overflow:hidden}
+.day .st-h{padding:11px 14px}
+.day .dt{flex:0 0 auto;width:52px;text-align:center}
+.day .dt b{display:block;font-family:'Playfair Display',serif;font-size:16px;color:var(--navy);line-height:1.15}
+.day .dt span{font-size:10.5px;color:var(--muted)}
+.day.open .st-body{display:block}
+.day.open .chev{transform:rotate(90deg)}
+.day.today{border:2px solid var(--gold);box-shadow:0 4px 18px rgba(224,164,0,.28)}
+.day .tdy{background:var(--gold);color:#fff;font-size:10.5px;font-weight:700;padding:2px 8px;border-radius:10px;flex:0 0 auto}
+.day .d-meta{font-size:12px;color:var(--muted);display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:1px}
+.day .th-line{font-size:12.5px;color:var(--blue);margin-top:2px}
+.plan-row{display:flex;gap:9px;padding:7px 0;border-bottom:1px dashed var(--line);font-size:13.5px}
+.plan-row:last-child{border:none}
+.plan-row .pl{flex:0 0 auto;font-size:15px}
+
+/* 訂房車票作戰板 */
+.bk-item{display:flex;gap:10px;padding:10px 14px;border-bottom:1px solid var(--line);align-items:flex-start;cursor:pointer}
+.bk-item:last-child{border:none}
+.bk-item.ck .bk-n{text-decoration:line-through;color:var(--muted)}
+.bk-n{font-weight:600;font-size:14px}
+.bk-n .urg{font-size:11px;margin-right:4px}
+.bk-tip{font-size:12.3px;color:var(--muted);margin-top:1px}
+.bk-ref{width:100%;max-width:280px;border:1px solid var(--line);border-radius:8px;padding:4px 8px;font-family:inherit;font-size:12.5px;margin-top:6px;background:#fffdf6}
+
+/* SOS */
+.tel-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px}
+.tel{display:flex;gap:11px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:13px;padding:12px 14px;box-shadow:var(--shadow)}
+.tel .t-ico{font-size:22px;flex:0 0 auto}
+.tel b{font-size:13.5px;display:block;color:var(--navy)}
+.tel a{font-family:'Playfair Display',serif;font-size:17px;font-weight:600;color:var(--blue)}
+.tel .t-sub{font-size:11.5px;color:var(--muted)}
+.sos-form .ritem{flex-wrap:wrap}
+.sos-form input{flex:1 1 220px;border:1px solid var(--line);border-radius:8px;padding:6px 9px;font-family:inherit;font-size:13.5px;background:#fffdf6}
+.ph-row{display:flex;gap:10px;padding:9px 0;border-bottom:1px dashed var(--line);align-items:baseline;flex-wrap:wrap}
+.ph-row:last-child{border:none}
+.ph-row .es{flex:1 1 55%;font-weight:600;font-size:14.5px;color:var(--navy)}
+.ph-row .zh{flex:1 1 38%;font-size:13px;color:var(--muted)}
+
+/* 記帳 */
+.cash-form{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:9px;align-items:end}
+.cash-form label{font-size:11.5px;color:var(--muted);display:block;margin-bottom:3px}
+.cash-form input,.cash-form select{width:100%;border:1px solid var(--line);border-radius:9px;padding:8px 9px;font-family:inherit;font-size:14px;background:#fffdf6}
+.exp-day{font-size:12.5px;color:var(--muted);font-weight:700;margin:13px 2px 4px}
+.exp-row{display:flex;gap:9px;padding:8px 12px;border-bottom:1px dashed var(--line);font-size:13.8px;align-items:center}
+.exp-row:last-child{border:none}
+.exp-row .ec{flex:0 0 auto;font-size:16px}
+.exp-row .en2{flex:1;min-width:0}
+.exp-row .ev{font-weight:700;color:var(--navy);font-family:'Playfair Display',serif;flex:0 0 auto}
+.exp-row .del{flex:0 0 auto;border:none;background:none;color:var(--hard);cursor:pointer;font-size:15px;padding:2px 6px}
+.cat-bar{display:flex;align-items:center;gap:8px;font-size:12.8px;margin:5px 0}
+.cat-bar .cb-n{flex:0 0 92px}
+.cat-bar .cb-bar{flex:1;height:8px;background:var(--stone);border-radius:5px;overflow:hidden}
+.cat-bar .cb-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--gold-soft),var(--gold))}
+.cat-bar .cb-v{flex:0 0 auto;color:var(--muted)}
+
 @media(max-width:720px){
   .stats{grid-template-columns:repeat(2,1fr)}
   .grid2{grid-template-columns:1fr}
   .brand h1{font-size:16px}
+  .eco a{padding:4px 7px}
+  .eco a .t{display:none}
   main{padding:18px 12px 90px}
   .ritem{flex-wrap:wrap}
 }
@@ -234,13 +305,30 @@ table.cmp tr:last-child td{border-bottom:none}
       <h1>朝聖之路 · 法國之路</h1>
       <p>CAMINO FRANCÉS · SJPP → SANTIAGO</p>
     </div>
+    <div class="eco">
+      <a href="https://camino-prayer.pages.dev/?v=camino40" target="_blank" rel="noopener" title="逐日靈修 App">🙏<span class="t"> 靈修</span></a>
+      <a href="https://camino-2026.pages.dev/journal.html" target="_blank" rel="noopener" title="父子每日記錄">📔<span class="t"> 日誌</span></a>
+      <a href="https://camino-2026.pages.dev/" target="_blank" rel="noopener" title="朝聖總站">🌐<span class="t"> 總站</span></a>
+    </div>
   </div>
   <nav id="nav"></nav>
 </header>
 
 <main>
+  <!-- 我的 40 天（實際拍板行程） -->
+  <section id="s-plan" class="on">
+    <div class="sec-head"><span class="kicker">My Camino · 2026/6/18 – 7/27</span><h2>📅 我的 40 天</h2><p class="ln">修哥 × 諒哥的實際拍板行程：精選段連續走＋跳接、奔牛節開幕、火之夜、大香爐、環法巴黎。出發後打開自動跳到「今天」。</p></div>
+    <div id="today-banner"></div>
+    <div class="card" id="bookboard" style="margin-bottom:18px">
+      <div class="cat-h" id="bk-h"><span class="ico">🎫</span><h3>訂房／車票作戰板</h3><span class="cnt" id="bk-cnt"></span><span class="chev">▶</span></div>
+      <div id="bk-items" style="display:none"></div>
+    </div>
+    <div id="plan"></div>
+    <div class="note-box" style="margin-top:14px">🔥 <b>夏季實況（2026-06-11 查證）</b>：AEMET 已發 6 月首波熱浪警報、今夏預報整體偏熱 → Meseta 段（6/30–7/5）「清晨出發、正午前收工」當鐵律，電解質粉備好。</div>
+  </section>
+
   <!-- 總覽 -->
-  <section id="s-home" class="on">
+  <section id="s-home">
     <div class="hero">
       <h2>Buen Camino, 修哥！</h2>
       <p>從法國 Saint-Jean-Pied-de-Port 翻越庇里牛斯山，穿過 Navarra 酒鄉、Meseta 大平原、加利西亞綠林，抵達 Santiago de Compostela 主教座堂，再走到大西洋邊的「世界盡頭」Finisterre。這份手冊整合了裝備、品牌、逐日路線、庇護所、打卡座標、儀式與美食 —— 規劃與帶著走兩用。</p>
@@ -355,6 +443,49 @@ table.cmp tr:last-child td{border-bottom:none}
     <div class="sec-head"><span class="kicker">Food &amp; Culture</span><h2>🍷 特色美食 &amp; 人文</h2><p class="ln">依地區整理的必吃與在地體驗。一路從巴斯克 pintxos、Rioja 紅酒，吃到加利西亞章魚與聖地牙哥杏仁蛋糕。</p></div>
     <div class="callout">🍽 <b>朝聖者套餐 Menú del Peregrino</b>：沿途餐廳／庇護所的固定套餐 —— 前菜＋主菜＋甜點＋麵包，多含一瓶（或半瓶）餐酒或水，通常 <b>€10–15</b>。份量足、最省錢的正餐選擇。</div>
     <div id="food"></div>
+  </section>
+
+  <!-- SOS 西語 -->
+  <section id="s-sos">
+    <div class="sec-head"><span class="kicker">Emergency &amp; Español</span><h2>🆘 SOS · 西語救援</h2><p class="ln">緊急電話一鍵撥打、自填資料卡（只存在這支手機）、Camino 最常用的 29 句西語。全部離線可用。</p></div>
+    <div class="callout">🚨 <b>只要記住一個號碼：112</b> —— 歐盟通用緊急專線（西／法／葡都通），警察、消防、救護全包，<b>手機沒 SIM 卡、沒訊號漫遊也撥得通</b>。</div>
+    <div class="tel-grid" id="tels"></div>
+    <div class="card pad block sos-form" style="margin-top:16px">
+      <h3><span class="ico">🧾</span>我的緊急資料卡（出發前填好）</h3>
+      <div id="sos-form"></div>
+      <p style="font-size:11.5px;color:var(--muted);margin:10px 0 0">🔒 資料只儲存在這支手機的瀏覽器裡，不會上傳任何伺服器。建議再<button class="mini" onclick="window.print()" style="margin:0 4px">🖨 列印本頁</button>放進防水證件夾備援。</p>
+    </div>
+    <div class="card pad block" style="margin-top:16px">
+      <h3><span class="ico">🗣️</span>救命＋常用西語 29 句</h3>
+      <p style="font-size:12.5px;color:var(--muted);margin:0 0 6px">發音訣竅：羅馬拼音直接唸。<b>j＝ㄏ、ll＝一、ñ＝ㄋㄧ、h 不發音、v≈b</b>，重音多在倒數第二音節。</p>
+      <div id="phrases"></div>
+    </div>
+    <div class="note-box">💊 <b>海外就醫小抄</b>：急症打 112 或直奔 Urgencias（急診）；小傷水泡找綠十字招牌藥局 <b>Farmacia</b>。回台 <b>6 個月內</b>憑診斷書＋收據正本，可向健保署申請「自墊醫療費用核退」。</div>
+  </section>
+
+  <!-- 記帳 -->
+  <section id="s-cash">
+    <div class="sec-head"><span class="kicker">Expense Tracker</span><h2>💶 旅費記帳</h2><p class="ln">隨手記一筆，自動分類加總＋換算台幣。資料存在手機裡；回國一鍵複製 CSV，直接變出書附錄「800 公里花了多少錢」。</p></div>
+    <div class="card pad" style="margin-bottom:14px">
+      <div class="cash-form">
+        <div><label>日期</label><input type="date" id="ex-d"></div>
+        <div><label>分類</label><select id="ex-c"></select></div>
+        <div><label>金額 €</label><input type="number" id="ex-a" min="0" step="0.01" placeholder="0.00" inputmode="decimal"></div>
+        <div style="grid-column:1/-1"><label>備註（店名／站名，選填）</label><input type="text" id="ex-n" placeholder="例：Orisson 半膳、ALSA 巴士"></div>
+        <button class="btn act" id="ex-add" style="justify-content:center">＋ 記一筆</button>
+      </div>
+    </div>
+    <div class="stats" style="grid-template-columns:repeat(3,1fr)">
+      <div class="stat"><b id="ex-total">€0</b><span>總支出</span></div>
+      <div class="stat"><b id="ex-avg">€0</b><span>日均（有記帳的天數）</span></div>
+      <div class="stat"><b id="ex-twd">NT$0</b><span>≈ 台幣・匯率 <input id="ex-rate" type="number" step="0.1" min="20" max="50" style="width:54px;border:1px solid var(--line);border-radius:6px;font-size:12px;text-align:center;font-family:inherit"></span></div>
+    </div>
+    <div class="card pad" id="ex-cats" style="margin-bottom:14px"></div>
+    <div class="btns" style="margin-bottom:10px">
+      <button class="btn" id="ex-csv">📋 複製 CSV（出書用）</button>
+      <button class="btn" id="ex-clear">↺ 清空全部</button>
+    </div>
+    <div class="card" id="ex-list" style="padding:4px 4px"></div>
   </section>
 </main>
 
@@ -715,9 +846,139 @@ const FOOD=[
  ]}
 ];
 
+/* ============ 我的 40 天（2026-06-08 拍板版） ============ */
+const TRIP_START="2026-06-18", TRIP_END="2026-07-27";
+const PBLOCKS=[
+ {t:"🧳 去程",r:"6/18–6/20"},
+ {t:"⛰️ 前段精選：庇里牛斯 → Rioja 酒鄉 → Burgos",r:"6/21–6/29"},
+ {t:"🌾 Meseta 精華",r:"6/30–7/5"},
+ {t:"🐂 奔牛節開幕插曲",r:"7/6"},
+ {t:"🌲 後段精選：León → Cruz de Ferro → Santiago",r:"7/7–7/20"},
+ {t:"🌊 世界盡頭 · 南下波多",r:"7/21–7/22"},
+ {t:"🍷🔔🚴 慶典收尾：波多 → 火之夜 → 大香爐 → 環法",r:"7/23–7/27"}
+];
+const MYPLAN=[
+ {d:"2026-06-18",w:"四",day:"",blk:0,seg:"桃園 ✈ 歐洲樞紐（夜飛）",km:"",md:"✈",th:"啟程的呼召（來 11:8）",ph:"機場定裝照、父子出發合影、行李開箱",st:"機上",tr:""},
+ {d:"2026-06-19",w:"五",day:"",blk:0,seg:"抵歐洲 → 轉 Biarritz / Bayonne",km:"",md:"✈🚌",th:"在路上（詩 121:8 出入蒙保守）",ph:"火車窗景、歐洲第一餐",st:"Bayonne / Pamplona",tr:"CDG→Biarritz 廉航 或 TGV→Bayonne。⚠️ EES 新制首次入境要按指紋＋拍臉，通關排隊變長，轉接留 3 小時以上"},
+ {d:"2026-06-20",w:"六",day:"",blk:0,seg:"進 SJPP，領朝聖者護照 credencial",km:"",md:"🚌",th:"領憑證 · 立志（書 1:9 剛強壯膽）",ph:"⭐Porte St-Jacques 城門石板街、護照蓋首章",st:"SJPP",tr:"Bayonne→SJPP 火車（SNCF TER）約 1 小時"},
+ {d:"2026-06-21",w:"日",day:"D1",blk:1,seg:"SJPP → Orisson",km:"8.7",md:"🥾",th:"起程的呼召（來 11:8）",ph:"⭐庇里牛斯牧場稜線、Orisson 黃昏共餐看日落",st:"⭐Refuge Orisson（含早晚餐，務必先訂）",tr:""},
+ {d:"2026-06-22",w:"一",day:"D2",blk:1,seg:"Orisson → Roncesvalles",km:"~19",md:"🥾🔴",th:"腳下的燈（詩 119:105）",ph:"翻山雲海、進西班牙界碑",st:"⛪Albergue de Roncesvalles（傍晚朝聖者彌撒＋祝福必參加）",tr:""},
+ {d:"2026-06-23",w:"二",day:"D3",blk:1,seg:"Roncesvalles → Zubiri",km:"~22",md:"🥾🔴",th:"進城的人（路 19:41）",ph:"下坡櫸木林、魔女橋",st:"🏨Segunda Etapa",tr:""},
+ {d:"2026-06-24",w:"三",day:"D4",blk:1,seg:"Zubiri → Pamplona",km:"~17",md:"🥾",th:"渡橋（創 32 雅各過渡口）",ph:"進奔牛城、舊城 pintxos",st:"⛪Jesús y María（16 世紀古教堂改建）",tr:""},
+ {d:"2026-06-25",w:"四",day:"D5",blk:1,seg:"Pamplona → Puente la Reina",km:"~24",md:"🥾⭐",th:"寬恕（太 18:21-22 七十個七次）",ph:"⭐Alto del Perdón 寬恕之峰鐵雕＋風車、王后橋六拱石橋",st:"⛪Padres Reparadores",tr:""},
+ {d:"2026-06-26",w:"五",day:"D6",blk:1,seg:"Puente la Reina → Estella",km:"~22",md:"🥾",th:"拾穗的人（得 2:1-3）",ph:"Estella 古城、羅馬橋",st:"🏨⭐Alda Estella Hostel",tr:""},
+ {d:"2026-06-27",w:"六",day:"D7",blk:1,seg:"Estella → Los Arcos",km:"~21",md:"🥾⭐",th:"婚宴的酒（約 2:1-11 迦拿）",ph:"⭐Irache 免費酒泉（8:00–20:00，早到人少）",st:"🏨Casa de la Abuela",tr:""},
+ {d:"2026-06-28",w:"日",day:"D8",blk:1,seg:"Los Arcos → Logroño",km:"~28",md:"🥾",th:"第一週的眺望（詩 121 向山舉目）",ph:"進 Rioja 酒鄉、Calle Laurel tapas 街",st:"🏨Check In Rioja",tr:""},
+ {d:"2026-06-29",w:"一",day:"",blk:1,seg:"Logroño 品酒半日 → 跳接 Burgos",km:"",md:"🚌🛌",th:"進城歇腳（詩 27:4 一件事）",ph:"⭐Burgos 主教座堂（世界遺產）、米血腸 morcilla",st:"🏛⭐Casa del Cubo（16 世紀古宅鄰大教堂）",tr:"Logroño→Burgos：ALSA 巴士／火車約 2h（跳過 Nájera–Belorado 一般段）"},
+ {d:"2026-06-30",w:"二",day:"D9",blk:2,seg:"Burgos → Hornillos",km:"~21",md:"🥾",th:"進入曠野（出 13:17-22 火柱雲柱）",ph:"Meseta 入口、無遮蔭麥浪",st:"🏛Municipal（教堂旁）",tr:""},
+ {d:"2026-07-01",w:"三",day:"D10",blk:2,seg:"Hornillos → Castrojeriz",km:"~20",md:"🥾",th:"曠野的試煉（申 8:2-3）",ph:"⭐Alto de Mostelares 制高點日出、城堡山村",st:"🏨A Cien Leguas",tr:""},
+ {d:"2026-07-02",w:"四",day:"D11",blk:2,seg:"Castrojeriz → Frómista",km:"~25",md:"🥾",th:"水渠旁的樹（詩 1 種在溪水旁）",ph:"運河步道、11 世紀羅馬式教堂",st:"🏨Estrella del Camino",tr:""},
+ {d:"2026-07-03",w:"五",day:"D12",blk:2,seg:"Frómista → Carrión",km:"~19",md:"🥾",th:"古道上的相遇（路 24 以馬忤斯）",ph:"⭐Carrión 修女院共餐獻唱（動人）",st:"⛪⭐Parroquial Santa María（修女共餐獻唱）",tr:""},
+ {d:"2026-07-04",w:"六",day:"",blk:2,seg:"Carrión 休整／短走 Meseta",km:"",md:"🛌🥾",th:"寂寞的中段（何 2:14 領她到曠野）",ph:"麥田星空、長路一鏡到底空景",st:"Carrión / Sahagún",tr:""},
+ {d:"2026-07-05",w:"日",day:"",blk:2,seg:"Carrión → Sahagún（短程或休）· Meseta 中點",km:"",md:"🥾🛌",th:"半路回望（詩 23 牧者）",ph:"半程紀念、回望已走的路",st:"🏛Cluny / ⛪Santa Cruz 修女院（或提前拉 León 住兩晚）",tr:"⚡選項 B：今晚就拉到 León 連住兩晚，明天輕裝來回奔牛節"},
+ {d:"2026-07-06",w:"一",day:"",blk:3,seg:"Pamplona 奔牛節開幕 Txupinazo 12:00",km:"",md:"🚌🐂",th:"眾人的城（耶 29:7 為那城求平安）",ph:"⭐市政廳廣場紅白人海＋香檳煙火、紅領巾儀式、海明威雕像；夜間 23:00 國際煙火",st:"León（看完開幕夜車拉到，不宿 Pamplona）",tr:"上午火車赴 Pamplona（多需轉車，車票先買）；晚上 Pamplona→León。⚠️ 大背包進不了廣場，寄物先查（或用 7/5 的 León 兩晚方案輕裝來回）"},
+ {d:"2026-07-07",w:"二",day:"",blk:4,seg:"León 休整（若 7/6 已宿 León 則整天慢遊）",km:"",md:"🛌",th:"過約旦河 · 再出發（書 3）",ph:"⭐León 主教座堂彩繪玻璃、Barrio Húmedo tapas",st:"⛪⭐Benedictinas（修女院晚禱祝福）",tr:""},
+ {d:"2026-07-08",w:"三",day:"D13",blk:4,seg:"León → San Martín del Camino ⚡",km:"~25",md:"🥾⚡",th:"長路（詩 25:4-5 指教我）",ph:"光榮之橋（中世紀最長石橋）",st:"🏨私立庇護所",tr:"⚡想省 2 天：7/8–7/9 改搭車，從 Astorga 起走山段精華"},
+ {d:"2026-07-09",w:"四",day:"D14",blk:4,seg:"San Martín → Astorga ⚡",km:"~24",md:"🥾⚡",th:"上山的人（出 19 摩西上西奈）",ph:"⭐高第主教宮、cocido maragato 反著吃",st:"🏨⭐San Javier",tr:""},
+ {d:"2026-07-10",w:"五",day:"D15",blk:4,seg:"Astorga → Foncebadón",km:"~26",md:"🥾🔴",th:"在事業高峰的人（出 19）",ph:"進山、Rabanal 奉茶＋葛利果聖歌晚禱",st:"⛪⭐Refugio Gaucelmo（英國兄弟會下午茶）",tr:""},
+ {d:"2026-07-11",w:"六",day:"D16",blk:4,seg:"Foncebadón → Ponferrada",km:"~27",md:"🥾🔴⭐",th:"放下的石頭（賽 53:4 擔當憂患）",ph:"⭐Cruz de Ferro 鐵十字（1,504m 最高點）放石儀式、聖殿城堡",st:"⛪San Nicolás de Flüe",tr:""},
+ {d:"2026-07-12",w:"日",day:"D17",blk:4,seg:"Ponferrada → Villafranca",km:"~25",md:"🥾",th:"騎士的城（詩 91 隱密處）",ph:"Bierzo 酒鄉、美村",st:"⛪San Nicolás el Real / 🏨⭐Albergue Leo",tr:""},
+ {d:"2026-07-13",w:"一",day:"D18",blk:4,seg:"Villafranca → O Cebreiro",km:"~28",md:"🥾🔴⭐",th:"翻越（拿 2 大魚腹中）",ph:"⭐O Cebreiro 凱爾特石屋村雲海、聖杯教堂",st:"🏛⭐Municipal（山頂石村，旺季要早到）",tr:""},
+ {d:"2026-07-14",w:"二",day:"D19",blk:4,seg:"O Cebreiro → Triacastela",km:"~21",md:"🥾",th:"聖體的傳說（太 26:26-29 主餐）",ph:"長下坡綠林",st:"🏛Municipal",tr:""},
+ {d:"2026-07-15",w:"三",day:"D20",blk:4,seg:"Triacastela → Sarria",km:"~18",md:"🥾",th:"定意（路 9:51 定意上耶路撒冷）",ph:"最後 100km 起點、人潮暴增",st:"⛪⭐Monasterio de la Magdalena",tr:""},
+ {d:"2026-07-16",w:"四",day:"D21",blk:4,seg:"Sarria → Portomarín",km:"~22",md:"🥾",th:"匯入人潮（徒 2 五旬節）",ph:"⭐水底之城 Portomarín、100km 里程碑",st:"🏨Ferramenteiro",tr:""},
+ {d:"2026-07-17",w:"五",day:"D22",blk:4,seg:"Portomarín → Palas de Rei",km:"~25",md:"🥾",th:"王的宮殿（詩 24 榮耀的王）",ph:"綠林連續起伏",st:"🏛Municipal",tr:""},
+ {d:"2026-07-18",w:"六",day:"D23",blk:4,seg:"Palas de Rei → Arzúa",km:"~29",md:"🥾",th:"加利西亞的雨（申 11:14 春雨秋雨）",ph:"⭐Melide 章魚 Pulpería Ezequiel 必吃",st:"🏨Cima do Lugar",tr:""},
+ {d:"2026-07-19",w:"日",day:"D24",blk:4,seg:"Arzúa → O Pedrouzo",km:"~19",md:"🥾",th:"最後一夜（太 26:36-46 客西馬尼）",ph:"尤加利森林、距聖城 20km",st:"🏛Arca / 🏨Edreira",tr:""},
+ {d:"2026-07-20",w:"一",day:"D25",blk:4,seg:"O Pedrouzo → Santiago de Compostela",km:"~20",md:"🥾⭐",th:"抵達（詩 122 上耶路撒冷的喜樂）",ph:"⭐大教堂＋奧布拉多伊羅廣場抵達癱坐、12:00 朝聖者彌撒、領 Compostela",st:"⛪⭐Seminario Menor / 🏨The Last Stamp",tr:""},
+ {d:"2026-07-21",w:"二",day:"",blk:5,seg:"世界盡頭一日 tour：Fisterra＋Muxía＋Ézaro",km:"",md:"🚌🌊⭐",th:"到海邊（詩 139:9-10 海極也有你的手）",ph:"⭐Fisterra 燈塔＋K.M.0,00 石碑＋大西洋落日、船之聖母教堂、Ézaro 瀑布",st:"Santiago",tr:"08:45 出發、約 18:00 回（9.5h，GetYourGuide/Civitatis 先訂）"},
+ {d:"2026-07-22",w:"三",day:"",blk:5,seg:"Santiago → 波多（跨進葡萄牙）",km:"",md:"🚌",th:"安息的起點（提後 4:7 美好的仗已打過）",ph:"跨國界、波多 Ribeira 河岸第一眼",st:"波多 Ribeira",tr:"ALSA / FlixBus 直達約 3.5h"},
+ {d:"2026-07-23",w:"四",day:"",blk:6,seg:"波多深度休息",km:"",md:"🍷🛌",th:"安息（創 2:1-3 第七日安息）",ph:"杜羅河日落、Gaia 波特酒窖、Lello 書店、藍瓷 azulejo",st:"波多",tr:""},
+ {d:"2026-07-24",w:"五",day:"",blk:6,seg:"波多 → Santiago；23:30 火之夜 Fuegos del Apóstol",km:"",md:"🚌🎆⭐",th:"數算恩典（詩 103:1-5 不可忘記他的恩惠）",ph:"⭐2026 首度三點齊放「火冠」（Alameda／Cidade da Cultura／Carlomagno）＋大教堂燈光秀——建議 Alameda 側提前卡位，三腳架長曝",st:"Santiago（聖雅各前夜 · 極旺早訂）",tr:"上午巴士北返 3.5h，車上補眠"},
+ {d:"2026-07-25",w:"六",day:"",blk:6,seg:"聖雅各日：10:30 莊嚴彌撒看大香爐 → 午後 ✈ 巴黎",km:"",md:"🔔⛪✈⭐",th:"雅各的擁抱（可 10:35-45 求座位）",ph:"⭐Botafumeiro 53kg 史詩擺盪——提早 60–90 分入座搶側殿、120fps 慢動作、勿閃燈",st:"巴黎",tr:"SCQ→CDG：漢莎 17:45→22:35 轉法蘭克福／Air Baltic+瑞士 15:10→23:30 轉蘇黎世（當天無直飛）"},
+ {d:"2026-07-26",w:"日",day:"",blk:6,seg:"環法最終站 S21：Thoiry → 香榭麗舍（蒙馬特 Rue Lepic 爬三次）",km:"",md:"🚴⭐",th:"奔那當跑的路（林前 9:24-25 賽跑得獎賞）",ph:"⭐香榭麗舍衝線＋凱旋門、蒙馬特石板坡、黃衫誕生。車手約 19:30 才進香榭——白天先卡位＋拍蒙馬特",st:"巴黎（賽事日早訂）",tr:""},
+ {d:"2026-07-27",w:"一",day:"",blk:6,seg:"巴黎 ✈ 台灣（回程）",km:"",md:"✈",th:"回家的人（路 24:33 起身回去）",ph:"護照蓋滿章特寫、40 天數字回顧、父子最後合影",st:"機上",tr:""}
+];
+
+/* 訂房／車票作戰板（出發前倒數） */
+const BOOK=[
+ {u:"🔴🔴",n:"機票 TPE ↔ 巴黎 CDG 來回（6/18 去、7/27 回）",tip:"長榮直達 23:30→08:05 最穩；回程土航／瑞士轉機較省。來回票通常比兩張單程省數千"},
+ {u:"🔴🔴",n:"機票 SCQ → 巴黎（7/25 午後）",tip:"漢莎 17:45→22:35 或 Air Baltic+瑞士 15:10→23:30。沒這張＝大香爐→環法收尾崩塌，最優先！"},
+ {u:"🔴🔴",n:"住宿 Santiago 7/24–25 兩晚（火之夜＋聖雅各日）",tip:"全西班牙湧入、慣例數月前滿；先求有再求好，備案近郊 Milladoiro"},
+ {u:"🔴🔴",n:"住宿 Orisson 6/21 首夜",tip:"官網／email 直訂。若滿 → Plan B：改走 Valcarlos 線，或一日翻到 Roncesvalles＋行李轉運"},
+ {u:"🔴",n:"接駁 6/19：CDG→Biarritz 廉航 或 TGV→Bayonne",tip:"EES 首入境按指紋排隊變長，轉接留 3 小時以上；接 Bayonne→SJPP 火車"},
+ {u:"🔴",n:"住宿 巴黎 7/25–26 兩晚",tip:"環法終點＋週末，選香榭麗舍／RER 沿線"},
+ {u:"🔴",n:"住宿 Santiago 7/20（抵達夜）",tip:"Seminario Menor / The Last Stamp"},
+ {u:"🟡",n:"車票 7/6 兩段：往 Pamplona ＋ Pamplona→León",tip:"開幕日全國搶票，RENFE／ALSA 先買；或改 7/5 進 León 住兩晚、7/6 輕裝來回"},
+ {u:"🟡",n:"住宿 León 7/6（建議連 7/5 兩晚）",tip:"奔牛當晚拉車到 León 睡，行李留旅館"},
+ {u:"🟡",n:"住宿 波多 7/22–23 兩晚",tip:"Ribeira 河岸旅店"},
+ {u:"🟡",n:"巴士 Santiago→波多 7/22、波多→Santiago 7/24",tip:"ALSA / FlixBus，3.5h，€16–50"},
+ {u:"🟡",n:"世界盡頭一日 tour 7/21",tip:"GetYourGuide / Civitatis / Viator，約 €50–60/人，9.5h"},
+ {u:"🟢",n:"申根旅遊保險（含醫療＋救援）",tip:"英文保單印一份；保單號填進 SOS 分頁資料卡"},
+ {u:"🟢",n:"eSIM（Holafly / Airalo）",tip:"落地即上網；訂床、報平安每天用"},
+ {u:"🟢",n:"朝聖者護照 credencial",tip:"台灣先辦，或 6/20 SJPP 朝聖者辦公室領（蓋首章）"}
+];
+
+/* SOS 資料（電話均查證自外交部領事事務局／駐外館處官網 2026-06-11） */
+const TELS=[
+ {i:"🚨",n:"歐盟緊急專線（西／法／葡通用）",tel:"112",disp:"112",sub:"警消救護全包；無 SIM、無訊號也能撥"},
+ {i:"🚑",n:"西班牙救護／警察",tel:"061",disp:"061 / 091",sub:"061 救護（多數自治區）、091 國家警察"},
+ {i:"🇪🇸",n:"駐西班牙代表處 急難救助",tel:"+34639384883",disp:"+34 639 384 883",sub:"馬德里；一般事務 +34 91 571 4678（上班時間）"},
+ {i:"🇫🇷",n:"駐法國代表處 急難救助",tel:"+33680074994",disp:"+33 6 80 07 49 94",sub:"巴黎；6/19 入境與 7/25–27 適用"},
+ {i:"🇵🇹",n:"駐葡萄牙代表處 急難救助",tel:"+351962735481",disp:"+351 962 735 481",sub:"波多 7/22–23 適用；辦公 +351 21 315 1279"},
+ {i:"🇹🇼",n:"外交部緊急聯絡中心（24 小時）",tel:"+886800085095",disp:"+886-800-085-095",sub:"海外付費撥打。法國境內另可免費撥 00-800-0885-0885（⚠️ 西班牙不適用此免費專線）"}
+];
+const SOSF=[
+ ["ins","保險公司＋保單號"],
+ ["insTel","保險公司 24 小時海外急難專線"],
+ ["card","信用卡掛失電話（兩人的卡都填）"],
+ ["med","血型／過敏／慢性用藥（附西文或英文）"],
+ ["ice","台灣緊急聯絡人（姓名＋電話）"],
+ ["pp","護照號碼（修哥／諒哥）"]
+];
+const PHRASES=[
+ {g:"🆘 救命（先背這 8 句）",rows:[
+  ["¡Ayuda, por favor!","請幫幫我！"],
+  ["Necesito un médico.","我需要醫生。"],
+  ["Llame a una ambulancia, por favor.","請幫我叫救護車。"],
+  ["Me duele aquí.","我這裡痛。"],
+  ["Tengo ampollas en los pies.","我腳起水泡了。"],
+  ["¿Dónde está la farmacia más cercana?","最近的藥局在哪裡？"],
+  ["He perdido mi pasaporte / mochila.","我的護照／背包不見了。"],
+  ["Me han robado.","我被偷（搶）了。"]]},
+ {g:"🛏 庇護所",rows:[
+  ["Hola, ¿hay camas libres?","你好，還有床位嗎？"],
+  ["Somos dos peregrinos, padre e hijo.","我們是兩位朝聖者，父子檔。"],
+  ["¿Cuánto cuesta por persona?","一個人多少錢？"],
+  ["¿Puede sellar mi credencial, por favor?","請幫我的朝聖護照蓋章。"],
+  ["¿Hay lavadora y secadora?","有洗衣機／烘衣機嗎？"],
+  ["¿A qué hora cierran la puerta?","門禁是幾點？"]]},
+ {g:"🍽 餐廳酒吧",rows:[
+  ["El menú del peregrino, por favor.","請給我朝聖者套餐。"],
+  ["Una botella de agua / vino tinto, por favor.","請給我一瓶水／紅酒。"],
+  ["Soy alérgico a...","我對……過敏。"],
+  ["La cuenta, por favor.","買單，謝謝。"],
+  ["¡Está buenísimo!","太好吃了！"]]},
+ {g:"🥾 路上",rows:[
+  ["¿Por dónde va el Camino?","朝聖路往哪邊走？"],
+  ["¿Cuántos kilómetros faltan hasta Santiago?","到 Santiago 還有幾公里？"],
+  ["¿Dónde hay una fuente de agua potable?","哪裡有飲用水？"],
+  ["¿Me puede llamar un taxi, por favor?","可以幫我叫計程車嗎？"],
+  ["¿Dónde está la parada de autobús?","公車站在哪裡？"]]},
+ {g:"🤝 社交＋信仰（訪問開場也好用）",rows:[
+  ["Mi hijo y yo venimos de Taiwán.","我和兒子從台灣來。"],
+  ["¿A qué hora es la misa del peregrino?","朝聖者彌撒幾點開始？"],
+  ["¿Puedo hacerle una foto?","可以幫您拍張照嗎？"],
+  ["Gracias, muy amable.","謝謝，您人真好。"],
+  ["¡Buen Camino!","一路平安！（朝聖者間的招呼語）"]]}
+];
+
+/* 記帳分類 */
+const EXCATS=[["🛏","住宿"],["🍽","餐食"],["🚌","交通"],["🎒","裝備"],["🎟","門票/活動"],["🧴","雜項"]];
+
 /* ============ RENDER ============ */
 const $=s=>document.querySelector(s), $$=s=>document.querySelectorAll(s);
-const TABS=[["s-home","🏠 總覽"],["s-gear","🎒 裝備清單"],["s-brand","🏷️ 品牌推薦"],["s-route","🥾 路線庇護所"],["s-spots","📸 打卡地圖"],["s-faith","⛪ 儀式聖餐"],["s-food","🍷 美食人文"]];
+const TABS=[["s-plan","📅 我的40天"],["s-home","🏠 總覽"],["s-gear","🎒 裝備清單"],["s-brand","🏷️ 品牌推薦"],["s-route","🥾 路線庇護所"],["s-spots","📸 打卡地圖"],["s-faith","⛪ 儀式聖餐"],["s-food","🍷 美食人文"],["s-sos","🆘 SOS西語"],["s-cash","💶 記帳"]];
 
 function buildNav(){
   const nav=$("#nav");
@@ -893,15 +1154,193 @@ function renderFood(){
   });
 }
 
+/* --- 我的 40 天 --- */
+function isoToday(){const n=new Date();return n.getFullYear()+"-"+String(n.getMonth()+1).padStart(2,"0")+"-"+String(n.getDate()).padStart(2,"0")}
+function mdLabel(iso){const p=iso.split("-");return (+p[1])+"/"+(+p[2])}
+function renderPlan(){
+  const t=isoToday();
+  // banner
+  const tb=$("#today-banner");
+  if(t<TRIP_START){
+    const days=Math.round((new Date(TRIP_START)-new Date(t))/864e5);
+    tb.innerHTML=`<div class="today-banner"><div class="big-d">${days}</div><div class="tb-t"><b>距出發還有 ${days} 天</b><span>6/18 桃園起飛 ✈ 下面的「訂房／車票作戰板」就是倒數清單，訂一項勾一項。</span></div></div>`;
+  }else if(t>TRIP_END){
+    tb.innerHTML=`<div class="today-banner"><div class="big-d">🎉</div><div class="tb-t"><b>完賽！800 公里走完了</b><span>該回來整理素材、剪長片、寫《人生上下半場》了。記帳分頁可以一鍵匯出 CSV。</span></div></div>`;
+  }else{
+    const e=MYPLAN.find(x=>x.d===t);
+    if(e){
+      const idx=MYPLAN.indexOf(e)+1;
+      tb.innerHTML=`<div class="today-banner"><div class="big-d">${e.day||("第"+idx+"天")}</div><div class="tb-t"><b>今天 ${mdLabel(e.d)}（${e.w}）· ${e.seg}</b><span>🙏 ${e.th}${e.km?"　·　"+e.km+" km":""}</span></div></div>`;
+    }
+  }
+  // day cards grouped by block
+  const root=$("#plan");root.innerHTML="";
+  let curBlk=-1;
+  MYPLAN.forEach(e=>{
+    if(e.blk!==curBlk){
+      curBlk=e.blk;
+      const bh=document.createElement("div");bh.className="blk-h";
+      bh.innerHTML=`<h3>${PBLOCKS[curBlk].t}</h3><span class="rng">${PBLOCKS[curBlk].r}</span>`;
+      root.appendChild(bh);
+    }
+    const isToday=e.d===t;
+    const div=document.createElement("div");
+    div.className="day card"+(isToday?" today open":"");
+    div.innerHTML=`
+      <div class="st-h">
+        <div class="dt"><b>${mdLabel(e.d)}</b><span>${e.w}${e.day?" · "+e.day:""}</span></div>
+        <div class="st-route">
+          <div class="tt">${e.seg}</div>
+          <div class="d-meta"><span>${e.md}</span>${e.km?`<span class="km">${e.km} km</span>`:""}</div>
+          <div class="th-line">🙏 ${e.th}</div>
+        </div>
+        ${isToday?'<span class="tdy">今天</span>':""}
+        <span class="chev">▶</span>
+      </div>
+      <div class="st-body">
+        ${e.ph?`<div class="plan-row"><span class="pl">📸</span><div>${e.ph}</div></div>`:""}
+        ${e.st?`<div class="plan-row"><span class="pl">🛏</span><div>${e.st}</div></div>`:""}
+        ${e.tr?`<div class="plan-row"><span class="pl">🚉</span><div>${e.tr}</div></div>`:""}
+        <div class="plan-row"><span class="pl">🙏</span><div><a href="https://camino-prayer.pages.dev/?v=camino40" target="_blank" rel="noopener">開今日靈修卡（經文＋故事＋禱告）→</a></div></div>
+      </div>`;
+    div.querySelector(".st-h").onclick=()=>div.classList.toggle("open");
+    if(isToday)div.id="today-card";
+    root.appendChild(div);
+  });
+  // 出發後自動捲到今天
+  if(t>=TRIP_START&&t<=TRIP_END){
+    setTimeout(()=>{const c=$("#today-card");if(c)c.scrollIntoView({block:"center",behavior:"smooth"})},350);
+  }
+}
+
+/* --- 訂房作戰板 --- */
+let BK={};
+try{BK=JSON.parse(localStorage.getItem("camino_book")||"{}")}catch(e){BK={}}
+function saveBK(){try{localStorage.setItem("camino_book",JSON.stringify(BK))}catch(e){}}
+function renderBook(){
+  const root=$("#bk-items");root.innerHTML="";
+  BOOK.forEach((b,i)=>{
+    const st=BK[i]||{};
+    const div=document.createElement("div");
+    div.className="bk-item"+(st.c?" ck":"");
+    div.innerHTML=`
+      <div class="chk" style="${st.c?"background:var(--gold);border-color:var(--gold)":""}">${st.c?'<span style="color:#fff;font-size:14px;font-weight:700">✓</span>':""}</div>
+      <div style="flex:1;min-width:0">
+        <div class="bk-n"><span class="urg">${b.u}</span>${b.n}</div>
+        <div class="bk-tip">${b.tip}</div>
+        <input class="bk-ref" type="text" placeholder="訂單編號／備註" value="${(st.r||"").replace(/"/g,"&quot;")}">
+      </div>`;
+    div.onclick=e=>{
+      if(e.target.classList.contains("bk-ref"))return;
+      BK[i]={...(BK[i]||{}),c:!(BK[i]&&BK[i].c)};saveBK();renderBook();
+    };
+    const ref=div.querySelector(".bk-ref");
+    ref.onclick=e=>e.stopPropagation();
+    ref.oninput=()=>{BK[i]={...(BK[i]||{}),r:ref.value};saveBK();updateBkCnt();};
+    root.appendChild(div);
+  });
+  updateBkCnt();
+}
+function updateBkCnt(){
+  const done=BOOK.filter((b,i)=>BK[i]&&BK[i].c).length;
+  $("#bk-cnt").textContent=done+" / "+BOOK.length+" 搞定";
+}
+function initBookboard(){
+  const items=$("#bk-items"), h=$("#bk-h");
+  // 出發前預設展開、上路後預設收合
+  const t=isoToday();
+  let open = t<TRIP_START;
+  const apply=()=>{items.style.display=open?"block":"none";h.querySelector(".chev").style.transform=open?"rotate(90deg)":"none"};
+  h.onclick=()=>{open=!open;apply()};
+  apply();
+}
+
+/* --- SOS --- */
+function renderTels(){
+  $("#tels").innerHTML=TELS.map(x=>`
+    <div class="tel"><span class="t-ico">${x.i}</span>
+      <div><b>${x.n}</b><a href="tel:${x.tel}">${x.disp}</a><div class="t-sub">${x.sub}</div></div>
+    </div>`).join("");
+}
+let SOS={};
+try{SOS=JSON.parse(localStorage.getItem("camino_sos")||"{}")}catch(e){SOS={}}
+function renderSosForm(){
+  $("#sos-form").innerHTML=SOSF.map(([k,lab])=>`
+    <div class="ritem"><span class="lab">${lab}</span><input data-k="${k}" type="text" value="${(SOS[k]||"").replace(/"/g,"&quot;")}" placeholder="出發前填好"></div>`).join("");
+  $$("#sos-form input").forEach(inp=>inp.oninput=()=>{
+    SOS[inp.dataset.k]=inp.value;
+    try{localStorage.setItem("camino_sos",JSON.stringify(SOS))}catch(e){}
+  });
+}
+function renderPhrases(){
+  $("#phrases").innerHTML=PHRASES.map(g=>`
+    <div style="font-size:13px;font-weight:700;color:var(--navy);margin:13px 0 3px">${g.g}</div>`+
+    g.rows.map(([es,zh])=>`<div class="ph-row"><span class="es">${es}</span><span class="zh">${zh}</span></div>`).join("")
+  ).join("");
+}
+
+/* --- 記帳 --- */
+let EXP=[];
+try{EXP=JSON.parse(localStorage.getItem("camino_exp")||"[]")}catch(e){EXP=[]}
+function saveEXP(){try{localStorage.setItem("camino_exp",JSON.stringify(EXP))}catch(e){}}
+function fmtE(v){return "€"+v.toLocaleString("en-US",{minimumFractionDigits:0,maximumFractionDigits:2})}
+function renderExp(){
+  const rate=+$("#ex-rate").value||35;
+  const total=EXP.reduce((s,e)=>s+e.a,0);
+  const days=new Set(EXP.map(e=>e.d)).size||1;
+  $("#ex-total").textContent=fmtE(total);
+  $("#ex-avg").textContent=fmtE(EXP.length?total/days:0);
+  $("#ex-twd").textContent="NT$"+Math.round(total*rate).toLocaleString("en-US");
+  // 分類加總
+  const byCat={};EXP.forEach(e=>{byCat[e.c]=(byCat[e.c]||0)+e.a});
+  const max=Math.max(1,...Object.values(byCat));
+  $("#ex-cats").innerHTML=EXCATS.filter(([em,n])=>byCat[n]).map(([em,n])=>`
+    <div class="cat-bar"><span class="cb-n">${em} ${n}</span><div class="cb-bar"><i style="width:${byCat[n]/max*100}%"></i></div><span class="cb-v">${fmtE(byCat[n])}</span></div>`).join("")||'<div style="font-size:13px;color:var(--muted)">還沒有記帳，上面記第一筆吧。</div>';
+  // 清單（日期新→舊）
+  const byDay={};EXP.forEach((e,i)=>{(byDay[e.d]=byDay[e.d]||[]).push({...e,i})});
+  $("#ex-list").innerHTML=Object.keys(byDay).sort().reverse().map(d=>{
+    const sum=byDay[d].reduce((s,e)=>s+e.a,0);
+    return `<div class="exp-day" style="padding:0 12px">${mdLabel(d)}（${d}）· 小計 ${fmtE(sum)}</div>`+
+      byDay[d].map(e=>{
+        const em=(EXCATS.find(c=>c[1]===e.c)||["🧴"])[0];
+        return `<div class="exp-row"><span class="ec">${em}</span><div class="en2">${e.n||e.c}</div><span class="ev">${fmtE(e.a)}</span><button class="del" data-i="${e.i}" title="刪除">✕</button></div>`;
+      }).join("");
+  }).join("");
+  $$("#ex-list .del").forEach(b=>b.onclick=()=>{EXP.splice(+b.dataset.i,1);saveEXP();renderExp();});
+}
+function initCash(){
+  $("#ex-c").innerHTML=EXCATS.map(([em,n])=>`<option value="${n}">${em} ${n}</option>`).join("");
+  $("#ex-d").value=isoToday();
+  $("#ex-rate").value=(()=>{try{return localStorage.getItem("camino_rate")||35}catch(e){return 35}})();
+  $("#ex-rate").oninput=()=>{try{localStorage.setItem("camino_rate",$("#ex-rate").value)}catch(e){};renderExp();};
+  $("#ex-add").onclick=()=>{
+    const a=parseFloat($("#ex-a").value);
+    if(!a||a<=0){toast("先填金額再記帳");return}
+    EXP.push({d:$("#ex-d").value||isoToday(),c:$("#ex-c").value,a:a,n:$("#ex-n").value.trim()});
+    saveEXP();$("#ex-a").value="";$("#ex-n").value="";renderExp();toast("記好了 ✓");
+  };
+  $("#ex-csv").onclick=()=>{
+    const csv="日期,分類,金額EUR,備註\n"+EXP.map(e=>`${e.d},${e.c},${e.a},"${(e.n||"").replace(/"/g,'""')}"`).join("\n");
+    navigator.clipboard?.writeText(csv).then(()=>toast("CSV 已複製，可貼進試算表")).catch(()=>toast("複製失敗，手動截圖吧"));
+  };
+  $("#ex-clear").onclick=()=>{if(confirm("確定清空所有記帳？此動作無法復原。")){EXP=[];saveEXP();renderExp();toast("已清空");}};
+  renderExp();
+}
+
 /* --- Toast --- */
 let tT;
 function toast(msg){const t=$("#toast");t.textContent=msg;t.classList.add("show");clearTimeout(tT);tT=setTimeout(()=>t.classList.remove("show"),1900);}
 
 /* ============ INIT ============ */
 buildNav();renderRegions();renderGear();renderBrands();renderStages();renderSpots();renderFaith();renderFood();
+renderPlan();renderBook();initBookboard();renderTels();renderSosForm();renderPhrases();initCash();
 
-// restore last tab
-try{const lt=localStorage.getItem("camino_tab");if(lt&&document.getElementById(lt))show(lt);}catch(e){}
+// 分頁邏輯：旅途中（6/18–7/27）一律開「我的40天」；其餘時間恢復上次分頁
+(function(){
+  const t=isoToday();
+  if(t>=TRIP_START&&t<=TRIP_END){show("s-plan");return}
+  try{const lt=localStorage.getItem("camino_tab");if(lt&&document.getElementById(lt))show(lt);}catch(e){}
+})();
 
 // gear controls
 $("#bw").value=(()=>{try{return localStorage.getItem("camino_bw")||60}catch(e){return 60}})();

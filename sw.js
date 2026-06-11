@@ -1,5 +1,5 @@
 /* Camino 規劃手冊 — 離線快取 Service Worker */
-const CACHE = 'camino-v1';
+const CACHE = 'camino-v2';
 const ASSETS = ['.', 'index.html', 'manifest.json', 'icon.svg'];
 
 self.addEventListener('install', e => {
