@@ -519,7 +519,7 @@ table.cmp tr:last-child td{border-bottom:none}
 </main>
 
 <div class="footer">
-  Camino Francés 規劃手冊 · 為修哥的自媒體朝聖之旅而做<br>
+  Camino Francés 規劃手冊 · 為修哥的自媒體朝聖之旅而做 · <b style="color:var(--gold)">v3 · 2026-06-12</b><br>
   可「加到主畫面」當離線 App 使用｜資料整合自 buencaminoinfo / gotokm0 / prosabrina / cherstravel 等實走遊記與 Gronze
   <div class="src">※ 庇護所價格與彌撒時間逐年微調，出發前請再次確認；公立庇護所多為先到先得、不可預訂。</div>
 </div>
@@ -1474,9 +1474,9 @@ $$("[data-sf]").forEach(b=>b.onclick=function(){
   spotFilter=this.dataset.sf;renderSpots();
 });
 
-// service worker (only over http/https)
+// service worker (only over http/https)；updateViaCache:'none' 讓 sw.js 本身不吃 HTTP 快取
 if('serviceWorker' in navigator && location.protocol.startsWith('http')){
-  navigator.serviceWorker.register('sw.js').catch(()=>{});
+  navigator.serviceWorker.register('sw.js',{updateViaCache:'none'}).catch(()=>{});
 }
 </script>
 </body>
