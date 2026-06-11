@@ -287,7 +287,14 @@ table.cmp tr:last-child td{border-bottom:none}
 .bdg-skip{background:var(--stone);color:var(--muted);font-weight:500}
 .bdg-bk{background:var(--easy-bg);color:var(--easy)}
 
-/* 打卡地圖：星級＋已拍 */
+/* 打卡地圖：星級＋已拍＋日期分組 */
+.sp-dayh{display:flex;align-items:baseline;gap:9px;margin:20px 2px 8px;flex-wrap:wrap}
+.sp-dayh b{font-size:15.5px;color:var(--navy)}
+.sp-dayh span{font-size:12.5px;color:var(--muted)}
+.sp-dayh.today{background:var(--gold-tint);border:1px solid #ecd98f;border-radius:12px;padding:8px 12px;margin-top:22px}
+.sp-dayh.today b{color:#8a6a00}
+.sp-dayh .tdy{background:var(--gold);color:#fff;font-size:10.5px;font-weight:700;padding:2px 8px;border-radius:10px;align-self:center}
+.sp-dayh.hide{display:none}
 .sp-stars{color:var(--gold);letter-spacing:1.5px;font-size:13.5px;font-weight:700}
 .sp-date{font-size:11px;background:var(--gold-tint);color:#8a6a00;border-radius:10px;padding:1px 8px;font-weight:700;white-space:nowrap}
 .spot.done{opacity:.6}
@@ -445,7 +452,7 @@ table.cmp tr:last-child td{border-bottom:none}
 
   <!-- 打卡地圖 -->
   <section id="s-spots">
-    <div class="sec-head"><span class="kicker">Photo Spots</span><h2>📸 必拍打卡地圖 · 33 點</h2><p class="ln">照行程時間排序、附星級推薦（⭐⭐⭐ 非拍不可／⭐⭐ 強烈推薦／⭐ 順手拍）。拍完按「已拍」記進度；點「開地圖」直接導航。</p></div>
+    <div class="sec-head"><span class="kicker">Photo Spots</span><h2>📸 必拍打卡地圖 · 33 點</h2><p class="ln">依日期分組的拍攝日程表——每天一個標題（當日路段），點位掛在當天底下；星級推薦（⭐⭐⭐ 非拍不可／⭐⭐ 強烈推薦／⭐ 順手拍）。拍完按「已拍」記進度。</p></div>
     <div class="tools">
       <div class="prog-wrap">
         <div class="prog-top"><span>打卡進度</span><span><b id="sp-n">0</b> / <span id="sp-t">0</span> 點</span></div>
@@ -519,7 +526,7 @@ table.cmp tr:last-child td{border-bottom:none}
 </main>
 
 <div class="footer">
-  Camino Francés 規劃手冊 · 為修哥的自媒體朝聖之旅而做 · <b style="color:var(--gold)">v3 · 2026-06-12</b><br>
+  Camino Francés 規劃手冊 · 為修哥的自媒體朝聖之旅而做 · <b style="color:var(--gold)">v4 · 2026-06-12</b><br>
   可「加到主畫面」當離線 App 使用｜資料整合自 buencaminoinfo / gotokm0 / prosabrina / cherstravel 等實走遊記與 Gronze
   <div class="src">※ 庇護所價格與彌撒時間逐年微調，出發前請再次確認；公立庇護所多為先到先得、不可預訂。</div>
 </div>
@@ -816,41 +823,41 @@ const STAGES=[
  {d:"+5",from:"Fisterra",to:"Muxía",rg:4,km:"~29",diff:2,note:"可步行或搭公車。Muxía 礁岩上的船之聖母海岸教堂，最荒涼壯麗的收尾。多數人由此搭公車回 Santiago。",alb:[]}
 ];
 
-/* 33 點 · 依實際行程時間排序；stars 3=非拍不可 2=強烈推薦 1=順手拍；有 q 用地名開地圖（座標不確定的不亂給） */
+/* 33 點 · 依日期分組排列（sd=排序鍵）；stars 3=非拍不可 2=強烈推薦 1=順手拍；有 q 用地名開地圖（座標不確定的不亂給） */
 const SPOTS=[
- {n:"Porte Saint-Jacques & 城堡石板街",en:"Rue de la Citadelle, SJPP",town:"Saint-Jean-Pied-de-Port",date:"6/20–21",stars:2,lat:43.1646,lng:-1.2364,shot:"15 世紀城門＋鵝卵石窄街，朝聖第一張定裝照。清晨出發前光線柔、無人。"},
- {n:"庇里牛斯牧場稜線",en:"Route de Napoléon",town:"D1–D2（Orisson 一帶）",date:"6/21–22",stars:3,lat:43.123,lng:-1.310,shot:"綿羊、雲海、翻山稜線，入山史詩感。日出後逆光雲海最美。"},
- {n:"Roncesvalles 大修道院",en:"Real Colegiata de Roncesvalles",town:"翻山後第一夜",date:"6/22",stars:2,q:"Real Colegiata de Roncesvalles",shot:"霧中修道院＋「Santiago 790」路牌是經典兩連拍；傍晚朝聖者彌撒祝福莊嚴（先觀察再拍、勿擾）。"},
- {n:"Pamplona 市政廳廣場",en:"Plaza Consistorial",town:"Pamplona（6/24 路過＋7/6 開幕）",date:"6/24・7/6",stars:3,q:"Plaza Consistorial Pamplona",shot:"巴洛克市政廳立面。7/6 12:00 Txupinazo：紅白人海＋香檳煙火＝世界級畫面，找高點俯拍＋紅領巾特寫。"},
- {n:"寬恕之峰 鐵雕朝聖者群像",en:"Monumento al Peregrino, Alto del Perdón",town:"D5（Pamplona 後）",date:"6/25",stars:3,lat:42.73572,lng:-1.742832,shot:"17 尊鏽鐵朝聖者剪影＋風車稜線，全程最具代表的逆光剪影。日出側光最戲劇，父子走進雕像隊伍合成一列。"},
- {n:"王后橋 中世紀六拱石橋",en:"Puente la Reina",town:"D5 Puente la Reina",date:"6/25",stars:2,lat:42.671117,lng:-1.818736,shot:"11 世紀羅馬式拱橋倒映 Arga 河，明信片畫面。清晨平靜水面有倒影。"},
- {n:"Irache 免費酒泉",en:"Fuente del Vino, Bodegas Irache",town:"D7 Ayegui（Estella 旁）",date:"6/27",stars:2,lat:42.650826,lng:-2.043587,shot:"牆上紅酒龍頭＋扇貝裝杯，互動畫面超吸睛。8:00–20:00，早到人少；父子乾杯一鏡。"},
- {n:"Logroño 舊城 tapas 街",en:"Calle Laurel, Logroño",town:"D8 La Rioja 首府",date:"6/28",stars:1,lat:42.4661,lng:-2.4449,shot:"老城石巷與 tapas 酒吧街夜景，人文煙火氣。傍晚 tapeo 時段最熱鬧。"},
- {n:"Burgos 主教座堂",en:"Catedral de Burgos（世界遺產）",town:"Burgos",date:"6/29",stars:3,lat:42.3404,lng:-3.7046,shot:"西班牙哥德三大教堂之一，尖塔森林立面。傍晚金光打正面；Plaza Santa María 廣角＋星形迴廊細節。"},
- {n:"Alto de Mostelares 日出回望",en:"Castrojeriz 後制高點",town:"D10 Meseta",date:"7/1",stars:2,q:"Alto de Mostelares",shot:"陡上後回望 Castrojeriz 城堡山村＋麥田曲線，Meseta 代表性日出點（旅遊網站公認）。清晨抵達正好。"},
- {n:"Frómista 羅馬式教堂",en:"Iglesia de San Martín de Tours",town:"D11 Frómista",date:"7/2",stars:1,q:"Iglesia de San Martín de Tours Frómista",shot:"1066 年羅馬式教堂教科書範本，黃昏石材轉金色。"},
- {n:"León 主教座堂彩繪玻璃",en:"Catedral de León",town:"León 休整日",date:"7/7",stars:3,lat:42.5993,lng:-5.5669,shot:"1,800m² 中世紀彩繪玻璃「光之屋」。下午西曬時入內，光柱灑落最魔幻；外拍藍調時刻立面。"},
- {n:"光榮之橋",en:"Puente del Paso Honroso",town:"D13 Hospital de Órbigo",date:"7/8",stars:2,q:"Puente del Paso Honroso Hospital de Órbigo",shot:"20 拱 204m 西班牙最長中世紀橋＋騎士比武傳說。清晨順光走橋一鏡到底（Pocket3）。"},
- {n:"Astorga 高第主教宮",en:"Palacio Episcopal de Gaudí",town:"D14 Astorga",date:"7/9",stars:2,lat:42.4575,lng:-6.0563,shot:"高第新哥德城堡式主教宮＋隔壁大教堂雙拼。傍晚光最好；cocido maragato 反著吃的餐桌畫面別漏。"},
- {n:"Cruz de Ferro 鐵十字",en:"全程最高點 1,504 m",town:"D16 Foncebadón 後",date:"7/11",stars:3,lat:42.489,lng:-6.36167,shot:"木樁鐵十字＋朝聖者堆石丘，放下心石的儀式畫面——本趟靈魂鏡頭。日出逆光最動人、人最少；放石瞬間俯拍＋仰拍各一。"},
- {n:"Ponferrada 聖殿騎士城堡",en:"Castillo de los Templarios",town:"D16 Ponferrada",date:"7/11",stars:2,q:"Castillo de los Templarios Ponferrada",shot:"12 世紀聖殿騎士團城堡，城垛與護城河。黃昏外牆金光；橋上取全景。"},
- {n:"Villafranca 寬恕之門",en:"Puerta del Perdón, Iglesia de Santiago",town:"D17 Villafranca del Bierzo",date:"7/12",stars:1,q:"Puerta del Perdon Villafranca del Bierzo",shot:"中世紀走不動的朝聖者在此門獲同等赦免——「小 Santiago」。羅馬式石門細節＋故事旁白素材。"},
- {n:"O Cebreiro 凱爾特石屋村",en:"pallozas 圓形茅頂石屋",town:"D18 加利西亞入口",date:"7/13–14",stars:3,lat:42.708,lng:-7.0436,shot:"凱爾特圓石屋＋山嵐，進入 Galicia 的門戶。清晨常有雲海漫過村莊——7/14 出發前先拍再走。"},
- {n:"Sarria 抹大拉修道院",en:"Monasterio de la Magdalena",town:"D20 Sarria（最後 100km 起點）",date:"7/15",stars:1,q:"Monasterio de la Magdalena Sarria",shot:"13 世紀修道院迴廊（今晚住這）＋ Sarria 老街石階晨景，人潮暴增前的安靜版本。"},
- {n:"100 公里里程碑",en:"Marco do K.M. 100, Ferreiros",town:"D21 Sarria→Portomarín 途中",date:"7/16",stars:3,q:"Marco 100 km Camino Ferreiros",shot:"塗滿留言的 100km 石碑——倒數開始的儀式畫面。父子比 100 手勢＋蹲低廣角把碑拍高。"},
- {n:"Portomarín 水底之城",en:"Escalinata & Igrexa de San Xoán",town:"D21 Portomarín",date:"7/16",stars:2,q:"Escalinata de Portomarin",shot:"過水庫橋→爬入城階梯；1962 年整城逐石搬遷，枯水期橋下會露出舊城遺跡與羅馬舊橋。"},
- {n:"Melide 章魚老店",en:"Pulpería Ezequiel",town:"D23 Melide",date:"7/18",stars:2,q:"Pulperia Ezequiel Melide",shot:"木盤水煮章魚撒紅椒粉＋白酒，最後 100km 必吃。銅鍋撈章魚的後廚畫面先問再拍。"},
- {n:"Monte do Gozo 歡喜山",en:"初見大教堂尖塔的山丘",town:"D25 進聖城前 5km",date:"7/20",stars:2,lat:42.8895,lng:-8.4936,shot:"千年朝聖者在此第一次望見大教堂三尖塔喜極而泣。1993 年銅雕朝聖者像在南側約 570m，指向聖城方向。"},
- {n:"大教堂 & 奧布拉多伊羅廣場",en:"Catedral & Praza do Obradoiro",town:"終點 Santiago de Compostela",date:"7/20",stars:3,lat:42.880596,lng:-8.544641,shot:"巴洛克大教堂正立面＋抵達朝聖者癱坐廣場，旅程高潮。抵達當下先拍情緒、再補清晨無人／藍調夜景。"},
- {n:"Fisterra 燈塔 & K.M. 0,00",en:"Faro de Fisterra",town:"世界盡頭 Cabo Finisterre",date:"7/21",stars:3,lat:42.882362,lng:-9.271849,shot:"世界盡頭燈塔＋大西洋＋0.00km 扇貝石碑。tour 行程內以日落前的金光為目標；「歸零再出發」獨白在此錄。"},
- {n:"船之聖母海岸教堂",en:"Santuario da Virxe da Barca",town:"Muxía",date:"7/21",stars:2,lat:43.11194,lng:-9.21944,shot:"礁岩上孤教堂＋拍岸浪花，最荒涼壯麗的收尾。大浪天氣最震撼。"},
- {n:"Ézaro 瀑布",en:"Fervenza do Ézaro",town:"Costa da Morte（tour 含）",date:"7/21",stars:2,q:"Fervenza do Ezaro",shot:"歐洲罕見直接入海的瀑布，Xallas 河衝進大西洋。觀景棧道廣角＋慢快門絲流。"},
- {n:"波多 路易一世鐵橋",en:"Ponte Dom Luís I",town:"Porto Ribeira",date:"7/22–23",stars:3,lat:41.1399,lng:-8.6094,shot:"雙層鐵橋＋杜羅河＋彩色河岸屋。日落上層拍全景、夜景從 Gaia 岸回拍 Ribeira 燈火。"},
- {n:"萊羅書店",en:"Livraria Lello",town:"Porto",date:"7/23",stars:2,q:"Livraria Lello Porto",shot:"世界最美書店之一的紅色旋轉梯。需線上購票預約；一開門進場人最少。"},
- {n:"火之夜觀賞點 Alameda",en:"Parque da Alameda",town:"Santiago（7/24 23:30）",date:"7/24",stars:3,q:"Parque da Alameda Santiago de Compostela",shot:"2026 首度三點齊放「火冠」（Alameda／Cidade da Cultura／Carlomagno）＋大教堂燈光秀。Alameda 可同框大教堂剪影：三腳架長曝＋iPhone 錄直式。"},
- {n:"大香爐 Botafumeiro 席位",en:"Catedral 側翼耳堂",town:"Santiago 大教堂內",date:"7/25",stars:3,lat:42.880596,lng:-8.544641,shot:"10:30 莊嚴彌撒，53kg 香爐橫掃中殿 60km/h。提早 60–90 分入座搶『側翼耳堂』才拍得到完整弧線；120fps 慢動作、嚴禁閃燈。"},
- {n:"香榭麗舍 環法終點",en:"Champs-Élysées & Arc de Triomphe",town:"Paris S21 終點",date:"7/26",stars:3,lat:48.8738,lng:2.2950,shot:"凱旋門背景＋車隊衝線連拍（約 19:30 進香榭）。白天先卡位欄杆第一排；黃衫與觀眾海是收尾畫面。"},
- {n:"蒙馬特 Rue Lepic 彎道",en:"Montmartre（2026 環法爬三次）",town:"Paris",date:"7/26",stars:2,q:"Rue Lepic Paris",shot:"2026 環法終站新看點：車隊爬蒙馬特石板坡三次＋聖心堂背景。坡道彎處低角度拍壓迫感，比香榭更近車手。"}
+ {n:"Porte Saint-Jacques & 城堡石板街",en:"Rue de la Citadelle, SJPP",town:"Saint-Jean-Pied-de-Port",sd:"2026-06-20",date:"6/20–21",stars:2,lat:43.1646,lng:-1.2364,shot:"15 世紀城門＋鵝卵石窄街，朝聖第一張定裝照。清晨出發前光線柔、無人。"},
+ {n:"庇里牛斯牧場稜線",en:"Route de Napoléon",town:"D1–D2（Orisson 一帶）",sd:"2026-06-21",date:"6/21–22",stars:3,lat:43.123,lng:-1.310,shot:"綿羊、雲海、翻山稜線，入山史詩感。日出後逆光雲海最美。"},
+ {n:"Roncesvalles 大修道院",en:"Real Colegiata de Roncesvalles",town:"翻山後第一夜",sd:"2026-06-22",date:"6/22",stars:2,q:"Real Colegiata de Roncesvalles",shot:"霧中修道院＋「Santiago 790」路牌是經典兩連拍；傍晚朝聖者彌撒祝福莊嚴（先觀察再拍、勿擾）。"},
+ {n:"寬恕之峰 鐵雕朝聖者群像",en:"Monumento al Peregrino, Alto del Perdón",town:"D5（Pamplona 後）",sd:"2026-06-25",date:"6/25",stars:3,lat:42.73572,lng:-1.742832,shot:"17 尊鏽鐵朝聖者剪影＋風車稜線，全程最具代表的逆光剪影。日出側光最戲劇，父子走進雕像隊伍合成一列。"},
+ {n:"王后橋 中世紀六拱石橋",en:"Puente la Reina",town:"D5 Puente la Reina",sd:"2026-06-25",date:"6/25",stars:2,lat:42.671117,lng:-1.818736,shot:"11 世紀羅馬式拱橋倒映 Arga 河，明信片畫面。清晨平靜水面有倒影。"},
+ {n:"Irache 免費酒泉",en:"Fuente del Vino, Bodegas Irache",town:"D7 Ayegui（Estella 旁）",sd:"2026-06-27",date:"6/27",stars:2,lat:42.650826,lng:-2.043587,shot:"牆上紅酒龍頭＋扇貝裝杯，互動畫面超吸睛。8:00–20:00，早到人少；父子乾杯一鏡。"},
+ {n:"Logroño 舊城 tapas 街",en:"Calle Laurel, Logroño",town:"D8 La Rioja 首府",sd:"2026-06-28",date:"6/28",stars:1,lat:42.4661,lng:-2.4449,shot:"老城石巷與 tapas 酒吧街夜景，人文煙火氣。傍晚 tapeo 時段最熱鬧。"},
+ {n:"Burgos 主教座堂",en:"Catedral de Burgos（世界遺產）",town:"Burgos",sd:"2026-06-29",date:"6/29",stars:3,lat:42.3404,lng:-3.7046,shot:"西班牙哥德三大教堂之一，尖塔森林立面。傍晚金光打正面；Plaza Santa María 廣角＋星形迴廊細節。"},
+ {n:"Alto de Mostelares 日出回望",en:"Castrojeriz 後制高點",town:"D10 Meseta",sd:"2026-07-01",date:"7/1",stars:2,q:"Alto de Mostelares",shot:"陡上後回望 Castrojeriz 城堡山村＋麥田曲線，Meseta 代表性日出點（旅遊網站公認）。清晨抵達正好。"},
+ {n:"Frómista 羅馬式教堂",en:"Iglesia de San Martín de Tours",town:"D11 Frómista",sd:"2026-07-02",date:"7/2",stars:1,q:"Iglesia de San Martín de Tours Frómista",shot:"1066 年羅馬式教堂教科書範本，黃昏石材轉金色。"},
+ {n:"Pamplona 市政廳廣場",en:"Plaza Consistorial",town:"Pamplona（6/24 路過＋7/6 開幕）",sd:"2026-07-06",date:"6/24・7/6",stars:3,q:"Plaza Consistorial Pamplona",shot:"巴洛克市政廳立面。7/6 12:00 Txupinazo：紅白人海＋香檳煙火＝世界級畫面，找高點俯拍＋紅領巾特寫。"},
+ {n:"León 主教座堂彩繪玻璃",en:"Catedral de León",town:"León 休整日",sd:"2026-07-07",date:"7/7",stars:3,lat:42.5993,lng:-5.5669,shot:"1,800m² 中世紀彩繪玻璃「光之屋」。下午西曬時入內，光柱灑落最魔幻；外拍藍調時刻立面。"},
+ {n:"光榮之橋",en:"Puente del Paso Honroso",town:"D13 Hospital de Órbigo",sd:"2026-07-08",date:"7/8",stars:2,q:"Puente del Paso Honroso Hospital de Órbigo",shot:"20 拱 204m 西班牙最長中世紀橋＋騎士比武傳說。清晨順光走橋一鏡到底（Pocket3）。"},
+ {n:"Astorga 高第主教宮",en:"Palacio Episcopal de Gaudí",town:"D14 Astorga",sd:"2026-07-09",date:"7/9",stars:2,lat:42.4575,lng:-6.0563,shot:"高第新哥德城堡式主教宮＋隔壁大教堂雙拼。傍晚光最好；cocido maragato 反著吃的餐桌畫面別漏。"},
+ {n:"Cruz de Ferro 鐵十字",en:"全程最高點 1,504 m",town:"D16 Foncebadón 後",sd:"2026-07-11",date:"7/11",stars:3,lat:42.489,lng:-6.36167,shot:"木樁鐵十字＋朝聖者堆石丘，放下心石的儀式畫面——本趟靈魂鏡頭。日出逆光最動人、人最少；放石瞬間俯拍＋仰拍各一。"},
+ {n:"Ponferrada 聖殿騎士城堡",en:"Castillo de los Templarios",town:"D16 Ponferrada",sd:"2026-07-11",date:"7/11",stars:2,q:"Castillo de los Templarios Ponferrada",shot:"12 世紀聖殿騎士團城堡，城垛與護城河。黃昏外牆金光；橋上取全景。"},
+ {n:"Villafranca 寬恕之門",en:"Puerta del Perdón, Iglesia de Santiago",town:"D17 Villafranca del Bierzo",sd:"2026-07-12",date:"7/12",stars:1,q:"Puerta del Perdon Villafranca del Bierzo",shot:"中世紀走不動的朝聖者在此門獲同等赦免——「小 Santiago」。羅馬式石門細節＋故事旁白素材。"},
+ {n:"O Cebreiro 凱爾特石屋村",en:"pallozas 圓形茅頂石屋",town:"D18 加利西亞入口",sd:"2026-07-13",date:"7/13–14",stars:3,lat:42.708,lng:-7.0436,shot:"凱爾特圓石屋＋山嵐，進入 Galicia 的門戶。清晨常有雲海漫過村莊——7/14 出發前先拍再走。"},
+ {n:"Sarria 抹大拉修道院",en:"Monasterio de la Magdalena",town:"D20 Sarria（最後 100km 起點）",sd:"2026-07-15",date:"7/15",stars:1,q:"Monasterio de la Magdalena Sarria",shot:"13 世紀修道院迴廊（今晚住這）＋ Sarria 老街石階晨景，人潮暴增前的安靜版本。"},
+ {n:"100 公里里程碑",en:"Marco do K.M. 100, Ferreiros",town:"D21 Sarria→Portomarín 途中",sd:"2026-07-16",date:"7/16",stars:3,q:"Marco 100 km Camino Ferreiros",shot:"塗滿留言的 100km 石碑——倒數開始的儀式畫面。父子比 100 手勢＋蹲低廣角把碑拍高。"},
+ {n:"Portomarín 水底之城",en:"Escalinata & Igrexa de San Xoán",town:"D21 Portomarín",sd:"2026-07-16",date:"7/16",stars:2,q:"Escalinata de Portomarin",shot:"過水庫橋→爬入城階梯；1962 年整城逐石搬遷，枯水期橋下會露出舊城遺跡與羅馬舊橋。"},
+ {n:"Melide 章魚老店",en:"Pulpería Ezequiel",town:"D23 Melide",sd:"2026-07-18",date:"7/18",stars:2,q:"Pulperia Ezequiel Melide",shot:"木盤水煮章魚撒紅椒粉＋白酒，最後 100km 必吃。銅鍋撈章魚的後廚畫面先問再拍。"},
+ {n:"Monte do Gozo 歡喜山",en:"初見大教堂尖塔的山丘",town:"D25 進聖城前 5km",sd:"2026-07-20",date:"7/20",stars:2,lat:42.8895,lng:-8.4936,shot:"千年朝聖者在此第一次望見大教堂三尖塔喜極而泣。1993 年銅雕朝聖者像在南側約 570m，指向聖城方向。"},
+ {n:"大教堂 & 奧布拉多伊羅廣場",en:"Catedral & Praza do Obradoiro",town:"終點 Santiago de Compostela",sd:"2026-07-20",date:"7/20",stars:3,lat:42.880596,lng:-8.544641,shot:"巴洛克大教堂正立面＋抵達朝聖者癱坐廣場，旅程高潮。抵達當下先拍情緒、再補清晨無人／藍調夜景。"},
+ {n:"Fisterra 燈塔 & K.M. 0,00",en:"Faro de Fisterra",town:"世界盡頭 Cabo Finisterre",sd:"2026-07-21",date:"7/21",stars:3,lat:42.882362,lng:-9.271849,shot:"世界盡頭燈塔＋大西洋＋0.00km 扇貝石碑。tour 行程內以日落前的金光為目標；「歸零再出發」獨白在此錄。"},
+ {n:"船之聖母海岸教堂",en:"Santuario da Virxe da Barca",town:"Muxía",sd:"2026-07-21",date:"7/21",stars:2,lat:43.11194,lng:-9.21944,shot:"礁岩上孤教堂＋拍岸浪花，最荒涼壯麗的收尾。大浪天氣最震撼。"},
+ {n:"Ézaro 瀑布",en:"Fervenza do Ézaro",town:"Costa da Morte（tour 含）",sd:"2026-07-21",date:"7/21",stars:2,q:"Fervenza do Ezaro",shot:"歐洲罕見直接入海的瀑布，Xallas 河衝進大西洋。觀景棧道廣角＋慢快門絲流。"},
+ {n:"波多 路易一世鐵橋",en:"Ponte Dom Luís I",town:"Porto Ribeira",sd:"2026-07-22",date:"7/22–23",stars:3,lat:41.1399,lng:-8.6094,shot:"雙層鐵橋＋杜羅河＋彩色河岸屋。日落上層拍全景、夜景從 Gaia 岸回拍 Ribeira 燈火。"},
+ {n:"萊羅書店",en:"Livraria Lello",town:"Porto",sd:"2026-07-23",date:"7/23",stars:2,q:"Livraria Lello Porto",shot:"世界最美書店之一的紅色旋轉梯。需線上購票預約；一開門進場人最少。"},
+ {n:"火之夜觀賞點 Alameda",en:"Parque da Alameda",town:"Santiago（7/24 23:30）",sd:"2026-07-24",date:"7/24",stars:3,q:"Parque da Alameda Santiago de Compostela",shot:"2026 首度三點齊放「火冠」（Alameda／Cidade da Cultura／Carlomagno）＋大教堂燈光秀。Alameda 可同框大教堂剪影：三腳架長曝＋iPhone 錄直式。"},
+ {n:"大香爐 Botafumeiro 席位",en:"Catedral 側翼耳堂",town:"Santiago 大教堂內",sd:"2026-07-25",date:"7/25",stars:3,lat:42.880596,lng:-8.544641,shot:"10:30 莊嚴彌撒，53kg 香爐橫掃中殿 60km/h。提早 60–90 分入座搶『側翼耳堂』才拍得到完整弧線；120fps 慢動作、嚴禁閃燈。"},
+ {n:"香榭麗舍 環法終點",en:"Champs-Élysées & Arc de Triomphe",town:"Paris S21 終點",sd:"2026-07-26",date:"7/26",stars:3,lat:48.8738,lng:2.2950,shot:"凱旋門背景＋車隊衝線連拍（約 19:30 進香榭）。白天先卡位欄杆第一排；黃衫與觀眾海是收尾畫面。"},
+ {n:"蒙馬特 Rue Lepic 彎道",en:"Montmartre（2026 環法爬三次）",town:"Paris",sd:"2026-07-26",date:"7/26",stars:2,q:"Rue Lepic Paris",shot:"2026 環法終站新看點：車隊爬蒙馬特石板坡三次＋聖心堂背景。坡道彎處低角度拍壓迫感，比香榭更近車手。"}
 ];
 
 const FAITH=[
@@ -1198,7 +1205,20 @@ function saveSHOT(){try{localStorage.setItem("camino_shots",JSON.stringify(SHOT)
 let spotFilter="all";
 function renderSpots(){
   const root=$("#spots");root.innerHTML="";
-  SPOTS.forEach((sp,i)=>{
+  const t=isoToday();
+  // 依日期排序（sd），同日依原順序
+  const sorted=SPOTS.map((sp,i)=>({sp,i})).sort((a,b)=>a.sp.sd<b.sp.sd?-1:a.sp.sd>b.sp.sd?1:a.i-b.i);
+  let cur="",no=0;
+  sorted.forEach(({sp,i})=>{
+    no++;
+    if(sp.sd!==cur){
+      cur=sp.sd;
+      const day=MYPLAN.find(x=>x.d===cur);
+      const h=document.createElement("div");
+      h.className="sp-dayh"+(cur===t?" today":"");
+      h.innerHTML=`<b>📆 ${mdLabel(cur)}${day?`（${day.w}${day.day?" · "+day.day:""}）`:""}</b><span>${day?day.seg:""}</span>${cur===t?'<span class="tdy">今天</span>':""}`;
+      root.appendChild(h);
+    }
     const done=!!SHOT[sp.n];
     const mapHref=sp.q
       ? "https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(sp.q)
@@ -1207,7 +1227,7 @@ function renderSpots(){
     div.className="spot card"+(done?" done":"");
     if((spotFilter==="must"&&sp.stars<3)||(spotFilter==="todo"&&done))div.classList.add("hide");
     div.innerHTML=`
-      <div class="num">${done?"✓":i+1}</div>
+      <div class="num">${done?"✓":no}</div>
       <div class="sp-b">
         <h3>${sp.n} <span class="en">${sp.en}</span></h3>
         <div class="where" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
@@ -1224,6 +1244,15 @@ function renderSpots(){
         </div>
       </div>`;
     root.appendChild(div);
+  });
+  // 篩選後整組皆隱藏的日期標題也一起藏
+  $$("#spots .sp-dayh").forEach(h=>{
+    let el=h.nextElementSibling,vis=false;
+    while(el&&!el.classList.contains("sp-dayh")){
+      if(el.classList.contains("spot")&&!el.classList.contains("hide"))vis=true;
+      el=el.nextElementSibling;
+    }
+    h.classList.toggle("hide",!vis);
   });
   $$("#spots [data-shot]").forEach(b=>b.onclick=()=>{
     const sp=SPOTS[+b.dataset.shot];

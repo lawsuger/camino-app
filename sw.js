@@ -1,7 +1,7 @@
 /* Camino 規劃手冊 — 離線快取 Service Worker
    v3 策略：頁面「網路優先」（連線永遠拿最新版，離線才退回快取）；
    其他同源資源維持快取優先＋背景更新。 */
-const CACHE = 'camino-v3';
+const CACHE = 'camino-v4';
 const ASSETS = ['.', 'index.html', 'manifest.json', 'icon.svg'];
 
 self.addEventListener('install', e => {
