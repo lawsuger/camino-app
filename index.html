@@ -279,12 +279,29 @@ table.cmp tr:last-child td{border-bottom:none}
 .cat-bar .cb-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--gold-soft),var(--gold))}
 .cat-bar .cb-v{flex:0 0 auto;color:var(--muted)}
 
+/* 路線頁：日期徽章＋我們的預訂 */
+.st-bkx{background:var(--gold-tint);border:1px dashed #ecd98f;border-radius:10px;padding:10px 12px;margin:12px 0 6px;display:grid;gap:7px;grid-template-columns:1fr 1fr}
+.st-bkx .bk-t{grid-column:1/-1;font-size:13px;color:var(--navy);font-weight:700}
+.st-bkx input{width:100%;border:1px solid var(--line);border-radius:8px;padding:6px 9px;font-family:inherit;font-size:13px;background:#fffdf6}
+.bdg-dt{background:var(--gold-tint);color:#8a6a00}
+.bdg-skip{background:var(--stone);color:var(--muted);font-weight:500}
+.bdg-bk{background:var(--easy-bg);color:var(--easy)}
+
+/* 打卡地圖：星級＋已拍 */
+.sp-stars{color:var(--gold);letter-spacing:1.5px;font-size:13.5px;font-weight:700}
+.sp-date{font-size:11px;background:var(--gold-tint);color:#8a6a00;border-radius:10px;padding:1px 8px;font-weight:700;white-space:nowrap}
+.spot.done{opacity:.6}
+.spot.done .num{background:var(--easy)}
+.spot.hide{display:none}
+.mini.mdone{background:var(--easy);color:#fff;border-color:var(--easy)}
+
 @media(max-width:720px){
   .stats{grid-template-columns:repeat(2,1fr)}
   .grid2{grid-template-columns:1fr}
   .brand h1{font-size:16px}
   .eco a{padding:4px 7px}
   .eco a .t{display:none}
+  .st-bkx{grid-template-columns:1fr}
   main{padding:18px 12px 90px}
   .ritem{flex-wrap:wrap}
 }
@@ -337,7 +354,7 @@ table.cmp tr:last-child td{border-bottom:none}
       <div class="stat"><b>~790</b><span>總公里 km</span></div>
       <div class="stat"><b>33–38</b><span>天（不含世界盡頭）</span></div>
       <div class="stat"><b>30+</b><span>城鎮庇護所</span></div>
-      <div class="stat"><b>11</b><span>必拍打卡點</span></div>
+      <div class="stat"><b>33</b><span>必拍打卡點</span></div>
     </div>
 
     <div class="grid2">
@@ -428,7 +445,19 @@ table.cmp tr:last-child td{border-bottom:none}
 
   <!-- 打卡地圖 -->
   <section id="s-spots">
-    <div class="sec-head"><span class="kicker">Photo Spots</span><h2>📸 必訪城鎮 &amp; 打卡座標</h2><p class="ln">給自媒體的拍攝清單。點「開地圖」直接導航，或「複製座標」存進你的拍攝筆記。★ 標記者建議清晨／日落＋無人才出大景。</p></div>
+    <div class="sec-head"><span class="kicker">Photo Spots</span><h2>📸 必拍打卡地圖 · 33 點</h2><p class="ln">照行程時間排序、附星級推薦（⭐⭐⭐ 非拍不可／⭐⭐ 強烈推薦／⭐ 順手拍）。拍完按「已拍」記進度；點「開地圖」直接導航。</p></div>
+    <div class="tools">
+      <div class="prog-wrap">
+        <div class="prog-top"><span>打卡進度</span><span><b id="sp-n">0</b> / <span id="sp-t">0</span> 點</span></div>
+        <div class="bar"><i id="sp-bar"></i></div>
+      </div>
+    </div>
+    <div class="btns" style="margin-bottom:14px">
+      <button class="btn act" data-sf="all">全部</button>
+      <button class="btn" data-sf="must">⭐⭐⭐ 必拍</button>
+      <button class="btn" data-sf="todo">還沒拍的</button>
+    </div>
+    <div class="callout">💡 <b>每日必拍小物</b>（不分地點）：黃箭頭與扇貝路標、credencial 蓋章特寫、里程碑數字遞減、庇護所床位與晚餐 menú——這些日常細節是長片與出書的節奏素材。</div>
     <div id="spots"></div>
   </section>
 
@@ -787,18 +816,41 @@ const STAGES=[
  {d:"+5",from:"Fisterra",to:"Muxía",rg:4,km:"~29",diff:2,note:"可步行或搭公車。Muxía 礁岩上的船之聖母海岸教堂，最荒涼壯麗的收尾。多數人由此搭公車回 Santiago。",alb:[]}
 ];
 
+/* 33 點 · 依實際行程時間排序；stars 3=非拍不可 2=強烈推薦 1=順手拍；有 q 用地名開地圖（座標不確定的不亂給） */
 const SPOTS=[
- {n:"Porte Saint-Jacques & 城堡石板街",en:"Rue de la Citadelle, SJPP",town:"起點 Saint-Jean-Pied-de-Port",lat:43.1646,lng:-1.2364,star:0,shot:"15 世紀城門＋鵝卵石窄街，朝聖第一張定裝照。清晨出發前光線柔、無人。"},
- {n:"庇里牛斯牧場稜線",en:"Route de Napoléon",town:"Day 1–2（Orisson 一帶）",lat:43.123,lng:-1.310,star:1,shot:"綿羊、雲海、翻山稜線，入山史詩感。日出後逆光雲海最美。"},
- {n:"寬恕之峰 鐵雕朝聖者群像",en:"Monumento al Peregrino, Alto del Perdón",town:"Day 5（Pamplona 後）",lat:42.73572,lng:-1.742832,star:1,shot:"17 尊鏽鐵朝聖者剪影＋風車稜線，全程最具代表的逆光剪影。日出／日落側光最戲劇。"},
- {n:"王后橋 中世紀六拱石橋",en:"Puente la Reina",town:"Day 5 Puente la Reina",lat:42.671117,lng:-1.818736,star:0,shot:"11 世紀羅馬式拱橋倒映 Arga 河，明信片畫面。清晨平靜水面有倒影。"},
- {n:"Irache 免費酒泉",en:"Fuente del Vino, Bodegas Irache",town:"Day 7 Ayegui（Estella 旁）",lat:42.650826,lng:-2.043587,star:0,shot:"牆上紅酒水龍頭＋扇貝裝杯，互動畫面超吸睛。8:00–20:00，早到人少。"},
- {n:"Logroño 舊城 tapas 街",en:"Calle Laurel, Logroño",town:"Day 8 La Rioja 首府",lat:42.4661,lng:-2.4449,star:0,shot:"老城石巷與 tapas 酒吧街夜景，人文煙火氣。傍晚 tapeo 時段最熱鬧。"},
- {n:"Cruz de Ferro 鐵十字",en:"全程最高十字 1,504 m",town:"Day 25 Foncebadón 後",lat:42.489,lng:-6.36167,star:1,shot:"木樁鐵十字＋朝聖者堆石丘，放下心石的儀式畫面。日出時逆光最動人、人最少。"},
- {n:"O Cebreiro 凱爾特石屋村",en:"pallozas 圓形茅頂石屋",town:"Day 28 加利西亞入口",lat:42.708,lng:-7.0436,star:1,shot:"凱爾特圓石屋＋山嵐，進入 Galicia 的門戶。清晨常有雲海漫過村莊。"},
- {n:"大教堂 & 奧布拉多伊羅廣場",en:"Catedral & Praza do Obradoiro",town:"終點 Santiago de Compostela",lat:42.880596,lng:-8.544641,star:1,shot:"巴洛克大教堂正立面＋抵達朝聖者癱坐廣場，旅程高潮。清晨無人或藍調夜景。"},
- {n:"Fisterra 燈塔 & K.M. 0,00",en:"Faro de Fisterra",town:"世界盡頭 Cabo Finisterre",lat:42.882362,lng:-9.271849,star:1,shot:"世界盡頭燈塔＋大西洋＋0.00km 扇貝石碑，燒鞋看夕陽的儀式地。日落為唯一正解。"},
- {n:"船之聖母海岸教堂",en:"Santuario da Virxe da Barca",town:"Muxía",lat:43.11194,lng:-9.21944,star:1,shot:"礁岩上孤教堂＋拍岸浪花，最荒涼壯麗的收尾。日落或大浪天氣最震撼。"}
+ {n:"Porte Saint-Jacques & 城堡石板街",en:"Rue de la Citadelle, SJPP",town:"Saint-Jean-Pied-de-Port",date:"6/20–21",stars:2,lat:43.1646,lng:-1.2364,shot:"15 世紀城門＋鵝卵石窄街，朝聖第一張定裝照。清晨出發前光線柔、無人。"},
+ {n:"庇里牛斯牧場稜線",en:"Route de Napoléon",town:"D1–D2（Orisson 一帶）",date:"6/21–22",stars:3,lat:43.123,lng:-1.310,shot:"綿羊、雲海、翻山稜線，入山史詩感。日出後逆光雲海最美。"},
+ {n:"Roncesvalles 大修道院",en:"Real Colegiata de Roncesvalles",town:"翻山後第一夜",date:"6/22",stars:2,q:"Real Colegiata de Roncesvalles",shot:"霧中修道院＋「Santiago 790」路牌是經典兩連拍；傍晚朝聖者彌撒祝福莊嚴（先觀察再拍、勿擾）。"},
+ {n:"Pamplona 市政廳廣場",en:"Plaza Consistorial",town:"Pamplona（6/24 路過＋7/6 開幕）",date:"6/24・7/6",stars:3,q:"Plaza Consistorial Pamplona",shot:"巴洛克市政廳立面。7/6 12:00 Txupinazo：紅白人海＋香檳煙火＝世界級畫面，找高點俯拍＋紅領巾特寫。"},
+ {n:"寬恕之峰 鐵雕朝聖者群像",en:"Monumento al Peregrino, Alto del Perdón",town:"D5（Pamplona 後）",date:"6/25",stars:3,lat:42.73572,lng:-1.742832,shot:"17 尊鏽鐵朝聖者剪影＋風車稜線，全程最具代表的逆光剪影。日出側光最戲劇，父子走進雕像隊伍合成一列。"},
+ {n:"王后橋 中世紀六拱石橋",en:"Puente la Reina",town:"D5 Puente la Reina",date:"6/25",stars:2,lat:42.671117,lng:-1.818736,shot:"11 世紀羅馬式拱橋倒映 Arga 河，明信片畫面。清晨平靜水面有倒影。"},
+ {n:"Irache 免費酒泉",en:"Fuente del Vino, Bodegas Irache",town:"D7 Ayegui（Estella 旁）",date:"6/27",stars:2,lat:42.650826,lng:-2.043587,shot:"牆上紅酒龍頭＋扇貝裝杯，互動畫面超吸睛。8:00–20:00，早到人少；父子乾杯一鏡。"},
+ {n:"Logroño 舊城 tapas 街",en:"Calle Laurel, Logroño",town:"D8 La Rioja 首府",date:"6/28",stars:1,lat:42.4661,lng:-2.4449,shot:"老城石巷與 tapas 酒吧街夜景，人文煙火氣。傍晚 tapeo 時段最熱鬧。"},
+ {n:"Burgos 主教座堂",en:"Catedral de Burgos（世界遺產）",town:"Burgos",date:"6/29",stars:3,lat:42.3404,lng:-3.7046,shot:"西班牙哥德三大教堂之一，尖塔森林立面。傍晚金光打正面；Plaza Santa María 廣角＋星形迴廊細節。"},
+ {n:"Alto de Mostelares 日出回望",en:"Castrojeriz 後制高點",town:"D10 Meseta",date:"7/1",stars:2,q:"Alto de Mostelares",shot:"陡上後回望 Castrojeriz 城堡山村＋麥田曲線，Meseta 代表性日出點（旅遊網站公認）。清晨抵達正好。"},
+ {n:"Frómista 羅馬式教堂",en:"Iglesia de San Martín de Tours",town:"D11 Frómista",date:"7/2",stars:1,q:"Iglesia de San Martín de Tours Frómista",shot:"1066 年羅馬式教堂教科書範本，黃昏石材轉金色。"},
+ {n:"León 主教座堂彩繪玻璃",en:"Catedral de León",town:"León 休整日",date:"7/7",stars:3,lat:42.5993,lng:-5.5669,shot:"1,800m² 中世紀彩繪玻璃「光之屋」。下午西曬時入內，光柱灑落最魔幻；外拍藍調時刻立面。"},
+ {n:"光榮之橋",en:"Puente del Paso Honroso",town:"D13 Hospital de Órbigo",date:"7/8",stars:2,q:"Puente del Paso Honroso Hospital de Órbigo",shot:"20 拱 204m 西班牙最長中世紀橋＋騎士比武傳說。清晨順光走橋一鏡到底（Pocket3）。"},
+ {n:"Astorga 高第主教宮",en:"Palacio Episcopal de Gaudí",town:"D14 Astorga",date:"7/9",stars:2,lat:42.4575,lng:-6.0563,shot:"高第新哥德城堡式主教宮＋隔壁大教堂雙拼。傍晚光最好；cocido maragato 反著吃的餐桌畫面別漏。"},
+ {n:"Cruz de Ferro 鐵十字",en:"全程最高點 1,504 m",town:"D16 Foncebadón 後",date:"7/11",stars:3,lat:42.489,lng:-6.36167,shot:"木樁鐵十字＋朝聖者堆石丘，放下心石的儀式畫面——本趟靈魂鏡頭。日出逆光最動人、人最少；放石瞬間俯拍＋仰拍各一。"},
+ {n:"Ponferrada 聖殿騎士城堡",en:"Castillo de los Templarios",town:"D16 Ponferrada",date:"7/11",stars:2,q:"Castillo de los Templarios Ponferrada",shot:"12 世紀聖殿騎士團城堡，城垛與護城河。黃昏外牆金光；橋上取全景。"},
+ {n:"Villafranca 寬恕之門",en:"Puerta del Perdón, Iglesia de Santiago",town:"D17 Villafranca del Bierzo",date:"7/12",stars:1,q:"Puerta del Perdon Villafranca del Bierzo",shot:"中世紀走不動的朝聖者在此門獲同等赦免——「小 Santiago」。羅馬式石門細節＋故事旁白素材。"},
+ {n:"O Cebreiro 凱爾特石屋村",en:"pallozas 圓形茅頂石屋",town:"D18 加利西亞入口",date:"7/13–14",stars:3,lat:42.708,lng:-7.0436,shot:"凱爾特圓石屋＋山嵐，進入 Galicia 的門戶。清晨常有雲海漫過村莊——7/14 出發前先拍再走。"},
+ {n:"Sarria 抹大拉修道院",en:"Monasterio de la Magdalena",town:"D20 Sarria（最後 100km 起點）",date:"7/15",stars:1,q:"Monasterio de la Magdalena Sarria",shot:"13 世紀修道院迴廊（今晚住這）＋ Sarria 老街石階晨景，人潮暴增前的安靜版本。"},
+ {n:"100 公里里程碑",en:"Marco do K.M. 100, Ferreiros",town:"D21 Sarria→Portomarín 途中",date:"7/16",stars:3,q:"Marco 100 km Camino Ferreiros",shot:"塗滿留言的 100km 石碑——倒數開始的儀式畫面。父子比 100 手勢＋蹲低廣角把碑拍高。"},
+ {n:"Portomarín 水底之城",en:"Escalinata & Igrexa de San Xoán",town:"D21 Portomarín",date:"7/16",stars:2,q:"Escalinata de Portomarin",shot:"過水庫橋→爬入城階梯；1962 年整城逐石搬遷，枯水期橋下會露出舊城遺跡與羅馬舊橋。"},
+ {n:"Melide 章魚老店",en:"Pulpería Ezequiel",town:"D23 Melide",date:"7/18",stars:2,q:"Pulperia Ezequiel Melide",shot:"木盤水煮章魚撒紅椒粉＋白酒，最後 100km 必吃。銅鍋撈章魚的後廚畫面先問再拍。"},
+ {n:"Monte do Gozo 歡喜山",en:"初見大教堂尖塔的山丘",town:"D25 進聖城前 5km",date:"7/20",stars:2,lat:42.8895,lng:-8.4936,shot:"千年朝聖者在此第一次望見大教堂三尖塔喜極而泣。1993 年銅雕朝聖者像在南側約 570m，指向聖城方向。"},
+ {n:"大教堂 & 奧布拉多伊羅廣場",en:"Catedral & Praza do Obradoiro",town:"終點 Santiago de Compostela",date:"7/20",stars:3,lat:42.880596,lng:-8.544641,shot:"巴洛克大教堂正立面＋抵達朝聖者癱坐廣場，旅程高潮。抵達當下先拍情緒、再補清晨無人／藍調夜景。"},
+ {n:"Fisterra 燈塔 & K.M. 0,00",en:"Faro de Fisterra",town:"世界盡頭 Cabo Finisterre",date:"7/21",stars:3,lat:42.882362,lng:-9.271849,shot:"世界盡頭燈塔＋大西洋＋0.00km 扇貝石碑。tour 行程內以日落前的金光為目標；「歸零再出發」獨白在此錄。"},
+ {n:"船之聖母海岸教堂",en:"Santuario da Virxe da Barca",town:"Muxía",date:"7/21",stars:2,lat:43.11194,lng:-9.21944,shot:"礁岩上孤教堂＋拍岸浪花，最荒涼壯麗的收尾。大浪天氣最震撼。"},
+ {n:"Ézaro 瀑布",en:"Fervenza do Ézaro",town:"Costa da Morte（tour 含）",date:"7/21",stars:2,q:"Fervenza do Ezaro",shot:"歐洲罕見直接入海的瀑布，Xallas 河衝進大西洋。觀景棧道廣角＋慢快門絲流。"},
+ {n:"波多 路易一世鐵橋",en:"Ponte Dom Luís I",town:"Porto Ribeira",date:"7/22–23",stars:3,lat:41.1399,lng:-8.6094,shot:"雙層鐵橋＋杜羅河＋彩色河岸屋。日落上層拍全景、夜景從 Gaia 岸回拍 Ribeira 燈火。"},
+ {n:"萊羅書店",en:"Livraria Lello",town:"Porto",date:"7/23",stars:2,q:"Livraria Lello Porto",shot:"世界最美書店之一的紅色旋轉梯。需線上購票預約；一開門進場人最少。"},
+ {n:"火之夜觀賞點 Alameda",en:"Parque da Alameda",town:"Santiago（7/24 23:30）",date:"7/24",stars:3,q:"Parque da Alameda Santiago de Compostela",shot:"2026 首度三點齊放「火冠」（Alameda／Cidade da Cultura／Carlomagno）＋大教堂燈光秀。Alameda 可同框大教堂剪影：三腳架長曝＋iPhone 錄直式。"},
+ {n:"大香爐 Botafumeiro 席位",en:"Catedral 側翼耳堂",town:"Santiago 大教堂內",date:"7/25",stars:3,lat:42.880596,lng:-8.544641,shot:"10:30 莊嚴彌撒，53kg 香爐橫掃中殿 60km/h。提早 60–90 分入座搶『側翼耳堂』才拍得到完整弧線；120fps 慢動作、嚴禁閃燈。"},
+ {n:"香榭麗舍 環法終點",en:"Champs-Élysées & Arc de Triomphe",town:"Paris S21 終點",date:"7/26",stars:3,lat:48.8738,lng:2.2950,shot:"凱旋門背景＋車隊衝線連拍（約 19:30 進香榭）。白天先卡位欄杆第一排；黃衫與觀眾海是收尾畫面。"},
+ {n:"蒙馬特 Rue Lepic 彎道",en:"Montmartre（2026 環法爬三次）",town:"Paris",date:"7/26",stars:2,q:"Rue Lepic Paris",shot:"2026 環法終站新看點：車隊爬蒙馬特石板坡三次＋聖心堂背景。坡道彎處低角度拍壓迫感，比香榭更近車手。"}
 ];
 
 const FAITH=[
@@ -1074,6 +1126,19 @@ function renderBrands(){
 }
 
 /* --- Route --- */
+/* 各段對應實際行程日期（依我的40天）；字串=實走日期、{s}=跳接略過 */
+const STAGE_DATES=[
+ "6/21","6/22","6/23","6/24","6/25","6/26","6/27","6/28",
+ {s:"6/29 🚌 搭車跳過"},{s:"6/29 🚌 搭車跳過"},{s:"6/29 🚌 搭車跳過"},{s:"6/29 🚌 搭車跳過"},{s:"6/29 🚌 搭車抵 Burgos"},
+ "6/30","7/1","7/2","7/3","7/5",
+ {s:"7/6 🐂 奔牛節跳過"},{s:"7/6 🚌 搭車跳過"},{s:"7/7 🚂 火車抵 León"},
+ "7/8","7/9","7/10","7/11","7/12","7/13","7/13","7/14","7/15","7/16","7/17","7/18","7/19","7/20",
+ {s:"7/21 🚌 改一日 tour"},{s:"7/21 🚌 改一日 tour"},{s:"7/21 🚌 改一日 tour"},{s:"7/21 🚌 改一日 tour"},{s:"7/21 🚌 改一日 tour"}
+];
+let SB={};
+try{SB=JSON.parse(localStorage.getItem("camino_stagebook")||"{}")}catch(e){SB={}}
+function saveSB(){try{localStorage.setItem("camino_stagebook",JSON.stringify(SB))}catch(e){}}
+const escAttr=s=>(s||"").replace(/"/g,"&quot;");
 function renderStages(){
   const root=$("#stages");root.innerHTML="";
   STAGES.forEach((st,i)=>{
@@ -1084,17 +1149,28 @@ function renderStages(){
       : `<div class="alb-none">此為中繼小站，以沿途公立庇護所為主，先到先得。</div>`;
     const dnum = (""+st.d).startsWith("+") ? st.d.replace("+","") : st.d;
     const dlab = (""+st.d).startsWith("+") ? "盡頭" : "Day";
+    const dt=STAGE_DATES[i];
+    const dtBadge = dt ? (typeof dt==="string"
+      ? `<span class="badge bdg-dt">📆 ${dt} 實走</span>`
+      : `<span class="badge bdg-skip">${dt.s}</span>`) : "";
+    const sb=SB["s"+i]||{};
+    const bkChip=`<span class="badge bdg-bk" id="sbc${i}"${(sb.n||"").trim()?"":' style="display:none"'}>${(sb.n||"").trim()?"✓ 已訂 "+sb.n:""}</span>`;
     const div=document.createElement("div");div.className="stage card";div.dataset.diff=st.diff;
     div.innerHTML=`
       <div class="st-h">
         <div class="st-day"><b>${dnum}</b><span>${dlab}</span></div>
         <div class="st-route">
           <div class="tt">${st.from} <span style="color:var(--gold)">➤</span> ${st.to}</div>
-          <div class="sub"><span class="dot" style="background:${rg.c}"></span>${rg.n}<span class="km">${st.km} km</span><span class="badge ${bcls}">${blabel}</span></div>
+          <div class="sub"><span class="dot" style="background:${rg.c}"></span>${rg.n}<span class="km">${st.km} km</span><span class="badge ${bcls}">${blabel}</span>${dtBadge}${bkChip}</div>
         </div>
         <span class="chev">▶</span>
       </div>
       <div class="st-body">
+        <div class="st-bkx">
+          <div class="bk-t">✅ 我們的預訂（自填，自動儲存在手機）</div>
+          <input class="sb-n" data-i="${i}" type="text" placeholder="最終確定住所" value="${escAttr(sb.n)}">
+          <input class="sb-r" data-i="${i}" type="text" placeholder="訂房代碼／平台／備註" value="${escAttr(sb.r)}">
+        </div>
         <div class="st-note"><b>📍 重點／注意：</b>${st.note}</div>
         <div style="font-size:13px;color:var(--muted);font-weight:700;margin-bottom:2px">🛏 推薦庇護所</div>
         ${alb}
@@ -1102,30 +1178,61 @@ function renderStages(){
     div.querySelector(".st-h").onclick=()=>div.classList.toggle("open");
     root.appendChild(div);
   });
+  $$("#stages .sb-n, #stages .sb-r").forEach(inp=>{
+    inp.oninput=()=>{
+      const i=inp.dataset.i, k=inp.classList.contains("sb-n")?"n":"r";
+      SB["s"+i]={...(SB["s"+i]||{}),[k]:inp.value};saveSB();
+      const chip=document.getElementById("sbc"+i), n=(SB["s"+i].n||"").trim();
+      if(chip){chip.style.display=n?"":"none";chip.textContent=n?"✓ 已訂 "+n:"";}
+    };
+  });
 }
 function filterStages(d){
   $$("#stages .stage").forEach(s=>s.classList.toggle("hide", d!=0 && s.dataset.diff!=d));
 }
 
 /* --- Spots --- */
+let SHOT={};
+try{SHOT=JSON.parse(localStorage.getItem("camino_shots")||"{}")}catch(e){SHOT={}}
+function saveSHOT(){try{localStorage.setItem("camino_shots",JSON.stringify(SHOT))}catch(e){}}
+let spotFilter="all";
 function renderSpots(){
-  const root=$("#spots");
+  const root=$("#spots");root.innerHTML="";
   SPOTS.forEach((sp,i)=>{
-    const div=document.createElement("div");div.className="spot card";
+    const done=!!SHOT[sp.n];
+    const mapHref=sp.q
+      ? "https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(sp.q)
+      : `https://www.google.com/maps/search/?api=1&query=${sp.lat},${sp.lng}`;
+    const div=document.createElement("div");
+    div.className="spot card"+(done?" done":"");
+    if((spotFilter==="must"&&sp.stars<3)||(spotFilter==="todo"&&done))div.classList.add("hide");
     div.innerHTML=`
-      <div class="num">${i+1}</div>
+      <div class="num">${done?"✓":i+1}</div>
       <div class="sp-b">
-        <h3>${sp.star?'★ ':''}${sp.n} <span class="en">${sp.en}</span></h3>
-        <div class="where">📍 ${sp.town}</div>
+        <h3>${sp.n} <span class="en">${sp.en}</span></h3>
+        <div class="where" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+          <span class="sp-stars">${"★".repeat(sp.stars)}</span>
+          <span class="sp-date">📆 ${sp.date}</span>
+          <span>📍 ${sp.town}</span>
+        </div>
         <div class="shot">${sp.shot}</div>
         <div class="sp-act">
-          <span class="geo">${sp.lat.toFixed(5)}, ${sp.lng.toFixed(5)}</span>
-          <a class="mini gmap" href="https://www.google.com/maps/search/?api=1&query=${sp.lat},${sp.lng}" target="_blank" rel="noopener">🗺 開地圖</a>
-          <button class="mini" onclick="copyGeo(${sp.lat},${sp.lng})">📋 複製座標</button>
+          ${sp.lat?`<span class="geo">${sp.lat.toFixed(5)}, ${sp.lng.toFixed(5)}</span>`:""}
+          <a class="mini gmap" href="${mapHref}" target="_blank" rel="noopener">🗺 開地圖</a>
+          ${sp.lat?`<button class="mini" onclick="copyGeo(${sp.lat},${sp.lng})">📋 複製座標</button>`:""}
+          <button class="mini${done?" mdone":""}" data-shot="${i}">${done?"📷 已拍 ✓":"📷 標記已拍"}</button>
         </div>
       </div>`;
     root.appendChild(div);
   });
+  $$("#spots [data-shot]").forEach(b=>b.onclick=()=>{
+    const sp=SPOTS[+b.dataset.shot];
+    if(SHOT[sp.n])delete SHOT[sp.n];else SHOT[sp.n]=1;
+    saveSHOT();renderSpots();
+  });
+  const done=SPOTS.filter(s=>SHOT[s.n]).length;
+  $("#sp-n").textContent=done;$("#sp-t").textContent=SPOTS.length;
+  $("#sp-bar").style.width=(done/SPOTS.length*100)+"%";
 }
 function copyGeo(lat,lng){
   const t=lat+","+lng;
@@ -1360,6 +1467,12 @@ $$(".filterbar [data-df]").forEach(b=>b.onclick=function(){
 });
 let rExp=false;
 $("#exp-r").onclick=function(){rExp=!rExp;$$(".stage").forEach(s=>s.classList.toggle("open",rExp));this.textContent=rExp?"收合全部":"展開全部";};
+
+// spots filter
+$$("[data-sf]").forEach(b=>b.onclick=function(){
+  $$("[data-sf]").forEach(x=>x.classList.remove("act"));this.classList.add("act");
+  spotFilter=this.dataset.sf;renderSpots();
+});
 
 // service worker (only over http/https)
 if('serviceWorker' in navigator && location.protocol.startsWith('http')){
