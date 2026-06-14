@@ -327,6 +327,25 @@ table.cmp tr:last-child td{border-bottom:none}
 .map-pin:last-child{border:none}
 .map-pin .stars{color:var(--gold);flex:0 0 auto;font-size:12px;letter-spacing:1px}
 .map-pin .geo{font-size:11.5px;color:var(--muted);font-family:'Playfair Display',serif}
+/* 行程教練 */
+.coach{margin-bottom:18px;border:2px solid var(--gold)!important}
+.coach h3{margin:0 0 4px;color:var(--navy);font-size:17px;display:flex;align-items:center;gap:8px}
+.coach .sub{font-size:12px;color:var(--muted);margin-bottom:10px}
+.coach-row{font-size:14px;margin-bottom:10px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.coach-row b{flex:0 0 auto}
+.coach-row select{flex:1;min-width:200px;border:1px solid var(--line);border-radius:8px;padding:9px 10px;font-family:inherit;font-size:13.5px;background:#fffdf6}
+.coach-stat{background:#eef4fa;border:1px solid #d6e4f2;border-radius:10px;padding:10px 13px;font-size:13.5px;margin-bottom:8px;color:var(--navy)}
+.coach-stat b{font-family:'Playfair Display',serif}
+.coach-advice{background:var(--gold-tint);border-radius:10px;padding:11px 14px;font-size:13.5px;line-height:1.75;margin-bottom:8px}
+.coach-advice b{color:#8a6a00}
+.coach-red{font-size:12.5px;color:var(--hard);background:var(--hard-bg);border-radius:8px;padding:8px 12px;line-height:1.6}
+.actbox{background:#fcfaf4;border:1px dashed var(--stone2);border-radius:10px;padding:10px 12px;margin-top:8px}
+.act-h{font-size:12px;color:var(--muted);font-weight:700;margin-bottom:6px;display:flex;justify-content:space-between}
+.act-sync{color:var(--blue);cursor:pointer;text-decoration:underline}
+.act-ins{display:flex;gap:8px}
+.act-i{border:1px solid var(--line);border-radius:7px;padding:6px 9px;font-family:inherit;font-size:13px;background:#fff;margin-bottom:6px}
+.act-ins .act-i{flex:1;min-width:0}
+.act-note{width:100%}
 
 @media print{
   header,nav,.tools,.footer,.filterbar,.legend{display:none!important}
@@ -359,6 +378,7 @@ table.cmp tr:last-child td{border-bottom:none}
   <section id="s-plan" class="on">
     <div class="sec-head"><span class="kicker">My Camino · 2026/6/18 – 7/27</span><h2>📅 我的 40 天</h2><p class="ln">修哥 × 諒哥的實際拍板行程：精選段連續走＋跳接、奔牛節開幕、火之夜、大香爐、環法巴黎。出發後打開自動跳到「今天」。</p></div>
     <div id="today-banner"></div>
+    <div id="coach"></div>
     <div class="card" id="bookboard" style="margin-bottom:18px">
       <div class="cat-h" id="bk-h"><span class="ico">🎫</span><h3>訂房／車票作戰板</h3><span class="cnt" id="bk-cnt"></span><span class="chev">▶</span></div>
       <div id="bk-items" style="display:none"></div>
@@ -563,7 +583,7 @@ table.cmp tr:last-child td{border-bottom:none}
 </main>
 
 <div class="footer">
-  Camino Francés 規劃手冊 · 為修哥的自媒體朝聖之旅而做 · <b style="color:var(--gold)">v5 · 2026-06-13</b><br>
+  Camino Francés 規劃手冊 · 為修哥的自媒體朝聖之旅而做 · <b style="color:var(--gold)">v6 · 2026-06-13</b><br>
   可「加到主畫面」當離線 App 使用｜資料整合自 buencaminoinfo / gotokm0 / prosabrina / cherstravel 等實走遊記與 Gronze
   <div class="src">※ 庇護所價格與彌撒時間逐年微調，出發前請再次確認；公立庇護所多為先到先得、不可預訂。</div>
 </div>
@@ -1396,15 +1416,81 @@ function renderPlan(){
         ${e.sb?`<div class="plan-row"><span class="pl">🔖</span><div>${e.sb}</div></div>`:""}
         ${e.tr?`<div class="plan-row"><span class="pl">🚉</span><div>${e.tr}</div></div>`:""}
         <div class="plan-row"><span class="pl">🙏</span><div><a href="https://camino-prayer.pages.dev/?v=camino40" target="_blank" rel="noopener">開今日靈修卡（經文＋故事＋禱告）→</a></div></div>
+        ${e.day?`<div class="actbox">
+          <div class="act-h"><span>✏️ 實際記錄（先存這手機）</span><span class="act-sync" data-d="${e.d}">☁️ 同步網站</span></div>
+          <div class="act-ins"><input class="act-i act-st" data-d="${e.d}" placeholder="實際住宿" value="${((ACT[e.d]||{}).st||'').replace(/"/g,'&quot;')}"><input class="act-i act-km" data-d="${e.d}" placeholder="實際 km" value="${((ACT[e.d]||{}).km||'').replace(/"/g,'&quot;')}"></div>
+          <input class="act-i act-note" data-d="${e.d}" placeholder="今天的備註／心情（出書素材）" value="${((ACT[e.d]||{}).note||'').replace(/"/g,'&quot;')}">
+        </div>`:''}
       </div>`;
     div.querySelector(".st-h").onclick=()=>div.classList.toggle("open");
     if(isToday)div.id="today-card";
     root.appendChild(div);
   });
+  // 實際記錄 input 綁定
+  $$("#plan .act-i").forEach(inp=>inp.oninput=()=>{
+    const d=inp.dataset.d,k=inp.classList.contains("act-st")?"st":inp.classList.contains("act-km")?"km":"note";
+    ACT[d]={...(ACT[d]||{}),[k]:inp.value};saveACT();
+  });
+  $$("#plan .act-sync").forEach(b=>b.onclick=()=>syncActual(b.dataset.d));
+  renderCoach();
   // 出發後自動捲到今天
   if(t>=TRIP_START&&t<=TRIP_END){
     setTimeout(()=>{const c=$("#today-card");if(c)c.scrollIntoView({block:"center",behavior:"smooth"})},350);
   }
+}
+
+/* --- 行程教練（動態調整建議）--- */
+let ACT={};
+try{ACT=JSON.parse(localStorage.getItem("camino_actual")||"{}")}catch(e){ACT={}}
+function saveACT(){try{localStorage.setItem("camino_actual",JSON.stringify(ACT))}catch(e){}}
+function parseKm(s){const m=(""+(s||"")).match(/[\d.]+/);return m?parseFloat(m[0]):0;}
+const WALK=MYPLAN.filter(e=>e.day);            // 25 個徒步日（有 D 編號）
+const ARR=WALK[WALK.length-1];                  // D25 抵 Santiago（7/20，硬底線）
+function renderCoach(){
+  const root=$("#coach");if(!root)return;
+  const t=isoToday();
+  const sel=ACT._here||(function(){let c=WALK[0].day;WALK.forEach(e=>{if(e.d<=t)c=e.day});return c;})();
+  const cur=WALK.find(e=>e.day===sel)||WALK[0];
+  const idx=WALK.indexOf(cur);
+  const lead=Math.round((new Date(cur.d)-new Date(t))/864e5);   // 正=超前，負=落後
+  const remainKm=WALK.slice(idx+1).reduce((s,e)=>s+parseKm(e.km),0);
+  const remainSt=WALK.length-1-idx;
+  const daysToArr=Math.round((new Date(ARR.d)-new Date(t))/864e5);
+  const opts=WALK.map(e=>`<option value="${e.day}"${e.day===sel?" selected":""}>${e.day}·${mdLabel(e.d)} ${e.seg}</option>`).join("");
+  let stat,adv;
+  if(cur.day===ARR.day){
+    stat=`🎉 你已走到 <b>Santiago</b>！徒步完成，接下來是世界盡頭＋火之夜／大香爐／環法（固定行程）。`;
+    adv=`<b>提早抵聖城也別慌</b>　7/21 世界盡頭 tour、7/24 火之夜、7/25 大香爐都訂好了，安心等。多的時間補拍 Santiago 清晨無人空景、整理 40 天素材。`;
+  }else{
+    const pace=daysToArr>0?remainKm/daysToArr:remainKm;
+    const tag=pace>28?' 🔴 偏硬':(pace<18?' 🟢 輕鬆':' 🟡 適中');
+    stat=`到 <b>Santiago（7/20）</b>還有 <b>${daysToArr}</b> 天、<b>${remainSt}</b> 站、約 <b>${Math.round(remainKm)}</b> km　→　平均 <b>${pace.toFixed(1)}</b> km/天${tag}`;
+    if(lead>=1)adv=`<b>超前 ${lead} 天 👍</b>　走得比計畫快！<br>・<b>別太早到 Santiago</b>——7/20 抵達剛好接火之夜(7/24)，太早到要多付聖城住宿。<br>・這 ${lead} 天最好花在：O Cebreiro 雲海多留一晚、最後 100km 放慢細品、或挑一站全休養腿。<br>・體力有餘，世界盡頭(7/21)可考慮從巴士 tour 改成徒步走到 Fisterra。`;
+    else if(lead<=-1){const b=-lead;adv=`<b>落後 ${b} 天 ⚠️</b>　得追回，因為 <b>7/20 必到 Santiago</b>（火之夜／大香爐／飛巴黎全綁這天）。優先砍平淡段：<br>・<b>León→Astorga（7/8–9）</b>搭火車跳過省 1–2 天，山段精華從 Astorga 起走。<br>・併短站：Triacastela→Sarria(18km) 可與鄰站併日。<br>・⛔ <b>最後 100km（Sarria→Santiago）不能搭車</b>——領證必須徒步＋每天蓋 2 章，這段務必保留。`;}
+    else adv=`<b>進度正常 ✅</b>　照計畫走即可。提醒：Sarria(7/15) 後最後 100km 每天至少蓋 <b>2 個章</b>才能領 Compostela。`;
+  }
+  root.innerHTML=`<div class="card pad coach">
+    <h3>🧭 行程教練</h3>
+    <div class="sub">今天體力好多走一站、或臨時改住別站？選你「今晚實際走到哪」，我幫你算對後面的影響＋給調整建議（你決定，不自動改）。</div>
+    <div class="coach-row"><b>我今晚實際走到：</b><select id="coach-sel">${opts}</select></div>
+    <div class="coach-stat">${stat}</div>
+    <div class="coach-advice">💡 ${adv}</div>
+    <div class="coach-red">🔴 不可動的錨點：<b>7/6</b> 奔牛節開幕 · <b>7/20</b> 抵 Santiago · <b>7/25</b> 大香爐後當天飛巴黎 · <b>7/26</b> 環法終點</div>
+  </div>`;
+  $("#coach-sel").onchange=function(){ACT._here=this.value;saveACT();renderCoach();};
+}
+async function syncActual(d){
+  const a=ACT[d]||{};
+  if(!a.st&&!a.km&&!a.note){toast("這天還沒填實際記錄");return;}
+  const pw=prompt("輸入記錄密碼（13101226）以同步到網站：");
+  if(!pw)return;
+  try{
+    const r=await fetch("https://camino-2026.pages.dev/api/progress",{method:"POST",headers:{"content-type":"application/json"},
+      body:JSON.stringify({password:pw,date:d,st:a.st||"",km:a.km||"",note:a.note||""})});
+    const j=await r.json();
+    if(!r.ok)throw new Error(j.error||"同步失敗");
+    toast("✅ 已同步到網站 myplan");
+  }catch(e){toast("⚠️ "+e.message);}
 }
 
 /* --- 訂房作戰板 --- */
