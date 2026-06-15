@@ -7,7 +7,7 @@
   ],
   "start": "2026-06-18",
   "end": "2026-07-27",
-  "updated": "2026-06-13",
+  "updated": "2026-06-15",
   "source": "lawsuger/camino-app index.html（MYPLAN/PBLOCKS/SPOTS 為唯一事實來源，更新後重跑匯出）"
  },
  "blocks": [
@@ -85,32 +85,19 @@
    "w": "日",
    "day": "D1",
    "blk": 1,
-   "seg": "SJPP → Orisson",
-   "km": "8.7",
-   "md": "🥾",
+   "seg": "SJPP → Roncesvalles（一日翻越庇里牛斯）",
+   "km": "~25",
+   "md": "🥾🔴",
    "th": "起程的呼召（來 11:8）",
-   "ph": "⭐庇里牛斯牧場稜線、Orisson 黃昏共餐看日落",
-   "st": "⭐Refuge Orisson（含早晚餐，務必先訂）",
-   "tr": ""
+   "ph": "⭐庇里牛斯牧場稜線、翻山雲海、進西班牙界碑；Roncesvalles 傍晚朝聖者彌撒＋祝福",
+   "st": "⛪Albergue de Roncesvalles（大型修道院·可線上預訂·傍晚彌撒祝福必參加）",
+   "sb": "✓莎賓娜'19 也住 Albergue de Roncesvalles（官網預定）；⚠️一日翻山是全程最硬一天，訂不到床→在 Orisson 拆兩天或走 Valcarlos 線",
+   "tr": "⚠️全程最硬一天：~25km、+1,250m，雨霧低溫帶防風雨衣。想拆兩天可改在 Orisson 過夜（含早晚餐務必先訂）"
   },
   {
    "d": "2026-06-22",
    "w": "一",
    "day": "D2",
-   "blk": 1,
-   "seg": "Orisson → Roncesvalles",
-   "km": "~19",
-   "md": "🥾🔴",
-   "th": "腳下的燈（詩 119:105）",
-   "ph": "翻山雲海、進西班牙界碑",
-   "st": "⛪Albergue de Roncesvalles（傍晚朝聖者彌撒＋祝福必參加）",
-   "sb": "✓莎賓娜'19 也住 Albergue de Roncesvalles（官網預定·傍晚彌撒祝福）",
-   "tr": ""
-  },
-  {
-   "d": "2026-06-23",
-   "w": "二",
-   "day": "D3",
    "blk": 1,
    "seg": "Roncesvalles → Zubiri",
    "km": "~22",
@@ -122,9 +109,9 @@
    "tr": ""
   },
   {
-   "d": "2026-06-24",
-   "w": "三",
-   "day": "D4",
+   "d": "2026-06-23",
+   "w": "二",
+   "day": "D3",
    "blk": 1,
    "seg": "Zubiri → Pamplona",
    "km": "~17",
@@ -136,9 +123,9 @@
    "tr": ""
   },
   {
-   "d": "2026-06-25",
-   "w": "四",
-   "day": "D5",
+   "d": "2026-06-24",
+   "w": "三",
+   "day": "D4",
    "blk": 1,
    "seg": "Pamplona → Puente la Reina",
    "km": "~24",
@@ -150,9 +137,9 @@
    "tr": ""
   },
   {
-   "d": "2026-06-26",
-   "w": "五",
-   "day": "D6",
+   "d": "2026-06-25",
+   "w": "四",
+   "day": "D5",
    "blk": 1,
    "seg": "Puente la Reina → Estella",
    "km": "~22",
@@ -164,9 +151,9 @@
    "tr": ""
   },
   {
-   "d": "2026-06-27",
-   "w": "六",
-   "day": "D7",
+   "d": "2026-06-26",
+   "w": "五",
+   "day": "D6",
    "blk": 1,
    "seg": "Estella → Los Arcos",
    "km": "~21",
@@ -178,9 +165,9 @@
    "tr": ""
   },
   {
-   "d": "2026-06-28",
-   "w": "日",
-   "day": "D8",
+   "d": "2026-06-27",
+   "w": "六",
+   "day": "D7",
    "blk": 1,
    "seg": "Los Arcos → Logroño",
    "km": "~28",
@@ -189,6 +176,20 @@
    "ph": "進 Rioja 酒鄉、Calle Laurel tapas 街",
    "st": "🏨Check In Rioja",
    "sb": "莎賓娜'19 選 Albergue Municipal de Logroño（公立·7€）｜⚠️'19 舊資料，訂前再查",
+   "tr": ""
+  },
+  {
+   "d": "2026-06-28",
+   "w": "日",
+   "day": "",
+   "blk": 1,
+   "seg": "Logroño 休整 · Rioja 酒鄉品酒",
+   "km": "",
+   "md": "🛌🍷",
+   "th": "安息與品嘗（傳 9:7 歡歡喜喜吃飯）",
+   "ph": "Calle Laurel tapas 街、Rioja 酒莊、Concatedral；硬走庇里牛斯後的恢復日",
+   "st": "🏨Check In Rioja（續住一晚）",
+   "sb": "💡多出來的緩衝日：第一天併走 SJPP→Roncesvalles 省下的；在酒鄉好好休一天，明早再跳 Burgos",
    "tr": ""
   },
   {
@@ -208,7 +209,7 @@
   {
    "d": "2026-06-30",
    "w": "二",
-   "day": "D9",
+   "day": "D8",
    "blk": 2,
    "seg": "Burgos → Hornillos",
    "km": "~21",
@@ -222,7 +223,7 @@
   {
    "d": "2026-07-01",
    "w": "三",
-   "day": "D10",
+   "day": "D9",
    "blk": 2,
    "seg": "Hornillos → Castrojeriz",
    "km": "~20",
@@ -236,7 +237,7 @@
   {
    "d": "2026-07-02",
    "w": "四",
-   "day": "D11",
+   "day": "D10",
    "blk": 2,
    "seg": "Castrojeriz → Frómista",
    "km": "~25",
@@ -250,7 +251,7 @@
   {
    "d": "2026-07-03",
    "w": "五",
-   "day": "D12",
+   "day": "D11",
    "blk": 2,
    "seg": "Frómista → Carrión",
    "km": "~19",
@@ -318,7 +319,7 @@
   {
    "d": "2026-07-08",
    "w": "三",
-   "day": "D13",
+   "day": "D12",
    "blk": 4,
    "seg": "León → San Martín del Camino ⚡",
    "km": "~25",
@@ -332,7 +333,7 @@
   {
    "d": "2026-07-09",
    "w": "四",
-   "day": "D14",
+   "day": "D13",
    "blk": 4,
    "seg": "San Martín → Astorga ⚡",
    "km": "~24",
@@ -346,7 +347,7 @@
   {
    "d": "2026-07-10",
    "w": "五",
-   "day": "D15",
+   "day": "D14",
    "blk": 4,
    "seg": "Astorga → Foncebadón",
    "km": "~26",
@@ -360,7 +361,7 @@
   {
    "d": "2026-07-11",
    "w": "六",
-   "day": "D16",
+   "day": "D15",
    "blk": 4,
    "seg": "Foncebadón → Ponferrada",
    "km": "~27",
@@ -374,7 +375,7 @@
   {
    "d": "2026-07-12",
    "w": "日",
-   "day": "D17",
+   "day": "D16",
    "blk": 4,
    "seg": "Ponferrada → Villafranca",
    "km": "~25",
@@ -388,7 +389,7 @@
   {
    "d": "2026-07-13",
    "w": "一",
-   "day": "D18",
+   "day": "D17",
    "blk": 4,
    "seg": "Villafranca → O Cebreiro",
    "km": "~28",
@@ -401,7 +402,7 @@
   {
    "d": "2026-07-14",
    "w": "二",
-   "day": "D19",
+   "day": "D18",
    "blk": 4,
    "seg": "O Cebreiro → Triacastela",
    "km": "~21",
@@ -415,7 +416,7 @@
   {
    "d": "2026-07-15",
    "w": "三",
-   "day": "D20",
+   "day": "D19",
    "blk": 4,
    "seg": "Triacastela → Sarria",
    "km": "~18",
@@ -429,7 +430,7 @@
   {
    "d": "2026-07-16",
    "w": "四",
-   "day": "D21",
+   "day": "D20",
    "blk": 4,
    "seg": "Sarria → Portomarín",
    "km": "~22",
@@ -443,7 +444,7 @@
   {
    "d": "2026-07-17",
    "w": "五",
-   "day": "D22",
+   "day": "D21",
    "blk": 4,
    "seg": "Portomarín → Palas de Rei",
    "km": "~25",
@@ -457,7 +458,7 @@
   {
    "d": "2026-07-18",
    "w": "六",
-   "day": "D23",
+   "day": "D22",
    "blk": 4,
    "seg": "Palas de Rei → Arzúa",
    "km": "~29",
@@ -471,7 +472,7 @@
   {
    "d": "2026-07-19",
    "w": "日",
-   "day": "D24",
+   "day": "D23",
    "blk": 4,
    "seg": "Arzúa → O Pedrouzo",
    "km": "~19",
@@ -485,7 +486,7 @@
   {
    "d": "2026-07-20",
    "w": "一",
-   "day": "D25",
+   "day": "D24",
    "blk": 4,
    "seg": "O Pedrouzo → Santiago de Compostela",
    "km": "~20",
@@ -603,9 +604,9 @@
   {
    "n": "庇里牛斯牧場稜線",
    "en": "Route de Napoléon",
-   "town": "D1–D2（Orisson 一帶）",
+   "town": "D1（庇里牛斯越嶺）",
    "sd": "2026-06-21",
-   "date": "6/21–22",
+   "date": "6/21",
    "stars": 3,
    "lat": 43.123,
    "lng": -1.31,
@@ -614,9 +615,9 @@
   {
    "n": "Roncesvalles 大修道院",
    "en": "Real Colegiata de Roncesvalles",
-   "town": "翻山後第一夜",
-   "sd": "2026-06-22",
-   "date": "6/22",
+   "town": "D1 翻山後抵達",
+   "sd": "2026-06-21",
+   "date": "6/21",
    "stars": 2,
    "q": "Real Colegiata de Roncesvalles",
    "shot": "霧中修道院＋「Santiago 790」路牌是經典兩連拍；傍晚朝聖者彌撒祝福莊嚴（先觀察再拍、勿擾）。"
@@ -624,9 +625,9 @@
   {
    "n": "寬恕之峰 鐵雕朝聖者群像",
    "en": "Monumento al Peregrino, Alto del Perdón",
-   "town": "D5（Pamplona 後）",
-   "sd": "2026-06-25",
-   "date": "6/25",
+   "town": "D4（Pamplona 後）",
+   "sd": "2026-06-24",
+   "date": "6/24",
    "stars": 3,
    "lat": 42.73572,
    "lng": -1.742832,
@@ -635,9 +636,9 @@
   {
    "n": "王后橋 中世紀六拱石橋",
    "en": "Puente la Reina",
-   "town": "D5 Puente la Reina",
-   "sd": "2026-06-25",
-   "date": "6/25",
+   "town": "D4 Puente la Reina",
+   "sd": "2026-06-24",
+   "date": "6/24",
    "stars": 2,
    "lat": 42.671117,
    "lng": -1.818736,
@@ -646,9 +647,9 @@
   {
    "n": "Irache 免費酒泉",
    "en": "Fuente del Vino, Bodegas Irache",
-   "town": "D7 Ayegui（Estella 旁）",
-   "sd": "2026-06-27",
-   "date": "6/27",
+   "town": "D6 Ayegui（Estella 旁）",
+   "sd": "2026-06-26",
+   "date": "6/26",
    "stars": 2,
    "lat": 42.650826,
    "lng": -2.043587,
@@ -657,9 +658,9 @@
   {
    "n": "Logroño 舊城 tapas 街",
    "en": "Calle Laurel, Logroño",
-   "town": "D8 La Rioja 首府",
-   "sd": "2026-06-28",
-   "date": "6/28",
+   "town": "D7 La Rioja 首府",
+   "sd": "2026-06-27",
+   "date": "6/27",
    "stars": 1,
    "lat": 42.4661,
    "lng": -2.4449,
@@ -699,9 +700,9 @@
   {
    "n": "Pamplona 市政廳廣場",
    "en": "Plaza Consistorial",
-   "town": "Pamplona（6/24 路過＋7/6 開幕）",
+   "town": "Pamplona（6/23 路過＋7/6 開幕）",
    "sd": "2026-07-06",
-   "date": "6/24・7/6",
+   "date": "6/23・7/6",
    "stars": 3,
    "q": "Plaza Consistorial Pamplona",
    "shot": "巴洛克市政廳立面。7/6 12:00 Txupinazo：紅白人海＋香檳煙火＝世界級畫面，找高點俯拍＋紅領巾特寫。"
