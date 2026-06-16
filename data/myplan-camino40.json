@@ -1,11 +1,11 @@
 {
  "meta": {
-  "title": "竹孟之家朝聖之路 · 我的40天",
+  "title": "竹孟之家朝聖之路 · 我的33天",
   "people": [
    "修哥（李孟修，50）",
    "諒哥（紘諒，18）"
   ],
-  "start": "2026-06-18",
+  "start": "2026-06-25",
   "end": "2026-07-27",
   "updated": "2026-06-15",
   "source": "lawsuger/camino-app index.html（MYPLAN/PBLOCKS/SPOTS 為唯一事實來源，更新後重跑匯出）"
@@ -13,15 +13,15 @@
  "blocks": [
   {
    "t": "🧳 去程",
-   "r": "6/18–6/20"
+   "r": "6/25–6/27"
   },
   {
-   "t": "⛰️ 前段精選：庇里牛斯 → Rioja 酒鄉 → Burgos",
-   "r": "6/21–6/29"
+   "t": "⛰️ 前段精選：庇里牛斯 → Burgos",
+   "r": "6/28–7/2"
   },
   {
-   "t": "🌾 Meseta 精華",
-   "r": "6/30–7/5"
+   "t": "🌾 Meseta 精華（Frómista＋Carrión）",
+   "r": "7/3–7/5"
   },
   {
    "t": "🐂 奔牛節開幕插曲",
@@ -42,7 +42,7 @@
  ],
  "days": [
   {
-   "d": "2026-06-18",
+   "d": "2026-06-25",
    "w": "四",
    "day": "",
    "blk": 0,
@@ -55,7 +55,7 @@
    "tr": ""
   },
   {
-   "d": "2026-06-19",
+   "d": "2026-06-26",
    "w": "五",
    "day": "",
    "blk": 0,
@@ -64,11 +64,11 @@
    "md": "✈🚌",
    "th": "在路上（詩 121:8 出入蒙保守）",
    "ph": "火車窗景、歐洲第一餐",
-   "st": "Bayonne / Pamplona",
+   "st": "Bayonne",
    "tr": "CDG→Biarritz 廉航 或 TGV→Bayonne。⚠️ EES 新制首次入境要按指紋＋拍臉，通關排隊變長，轉接留 3 小時以上"
   },
   {
-   "d": "2026-06-20",
+   "d": "2026-06-27",
    "w": "六",
    "day": "",
    "blk": 0,
@@ -81,7 +81,7 @@
    "tr": "Bayonne→SJPP 火車（SNCF TER）約 1 小時"
   },
   {
-   "d": "2026-06-21",
+   "d": "2026-06-28",
    "w": "日",
    "day": "D1",
    "blk": 1,
@@ -95,7 +95,7 @@
    "tr": "⚠️全程最硬一天：~25km、+1,250m，雨霧低溫帶防風雨衣。想拆兩天可改在 Orisson 過夜（含早晚餐務必先訂）"
   },
   {
-   "d": "2026-06-22",
+   "d": "2026-06-29",
    "w": "一",
    "day": "D2",
    "blk": 1,
@@ -109,7 +109,7 @@
    "tr": ""
   },
   {
-   "d": "2026-06-23",
+   "d": "2026-06-30",
    "w": "二",
    "day": "D3",
    "blk": 1,
@@ -123,7 +123,7 @@
    "tr": ""
   },
   {
-   "d": "2026-06-24",
+   "d": "2026-07-01",
    "w": "三",
    "day": "D4",
    "blk": 1,
@@ -131,127 +131,57 @@
    "km": "~24",
    "md": "🥾⭐",
    "th": "寬恕（太 18:21-22 七十個七次）",
-   "ph": "⭐Alto del Perdón 寬恕之峰鐵雕＋風車、王后橋六拱石橋",
+   "ph": "⭐Alto del Perdón 寬恕之峰鐵雕＋風車、王后橋六拱石橋；順路可繞 Eunate 八角教堂",
    "st": "⛪Padres Reparadores",
    "sb": "✓莎賓娜'19 也住 Padres Reparadores（公立·5€）",
    "tr": ""
   },
   {
-   "d": "2026-06-25",
+   "d": "2026-07-02",
    "w": "四",
-   "day": "D5",
-   "blk": 1,
-   "seg": "Puente la Reina → Estella",
-   "km": "~22",
-   "md": "🥾",
-   "th": "拾穗的人（得 2:1-3）",
-   "ph": "Estella 古城、羅馬橋",
-   "st": "🏨⭐Alda Estella Hostel",
-   "sb": "莎賓娜'19 選 Albergue Municipal de Peregrinos（公立·洗澡水熱·有廚房·6€·她評推薦）｜⚠️'19 舊資料，訂前再查現況",
-   "tr": ""
-  },
-  {
-   "d": "2026-06-26",
-   "w": "五",
-   "day": "D6",
-   "blk": 1,
-   "seg": "Estella → Los Arcos",
-   "km": "~21",
-   "md": "🥾⭐",
-   "th": "婚宴的酒（約 2:1-11 迦拿）",
-   "ph": "⭐Irache 免費酒泉（8:00–20:00，早到人少）",
-   "st": "🏨Casa de la Abuela",
-   "sb": "莎賓娜'19 選 Hostel La Casa Austria（有廚房·官網預定·她評推薦）｜⚠️'19 舊資料，訂前再查",
-   "tr": ""
-  },
-  {
-   "d": "2026-06-27",
-   "w": "六",
-   "day": "D7",
-   "blk": 1,
-   "seg": "Los Arcos → Logroño",
-   "km": "~28",
-   "md": "🥾",
-   "th": "第一週的眺望（詩 121 向山舉目）",
-   "ph": "進 Rioja 酒鄉、Calle Laurel tapas 街",
-   "st": "🏨Check In Rioja",
-   "sb": "莎賓娜'19 選 Albergue Municipal de Logroño（公立·7€）｜⚠️'19 舊資料，訂前再查",
-   "tr": ""
-  },
-  {
-   "d": "2026-06-28",
-   "w": "日",
    "day": "",
    "blk": 1,
-   "seg": "Logroño 休整 · Rioja 酒鄉品酒",
+   "seg": "🚌 Puente la Reina → Burgos（跳過 Rioja 酒鄉段）",
    "km": "",
-   "md": "🛌🍷",
-   "th": "安息與品嘗（傳 9:7 歡歡喜喜吃飯）",
-   "ph": "Calle Laurel tapas 街、Rioja 酒莊、Concatedral；硬走庇里牛斯後的恢復日",
-   "st": "🏨Check In Rioja（續住一晚）",
-   "sb": "💡多出來的緩衝日：第一天併走 SJPP→Roncesvalles 省下的；在酒鄉好好休一天，明早再跳 Burgos",
-   "tr": ""
-  },
-  {
-   "d": "2026-06-29",
-   "w": "一",
-   "day": "",
-   "blk": 1,
-   "seg": "Logroño 品酒半日 → 跳接 Burgos",
-   "km": "",
-   "md": "🚌🛌",
+   "md": "🚌",
    "th": "進城歇腳（詩 27:4 一件事）",
    "ph": "⭐Burgos 主教座堂（世界遺產）、米血腸 morcilla",
    "st": "🏛⭐Casa del Cubo（16 世紀古宅鄰大教堂）",
    "sb": "✓莎賓娜'24 特別推薦 Casa del Cubo（10€·CP超高·鄰大教堂·附拋棄式床包）——跟你同款",
-   "tr": "Logroño→Burgos：ALSA 巴士／火車約 2h（跳過 Nájera–Belorado 一般段）"
+   "tr": "不喝酒取捨：巴士跳過 Estella–Logroño 的 Rioja 葡萄園段；Puente la Reina→Burgos ALSA／火車約 2–3h，先查班次"
   },
   {
-   "d": "2026-06-30",
-   "w": "二",
-   "day": "D8",
+   "d": "2026-07-03",
+   "w": "五",
+   "day": "",
    "blk": 2,
-   "seg": "Burgos → Hornillos",
-   "km": "~21",
-   "md": "🥾",
+   "seg": "🚌 Burgos → Castrojeriz（跳 Meseta 入口·省一天）",
+   "km": "",
+   "md": "🚌",
    "th": "進入曠野（出 13:17-22 火柱雲柱）",
-   "ph": "Meseta 入口、無遮蔭麥浪",
-   "st": "🏛Municipal（教堂旁）",
-   "sb": "✓莎賓娜'24 也住 Hornillos Municipal（13€·公立；她評簡單夠用，公立不算特別便宜）",
-   "tr": ""
-  },
-  {
-   "d": "2026-07-01",
-   "w": "三",
-   "day": "D9",
-   "blk": 2,
-   "seg": "Hornillos → Castrojeriz",
-   "km": "~20",
-   "md": "🥾",
-   "th": "曠野的試煉（申 8:2-3）",
-   "ph": "⭐Alto de Mostelares 制高點日出、城堡山村",
+   "ph": "城堡山村、Meseta 入口",
    "st": "🏨A Cien Leguas",
    "sb": "莎賓娜'24 選 Albergue Municipal San Esteban（9€·乾淨·小廚房·有吹風機脫水機·她評推薦）",
-   "tr": ""
+   "tr": "6/25 出發省的這一天就靠這段巴士；隔天走出 Castrojeriz 就是 Alto Mostelares"
   },
   {
-   "d": "2026-07-02",
-   "w": "四",
-   "day": "D10",
+   "d": "2026-07-04",
+   "w": "六",
+   "day": "D5",
    "blk": 2,
    "seg": "Castrojeriz → Frómista",
    "km": "~25",
    "md": "🥾",
    "th": "水渠旁的樹（詩 1 種在溪水旁）",
-   "ph": "運河步道、11 世紀羅馬式教堂",
+   "ph": "⭐Alto de Mostelares 制高點日出、Frómista 11 世紀羅馬式教堂 San Martín、運河步道、麥田星空",
    "st": "🏨Estrella del Camino",
    "sb": "✓同款 Estrella del Camino（莎賓娜'24 也住）⚠️但她提醒：老闆早上會衝進房『軍事化』叫起床＋拉窗簾，淺眠斟酌；環境其實乾淨舒適",
    "tr": ""
   },
   {
-   "d": "2026-07-03",
-   "w": "五",
-   "day": "D11",
+   "d": "2026-07-05",
+   "w": "日",
+   "day": "D6",
    "blk": 2,
    "seg": "Frómista → Carrión",
    "km": "~19",
@@ -263,44 +193,17 @@
    "tr": ""
   },
   {
-   "d": "2026-07-04",
-   "w": "六",
-   "day": "",
-   "blk": 2,
-   "seg": "Carrión 休整／短走 Meseta",
-   "km": "",
-   "md": "🛌🥾",
-   "th": "寂寞的中段（何 2:14 領她到曠野）",
-   "ph": "麥田星空、長路一鏡到底空景",
-   "st": "Carrión / Sahagún",
-   "tr": ""
-  },
-  {
-   "d": "2026-07-05",
-   "w": "日",
-   "day": "",
-   "blk": 2,
-   "seg": "Carrión → Sahagún（短程或休）· Meseta 中點",
-   "km": "",
-   "md": "🥾🛌",
-   "th": "半路回望（詩 23 牧者）",
-   "ph": "半程紀念、回望已走的路",
-   "st": "🏛Cluny / ⛪Santa Cruz 修女院（或提前拉 León 住兩晚）",
-   "sb": "✓若走到 Sahagún：莎賓娜'24 推薦 Albergue de la Santa Cruz（7€·獨立衛浴·朝聖者分享晚餐）——正對應你寫的 Santa Cruz 修女院",
-   "tr": "⚡選項 B：今晚就拉到 León 連住兩晚，明天輕裝來回奔牛節"
-  },
-  {
    "d": "2026-07-06",
    "w": "一",
    "day": "",
    "blk": 3,
-   "seg": "Pamplona 奔牛節開幕 Txupinazo 12:00",
+   "seg": "奔牛節開幕 Txupinazo 12:00（Carrión → Pamplona → León）",
    "km": "",
    "md": "🚌🐂",
    "th": "眾人的城（耶 29:7 為那城求平安）",
    "ph": "⭐市政廳廣場紅白人海＋香檳煙火、紅領巾儀式、海明威雕像；夜間 23:00 國際煙火",
    "st": "León（看完開幕夜車拉到，不宿 Pamplona）",
-   "tr": "上午火車赴 Pamplona（多需轉車，車票先買）；晚上 Pamplona→León。⚠️ 大背包進不了廣場，寄物先查（或用 7/5 的 León 兩晚方案輕裝來回）"
+   "tr": "⚠️長交通日：Carrión→Palencia→Pamplona 約 3–4h，早起；晚上 Pamplona→León。大背包進不了廣場，寄物先查"
   },
   {
    "d": "2026-07-07",
@@ -319,7 +222,7 @@
   {
    "d": "2026-07-08",
    "w": "三",
-   "day": "D12",
+   "day": "D7",
    "blk": 4,
    "seg": "León → San Martín del Camino ⚡",
    "km": "~25",
@@ -333,7 +236,7 @@
   {
    "d": "2026-07-09",
    "w": "四",
-   "day": "D13",
+   "day": "D8",
    "blk": 4,
    "seg": "San Martín → Astorga ⚡",
    "km": "~24",
@@ -347,7 +250,7 @@
   {
    "d": "2026-07-10",
    "w": "五",
-   "day": "D14",
+   "day": "D9",
    "blk": 4,
    "seg": "Astorga → Foncebadón",
    "km": "~26",
@@ -361,7 +264,7 @@
   {
    "d": "2026-07-11",
    "w": "六",
-   "day": "D15",
+   "day": "D10",
    "blk": 4,
    "seg": "Foncebadón → Ponferrada",
    "km": "~27",
@@ -375,7 +278,7 @@
   {
    "d": "2026-07-12",
    "w": "日",
-   "day": "D16",
+   "day": "D11",
    "blk": 4,
    "seg": "Ponferrada → Villafranca",
    "km": "~25",
@@ -389,7 +292,7 @@
   {
    "d": "2026-07-13",
    "w": "一",
-   "day": "D17",
+   "day": "D12",
    "blk": 4,
    "seg": "Villafranca → O Cebreiro",
    "km": "~28",
@@ -402,7 +305,7 @@
   {
    "d": "2026-07-14",
    "w": "二",
-   "day": "D18",
+   "day": "D13",
    "blk": 4,
    "seg": "O Cebreiro → Triacastela",
    "km": "~21",
@@ -416,7 +319,7 @@
   {
    "d": "2026-07-15",
    "w": "三",
-   "day": "D19",
+   "day": "D14",
    "blk": 4,
    "seg": "Triacastela → Sarria",
    "km": "~18",
@@ -430,7 +333,7 @@
   {
    "d": "2026-07-16",
    "w": "四",
-   "day": "D20",
+   "day": "D15",
    "blk": 4,
    "seg": "Sarria → Portomarín",
    "km": "~22",
@@ -444,7 +347,7 @@
   {
    "d": "2026-07-17",
    "w": "五",
-   "day": "D21",
+   "day": "D16",
    "blk": 4,
    "seg": "Portomarín → Palas de Rei",
    "km": "~25",
@@ -458,7 +361,7 @@
   {
    "d": "2026-07-18",
    "w": "六",
-   "day": "D22",
+   "day": "D17",
    "blk": 4,
    "seg": "Palas de Rei → Arzúa",
    "km": "~29",
@@ -472,7 +375,7 @@
   {
    "d": "2026-07-19",
    "w": "日",
-   "day": "D23",
+   "day": "D18",
    "blk": 4,
    "seg": "Arzúa → O Pedrouzo",
    "km": "~19",
@@ -486,7 +389,7 @@
   {
    "d": "2026-07-20",
    "w": "一",
-   "day": "D24",
+   "day": "D19",
    "blk": 4,
    "seg": "O Pedrouzo → Santiago de Compostela",
    "km": "~20",
@@ -554,26 +457,26 @@
    "w": "六",
    "day": "",
    "blk": 6,
-   "seg": "聖雅各日：10:30 莊嚴彌撒看大香爐 → 午後 ✈ 巴黎",
+   "seg": "聖雅各日：上午莊嚴彌撒看大香爐 Botafumeiro",
    "km": "",
-   "md": "🔔⛪✈⭐",
+   "md": "🔔⛪⭐",
    "th": "雅各的擁抱（可 10:35-45 求座位）",
    "ph": "⭐Botafumeiro 53kg 史詩擺盪——提早 60–90 分入座搶側殿、120fps 慢動作、勿閃燈",
-   "st": "巴黎",
-   "tr": "SCQ→CDG：漢莎 17:45→22:35 轉法蘭克福／Air Baltic+瑞士 15:10→23:30 轉蘇黎世（當天無直飛）"
+   "st": "Santiago（當晚住聖城，明早直飛巴黎）",
+   "tr": "彌撒約 10:30 含大香爐（官網確認）。7/25 唯一直飛 09:25 太早趕不上彌撒→改隔天飛"
   },
   {
    "d": "2026-07-26",
    "w": "日",
    "day": "",
    "blk": 6,
-   "seg": "環法最終站 S21：Thoiry → 香榭麗舍（蒙馬特 Rue Lepic 爬三次）",
+   "seg": "早班直飛巴黎 → 環法最終站 香榭麗舍",
    "km": "",
-   "md": "🚴⭐",
+   "md": "✈🚴⭐",
    "th": "奔那當跑的路（林前 9:24-25 賽跑得獎賞）",
-   "ph": "⭐香榭麗舍衝線＋凱旋門、蒙馬特石板坡、黃衫誕生。車手約 19:30 才進香榭——白天先卡位＋拍蒙馬特",
+   "ph": "⭐香榭麗舍衝線＋凱旋門、蒙馬特 Rue Lepic 石板坡。車手約 19:30 進香榭——中午到巴黎有 8h 卡位",
    "st": "巴黎（賽事日早訂）",
-   "tr": ""
+   "tr": "SCQ→巴黎 Vueling 直飛 09:15→11:15 ORY（~2h·€127），中午到、離衝線 8h 緩衝"
   },
   {
    "d": "2026-07-27",
@@ -584,7 +487,7 @@
    "km": "",
    "md": "✈",
    "th": "回家的人（路 24:33 起身回去）",
-   "ph": "護照蓋滿章特寫、40 天數字回顧、父子最後合影",
+   "ph": "護照蓋滿章特寫、33 天數字回顧、父子最後合影",
    "st": "機上",
    "tr": ""
   }
@@ -594,8 +497,8 @@
    "n": "Porte Saint-Jacques & 城堡石板街",
    "en": "Rue de la Citadelle, SJPP",
    "town": "Saint-Jean-Pied-de-Port",
-   "sd": "2026-06-20",
-   "date": "6/20–21",
+   "sd": "2026-06-27",
+   "date": "6/27",
    "stars": 2,
    "lat": 43.1646,
    "lng": -1.2364,
@@ -605,8 +508,8 @@
    "n": "庇里牛斯牧場稜線",
    "en": "Route de Napoléon",
    "town": "D1（庇里牛斯越嶺）",
-   "sd": "2026-06-21",
-   "date": "6/21",
+   "sd": "2026-06-28",
+   "date": "6/28",
    "stars": 3,
    "lat": 43.123,
    "lng": -1.31,
@@ -616,8 +519,8 @@
    "n": "Roncesvalles 大修道院",
    "en": "Real Colegiata de Roncesvalles",
    "town": "D1 翻山後抵達",
-   "sd": "2026-06-21",
-   "date": "6/21",
+   "sd": "2026-06-28",
+   "date": "6/28",
    "stars": 2,
    "q": "Real Colegiata de Roncesvalles",
    "shot": "霧中修道院＋「Santiago 790」路牌是經典兩連拍；傍晚朝聖者彌撒祝福莊嚴（先觀察再拍、勿擾）。"
@@ -626,8 +529,8 @@
    "n": "寬恕之峰 鐵雕朝聖者群像",
    "en": "Monumento al Peregrino, Alto del Perdón",
    "town": "D4（Pamplona 後）",
-   "sd": "2026-06-24",
-   "date": "6/24",
+   "sd": "2026-07-01",
+   "date": "7/1",
    "stars": 3,
    "lat": 42.73572,
    "lng": -1.742832,
@@ -637,8 +540,8 @@
    "n": "王后橋 中世紀六拱石橋",
    "en": "Puente la Reina",
    "town": "D4 Puente la Reina",
-   "sd": "2026-06-24",
-   "date": "6/24",
+   "sd": "2026-07-01",
+   "date": "7/1",
    "stars": 2,
    "lat": 42.671117,
    "lng": -1.818736,
@@ -647,31 +550,31 @@
   {
    "n": "Irache 免費酒泉",
    "en": "Fuente del Vino, Bodegas Irache",
-   "town": "D6 Ayegui（Estella 旁）",
-   "sd": "2026-06-26",
-   "date": "6/26",
+   "town": "Rioja（巴士跳段·選擇性下車拍）",
+   "sd": "2026-07-02",
+   "date": "7/2",
    "stars": 2,
    "lat": 42.650826,
    "lng": -2.043587,
-   "shot": "牆上紅酒龍頭＋扇貝裝杯，互動畫面超吸睛。8:00–20:00，早到人少；父子乾杯一鏡。"
+   "shot": "牆上紅酒龍頭＋扇貝裝杯，互動畫面超吸睛。8:00–20:00。⚠️本版巴士跳過 Rioja，想拍要自行安排下車。"
   },
   {
    "n": "Logroño 舊城 tapas 街",
    "en": "Calle Laurel, Logroño",
-   "town": "D7 La Rioja 首府",
-   "sd": "2026-06-27",
-   "date": "6/27",
+   "town": "Rioja（巴士跳段·選擇性下車拍）",
+   "sd": "2026-07-02",
+   "date": "7/2",
    "stars": 1,
    "lat": 42.4661,
    "lng": -2.4449,
-   "shot": "老城石巷與 tapas 酒吧街夜景，人文煙火氣。傍晚 tapeo 時段最熱鬧。"
+   "shot": "老城石巷與 tapas 酒吧街夜景。⚠️本版巴士跳過 Rioja，想拍要自行安排下車。"
   },
   {
    "n": "Burgos 主教座堂",
    "en": "Catedral de Burgos（世界遺產）",
    "town": "Burgos",
-   "sd": "2026-06-29",
-   "date": "6/29",
+   "sd": "2026-07-02",
+   "date": "7/2",
    "stars": 3,
    "lat": 42.3404,
    "lng": -3.7046,
@@ -680,9 +583,9 @@
   {
    "n": "Alto de Mostelares 日出回望",
    "en": "Castrojeriz 後制高點",
-   "town": "D10 Meseta",
-   "sd": "2026-07-01",
-   "date": "7/1",
+   "town": "D5 Meseta",
+   "sd": "2026-07-04",
+   "date": "7/4",
    "stars": 2,
    "q": "Alto de Mostelares",
    "shot": "陡上後回望 Castrojeriz 城堡山村＋麥田曲線，Meseta 代表性日出點（旅遊網站公認）。清晨抵達正好。"
@@ -690,9 +593,9 @@
   {
    "n": "Frómista 羅馬式教堂",
    "en": "Iglesia de San Martín de Tours",
-   "town": "D11 Frómista",
-   "sd": "2026-07-02",
-   "date": "7/2",
+   "town": "D5 Frómista",
+   "sd": "2026-07-04",
+   "date": "7/4",
    "stars": 1,
    "q": "Iglesia de San Martín de Tours Frómista",
    "shot": "1066 年羅馬式教堂教科書範本，黃昏石材轉金色。"
@@ -700,9 +603,9 @@
   {
    "n": "Pamplona 市政廳廣場",
    "en": "Plaza Consistorial",
-   "town": "Pamplona（6/23 路過＋7/6 開幕）",
+   "town": "Pamplona（6/30 路過＋7/6 開幕）",
    "sd": "2026-07-06",
-   "date": "6/23・7/6",
+   "date": "6/30・7/6",
    "stars": 3,
    "q": "Plaza Consistorial Pamplona",
    "shot": "巴洛克市政廳立面。7/6 12:00 Txupinazo：紅白人海＋香檳煙火＝世界級畫面，找高點俯拍＋紅領巾特寫。"
@@ -721,7 +624,7 @@
   {
    "n": "光榮之橋",
    "en": "Puente del Paso Honroso",
-   "town": "D13 Hospital de Órbigo",
+   "town": "D8 Hospital de Órbigo",
    "sd": "2026-07-08",
    "date": "7/8",
    "stars": 2,
@@ -731,7 +634,7 @@
   {
    "n": "Astorga 高第主教宮",
    "en": "Palacio Episcopal de Gaudí",
-   "town": "D14 Astorga",
+   "town": "D9 Astorga",
    "sd": "2026-07-09",
    "date": "7/9",
    "stars": 2,
@@ -742,7 +645,7 @@
   {
    "n": "Cruz de Ferro 鐵十字",
    "en": "全程最高點 1,504 m",
-   "town": "D16 Foncebadón 後",
+   "town": "D10 Foncebadón 後",
    "sd": "2026-07-11",
    "date": "7/11",
    "stars": 3,
@@ -753,7 +656,7 @@
   {
    "n": "Ponferrada 聖殿騎士城堡",
    "en": "Castillo de los Templarios",
-   "town": "D16 Ponferrada",
+   "town": "D10 Ponferrada",
    "sd": "2026-07-11",
    "date": "7/11",
    "stars": 2,
@@ -763,7 +666,7 @@
   {
    "n": "Villafranca 寬恕之門",
    "en": "Puerta del Perdón, Iglesia de Santiago",
-   "town": "D17 Villafranca del Bierzo",
+   "town": "D11 Villafranca del Bierzo",
    "sd": "2026-07-12",
    "date": "7/12",
    "stars": 1,
@@ -773,7 +676,7 @@
   {
    "n": "O Cebreiro 凱爾特石屋村",
    "en": "pallozas 圓形茅頂石屋",
-   "town": "D18 加利西亞入口",
+   "town": "D12 加利西亞入口",
    "sd": "2026-07-13",
    "date": "7/13–14",
    "stars": 3,
@@ -784,7 +687,7 @@
   {
    "n": "Sarria 抹大拉修道院",
    "en": "Monasterio de la Magdalena",
-   "town": "D20 Sarria（最後 100km 起點）",
+   "town": "D14 Sarria（最後 100km 起點）",
    "sd": "2026-07-15",
    "date": "7/15",
    "stars": 1,
@@ -794,7 +697,7 @@
   {
    "n": "100 公里里程碑",
    "en": "Marco do K.M. 100, Ferreiros",
-   "town": "D21 Sarria→Portomarín 途中",
+   "town": "D15 Sarria→Portomarín 途中",
    "sd": "2026-07-16",
    "date": "7/16",
    "stars": 3,
@@ -804,7 +707,7 @@
   {
    "n": "Portomarín 水底之城",
    "en": "Escalinata & Igrexa de San Xoán",
-   "town": "D21 Portomarín",
+   "town": "D15 Portomarín",
    "sd": "2026-07-16",
    "date": "7/16",
    "stars": 2,
@@ -814,7 +717,7 @@
   {
    "n": "Melide 章魚老店",
    "en": "Pulpería Ezequiel",
-   "town": "D23 Melide",
+   "town": "D17 Melide",
    "sd": "2026-07-18",
    "date": "7/18",
    "stars": 2,
@@ -824,7 +727,7 @@
   {
    "n": "Monte do Gozo 歡喜山",
    "en": "初見大教堂尖塔的山丘",
-   "town": "D25 進聖城前 5km",
+   "town": "D19 進聖城前 5km",
    "sd": "2026-07-20",
    "date": "7/20",
    "stars": 2,
