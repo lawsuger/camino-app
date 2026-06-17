@@ -7,7 +7,7 @@
   ],
   "start": "2026-06-25",
   "end": "2026-07-27",
-  "updated": "2026-06-15",
+  "updated": "2026-06-17",
   "source": "lawsuger/camino-app index.html（MYPLAN/PBLOCKS/SPOTS 為唯一事實來源，更新後重跑匯出）"
  },
  "blocks": [
@@ -20,24 +20,24 @@
    "r": "6/28–7/2"
   },
   {
-   "t": "🌾 Meseta 精華（Frómista＋Carrión）",
-   "r": "7/3–7/5"
+   "t": "🌾 Meseta 一瞥（Castrojeriz）",
+   "r": "7/3"
   },
   {
-   "t": "🐂 奔牛節開幕插曲",
-   "r": "7/6"
+   "t": "🐂 奔牛節（方案B：跳 Meseta 看奔牛）",
+   "r": "7/4–7/7"
   },
   {
    "t": "🌲 後段精選：León → Cruz de Ferro → Santiago",
-   "r": "7/7–7/20"
+   "r": "7/8–7/20"
   },
   {
    "t": "🌊 世界盡頭 · 南下波多",
-   "r": "7/21–7/22"
+   "r": "7/21–7/23"
   },
   {
-   "t": "🍷🔔🚴 慶典收尾：波多 → 火之夜 → 大香爐 → 環法",
-   "r": "7/23–7/27"
+   "t": "🔔🚴 慶典收尾：火之夜 → 大香爐 → 環法",
+   "r": "7/24–7/27"
   }
  ],
  "days": [
@@ -167,78 +167,75 @@
   {
    "d": "2026-07-04",
    "w": "六",
-   "day": "D5",
-   "blk": 2,
-   "seg": "Castrojeriz → Frómista",
-   "km": "~25",
-   "md": "🥾",
-   "th": "水渠旁的樹（詩 1 種在溪水旁）",
-   "ph": "⭐Alto de Mostelares 制高點日出、Frómista 11 世紀羅馬式教堂 San Martín、運河步道、麥田星空",
-   "st": "🏨Estrella del Camino",
-   "sb": "✓同款 Estrella del Camino（莎賓娜'24 也住）⚠️但她提醒：老闆早上會衝進房『軍事化』叫起床＋拉窗簾，淺眠斟酌；環境其實乾淨舒適",
-   "tr": ""
+   "day": "",
+   "blk": 3,
+   "seg": "跳 Meseta：Castrojeriz → Burgos（寄行李）→ Pamplona → Tafalla",
+   "km": "",
+   "md": "🚌🐂",
+   "th": "進入曠野（出 13:17-22 火柱雲柱）",
+   "ph": "奔牛城暖身、勘奔牛路線",
+   "st": "Tafalla（Sercotel Hola Tafalla 9.2）",
+   "tr": "Castrojeriz→Burgos 接駁約1h；行李用 Paq Peregrino 寄 Burgos→León 領（憑護照·含15天）；Burgos→Pamplona ALSA 約3h15；Pamplona→Tafalla Renfe 27分"
   },
   {
    "d": "2026-07-05",
    "w": "日",
-   "day": "D6",
-   "blk": 2,
-   "seg": "Frómista → Carrión",
-   "km": "~19",
-   "md": "🥾",
-   "th": "古道上的相遇（路 24 以馬忤斯）",
-   "ph": "⭐Carrión 修女院共餐獻唱（動人）",
-   "st": "⛪⭐Parroquial Santa María（修女共餐獻唱）",
-   "sb": "莎賓娜'24 最愛 Albergue Espíritu Santo（單層床·床距大·廚房齊·CP高·非常推薦）——你選修女共餐獻唱是另一種體驗，看那晚要靈修還是舒適",
-   "tr": ""
+   "day": "",
+   "blk": 3,
+   "seg": "Tafalla 基地 · 白天玩 Pamplona 暖身、勘奔牛路線",
+   "km": "",
+   "md": "🐂🛌",
+   "th": "安息預備（詩 46:10 你們要休息，知道我是神）",
+   "ph": "海明威 Café Iruña、城堡廣場、勘奔牛路線（Estafeta 街、死亡彎角 La Curva）、舊城 pintxos",
+   "st": "Tafalla",
+   "tr": "Tafalla↔Pamplona 火車30分；想遠玩→San Sebastián 一日遊（火車~1h）；想養腳→Tafalla 純休息"
   },
   {
    "d": "2026-07-06",
    "w": "一",
    "day": "",
    "blk": 3,
-   "seg": "奔牛節開幕 Txupinazo 12:00（Carrión → Pamplona → León）",
+   "seg": "奔牛節開幕 Chupinazo 12:00（市政廳廣場）",
    "km": "",
-   "md": "🚌🐂",
+   "md": "🐂🎆⭐",
    "th": "眾人的城（耶 29:7 為那城求平安）",
-   "ph": "⭐市政廳廣場紅白人海＋香檳煙火、紅領巾儀式、海明威雕像；夜間 23:00 國際煙火",
-   "st": "León（看完開幕夜車拉到，不宿 Pamplona）",
-   "tr": "⚠️長交通日：Carrión→Palencia→Pamplona 約 3–4h，早起；晚上 Pamplona→León。大背包進不了廣場，寄物先查"
+   "ph": "⭐市政廳廣場紅白人海＋香檳沖天炮、紅領巾儀式、巨人遊行、海明威雕像；23:00 Ciudadela 國際煙火（免費）",
+   "st": "Pamplona（開幕夜必住·最搶要早訂）",
+   "tr": "07–08:00 進市政廳廣場卡位（10:30 後擠不進）；穿包鞋、舊衣可丟、貴重物留旅館。看完煙火回不了 Tafalla → 今晚住 Pamplona"
   },
   {
    "d": "2026-07-07",
    "w": "二",
    "day": "",
-   "blk": 4,
-   "seg": "León 休整（若 7/6 已宿 León 則整天慢遊）",
+   "blk": 3,
+   "seg": "奔牛 Encierro 08:00（鬥牛場看終點）→ 下午車到 León",
    "km": "",
-   "md": "🛌",
-   "th": "過約旦河 · 再出發（書 3）",
-   "ph": "⭐León 主教座堂彩繪玻璃、Barrio Húmedo tapas",
-   "st": "⛪⭐Benedictinas（修女院晚禱祝福）",
-   "sb": "莎賓娜選 la madriguera（'19）／Hostel Quartier León Jabalquinto（'24·17€·附早餐·agoda 可訂）——你選 Benedictinas 修女院晚禱是體驗取向",
-   "tr": ""
+   "md": "🐂🚌",
+   "th": "過約旦河 · 再出發（書 3 過河）",
+   "ph": "⭐08:00 奔牛衝進鬥牛場＋小牛嬉鬧（鬥牛場 €12 票✅已訂）、10:00 聖費爾明聖人大遊行（最隆重）",
+   "st": "León（領回寄存行李）",
+   "tr": "06:30 鬥牛場排隊入場；下午 Pamplona→León Renfe 約3h46（每天僅3班·要先搶）；晚上 León 大教堂、Barrio Húmedo tapas"
   },
   {
    "d": "2026-07-08",
    "w": "三",
-   "day": "D7",
+   "day": "D5",
    "blk": 4,
-   "seg": "León → San Martín del Camino ⚡",
+   "seg": "León → San Martín del Camino",
    "km": "~25",
    "md": "🥾⚡",
    "th": "長路（詩 25:4-5 指教我）",
    "ph": "光榮之橋（中世紀最長石橋）",
    "st": "🏨私立庇護所",
    "sb": "🎯你這站還沒填名字：莎賓娜'24 超推 Albergue La Huella（乾淨寬敞·後院泳池·附設餐廳水準超高·男女分衛浴·agoda 可訂）——建議直接訂這間",
-   "tr": "⚡想省 2 天：7/8–7/9 改搭車，從 Astorga 起走山段精華"
+   "tr": ""
   },
   {
    "d": "2026-07-09",
    "w": "四",
-   "day": "D8",
+   "day": "D6",
    "blk": 4,
-   "seg": "San Martín → Astorga ⚡",
+   "seg": "San Martín → Astorga",
    "km": "~24",
    "md": "🥾⚡",
    "th": "上山的人（出 19 摩西上西奈）",
@@ -250,7 +247,7 @@
   {
    "d": "2026-07-10",
    "w": "五",
-   "day": "D9",
+   "day": "D7",
    "blk": 4,
    "seg": "Astorga → Foncebadón",
    "km": "~26",
@@ -264,7 +261,7 @@
   {
    "d": "2026-07-11",
    "w": "六",
-   "day": "D10",
+   "day": "D8",
    "blk": 4,
    "seg": "Foncebadón → Ponferrada",
    "km": "~27",
@@ -278,7 +275,7 @@
   {
    "d": "2026-07-12",
    "w": "日",
-   "day": "D11",
+   "day": "D9",
    "blk": 4,
    "seg": "Ponferrada → Villafranca",
    "km": "~25",
@@ -292,7 +289,7 @@
   {
    "d": "2026-07-13",
    "w": "一",
-   "day": "D12",
+   "day": "D10",
    "blk": 4,
    "seg": "Villafranca → O Cebreiro",
    "km": "~28",
@@ -305,7 +302,7 @@
   {
    "d": "2026-07-14",
    "w": "二",
-   "day": "D13",
+   "day": "D11",
    "blk": 4,
    "seg": "O Cebreiro → Triacastela",
    "km": "~21",
@@ -319,7 +316,7 @@
   {
    "d": "2026-07-15",
    "w": "三",
-   "day": "D14",
+   "day": "D12",
    "blk": 4,
    "seg": "Triacastela → Sarria",
    "km": "~18",
@@ -333,7 +330,7 @@
   {
    "d": "2026-07-16",
    "w": "四",
-   "day": "D15",
+   "day": "D13",
    "blk": 4,
    "seg": "Sarria → Portomarín",
    "km": "~22",
@@ -347,7 +344,7 @@
   {
    "d": "2026-07-17",
    "w": "五",
-   "day": "D16",
+   "day": "D14",
    "blk": 4,
    "seg": "Portomarín → Palas de Rei",
    "km": "~25",
@@ -361,7 +358,7 @@
   {
    "d": "2026-07-18",
    "w": "六",
-   "day": "D17",
+   "day": "D15",
    "blk": 4,
    "seg": "Palas de Rei → Arzúa",
    "km": "~29",
@@ -375,7 +372,7 @@
   {
    "d": "2026-07-19",
    "w": "日",
-   "day": "D18",
+   "day": "D16",
    "blk": 4,
    "seg": "Arzúa → O Pedrouzo",
    "km": "~19",
@@ -389,16 +386,16 @@
   {
    "d": "2026-07-20",
    "w": "一",
-   "day": "D19",
+   "day": "D17",
    "blk": 4,
    "seg": "O Pedrouzo → Santiago de Compostela",
    "km": "~20",
    "md": "🥾⭐",
    "th": "抵達（詩 122 上耶路撒冷的喜樂）",
    "ph": "⭐大教堂＋奧布拉多伊羅廣場抵達癱坐、12:00 朝聖者彌撒、領 Compostela",
-   "st": "⛪⭐Seminario Menor / 🏨The Last Stamp",
+   "st": "⛪⭐抵達夜住 Parador de Santiago（走完當天·儀式感·€235）／備 Seminario Menor",
    "sb": "莎賓娜'24 最推 Albergue SIXTOs no Caminho（22€·她每次來都住·乾淨·有冷氣電扇·隔壁自助洗衣）——你列的 Seminario Menor／The Last Stamp 也都熱門，三選一",
-   "tr": ""
+   "tr": "中午前到 Pilgrim's Office 領 Compostela；可加大教堂屋頂導覽 €15＋榮耀之門 €15（7/20 下午或 7/25 下午）"
   },
   {
    "d": "2026-07-21",
@@ -410,8 +407,8 @@
    "md": "🚌🌊⭐",
    "th": "到海邊（詩 139:9-10 海極也有你的手）",
    "ph": "⭐Fisterra 燈塔＋K.M.0,00 石碑＋大西洋落日、船之聖母教堂、Ézaro 瀑布",
-   "st": "Santiago",
-   "tr": "08:45 出發、約 18:00 回（9.5h，GetYourGuide/Civitatis 先訂）"
+   "st": "Santiago（Alda·€94）",
+   "tr": "08:45 出發約 18:00 回（9.5h）；Civitatis 英語團 €52/人（無中文團），先訂"
   },
   {
    "d": "2026-07-22",
@@ -424,7 +421,7 @@
    "th": "安息的起點（提後 4:7 美好的仗已打過）",
    "ph": "跨國界、波多 Ribeira 河岸第一眼",
    "st": "波多 Ribeira",
-   "tr": "ALSA / FlixBus 直達約 3.5h"
+   "tr": "ALSA 巴士 ✅已訂：08:00→10:20 Campanhã（€117.60 來回·已劃位）"
   },
   {
    "d": "2026-07-23",
@@ -436,7 +433,7 @@
    "md": "🍷🛌",
    "th": "安息（創 2:1-3 第七日安息）",
    "ph": "杜羅河日落、Gaia 波特酒窖、Lello 書店、藍瓷 azulejo",
-   "st": "波多",
+   "st": "波多 Ribeira（Panorama Apartments 河景 €244／Eurostars €301）",
    "tr": ""
   },
   {
@@ -444,39 +441,39 @@
    "w": "五",
    "day": "",
    "blk": 6,
-   "seg": "波多 → Santiago；23:30 火之夜 Fuegos del Apóstol",
+   "seg": "上午 ALSA 回聖城；23:30 火之夜（城內煙火＋無人機）",
    "km": "",
    "md": "🚌🎆⭐",
    "th": "數算恩典（詩 103:1-5 不可忘記他的恩惠）",
-   "ph": "⭐2026 首度三點齊放「火冠」（Alameda／Cidade da Cultura／Carlomagno）＋大教堂燈光秀——建議 Alameda 側提前卡位，三腳架長曝",
-   "st": "Santiago（聖雅各前夜 · 極旺早訂）",
-   "tr": "上午巴士北返 3.5h，車上補眠"
+   "ph": "⚠️2026 大教堂正立面投影秀停辦（別去 Obradoiro 等投影）→改城內多點煙火＋無人機 23:30",
+   "st": "Santiago（Casa Celsa-Barbantes ✅已訂·舊城中心 9.8）",
+   "tr": "ALSA 回程 ✅09:30→14:30；聖雅各前夜·極旺"
   },
   {
    "d": "2026-07-25",
    "w": "六",
    "day": "",
    "blk": 6,
-   "seg": "聖雅各日：上午莊嚴彌撒看大香爐 Botafumeiro",
+   "seg": "聖雅各日：10:30 莊嚴彌撒看大香爐 Botafumeiro",
    "km": "",
    "md": "🔔⛪⭐",
    "th": "雅各的擁抱（可 10:35-45 求座位）",
-   "ph": "⭐Botafumeiro 53kg 史詩擺盪——提早 60–90 分入座搶側殿、120fps 慢動作、勿閃燈",
-   "st": "Santiago（當晚住聖城，明早直飛巴黎）",
-   "tr": "彌撒約 10:30 含大香爐（官網確認）。7/25 唯一直飛 09:25 太早趕不上彌撒→改隔天飛"
+   "ph": "⭐Botafumeiro 53kg 史詩擺盪——站 transept 兩側、清晨卡位、提早 60–90 分入座；120fps 慢動作勿閃燈",
+   "st": "Santiago（Casa Celsa ✅）",
+   "tr": "⚠️彌撒 10:30（非中午）；行前 email botafumeiro@catedraldesantiago.es 確認場次。當晚住聖城，明早飛巴黎"
   },
   {
    "d": "2026-07-26",
    "w": "日",
    "day": "",
    "blk": 6,
-   "seg": "早班直飛巴黎 → 環法最終站 香榭麗舍",
+   "seg": "早班 Vueling 直飛巴黎 → 環法最終站 香榭麗舍",
    "km": "",
    "md": "✈🚴⭐",
    "th": "奔那當跑的路（林前 9:24-25 賽跑得獎賞）",
    "ph": "⭐香榭麗舍衝線＋凱旋門、蒙馬特 Rue Lepic 石板坡。車手約 19:30 進香榭——中午到巴黎有 8h 卡位",
-   "st": "巴黎（賽事日早訂）",
-   "tr": "SCQ→巴黎 Vueling 直飛 09:15→11:15 ORY（~2h·€127），中午到、離衝線 8h 緩衝"
+   "st": "巴黎（Hôtel d'Amiens·北站 RER B 直達 CDG €114）",
+   "tr": "SCQ→巴黎 Vueling 直飛 09:15→11:15 ORY（CDG 直飛已停飛·€127）。⚠️環法看台修哥未定：Grand Palais $345／正對終點 Élysée $575"
   },
   {
    "d": "2026-07-27",
@@ -489,7 +486,7 @@
    "th": "回家的人（路 24:33 起身回去）",
    "ph": "護照蓋滿章特寫、33 天數字回顧、父子最後合影",
    "st": "機上",
-   "tr": ""
+   "tr": "CDG T1 10:40 回台"
   }
  ],
  "spots": [
@@ -583,7 +580,7 @@
   {
    "n": "Alto de Mostelares 日出回望",
    "en": "Castrojeriz 後制高點",
-   "town": "D5 Meseta",
+   "town": "方案B 巴士跳過·未停（選擇性）",
    "sd": "2026-07-04",
    "date": "7/4",
    "stars": 2,
@@ -593,7 +590,7 @@
   {
    "n": "Frómista 羅馬式教堂",
    "en": "Iglesia de San Martín de Tours",
-   "town": "D5 Frómista",
+   "town": "方案B 巴士跳過·未停（選擇性）",
    "sd": "2026-07-04",
    "date": "7/4",
    "stars": 1,
@@ -807,7 +804,7 @@
    "date": "7/24",
    "stars": 3,
    "q": "Parque da Alameda Santiago de Compostela",
-   "shot": "2026 首度三點齊放「火冠」（Alameda／Cidade da Cultura／Carlomagno）＋大教堂燈光秀。Alameda 可同框大教堂剪影：三腳架長曝＋iPhone 錄直式。"
+   "shot": "⚠️2026 大教堂正立面投影秀停辦；改城內多點煙火＋無人機 23:30。找高點同框大教堂剪影，三腳架長曝＋iPhone 直式。"
   },
   {
    "n": "大香爐 Botafumeiro 席位",
