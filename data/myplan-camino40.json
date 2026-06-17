@@ -7,7 +7,7 @@
   ],
   "start": "2026-06-25",
   "end": "2026-07-27",
-  "updated": "2026-06-17",
+  "updated": "2026-06-18",
   "source": "lawsuger/camino-app index.html（MYPLAN/PBLOCKS/SPOTS 為唯一事實來源，更新後重跑匯出）"
  },
  "blocks": [
@@ -16,16 +16,16 @@
    "r": "6/25–6/27"
   },
   {
-   "t": "⛰️ 前段精選：庇里牛斯 → Burgos",
-   "r": "6/28–7/2"
+   "t": "⛰️ 前段精選：庇里牛斯 → 寬恕之峰",
+   "r": "6/28–7/1"
   },
   {
-   "t": "🌾 Meseta 一瞥（Castrojeriz）",
-   "r": "7/3"
+   "t": "⛪ 靈性跳接：Grañón → Meseta 修女院（坐車跳乏味段）",
+   "r": "7/2–7/5"
   },
   {
-   "t": "🐂 奔牛節（方案B：跳 Meseta 看奔牛）",
-   "r": "7/4–7/7"
+   "t": "🐂 奔牛節 San Fermín（折返 Pamplona）",
+   "r": "7/6–7/7"
   },
   {
    "t": "🌲 後段精選：León → Cruz de Ferro → Santiago",
@@ -140,81 +140,85 @@
    "d": "2026-07-02",
    "w": "四",
    "day": "",
-   "blk": 1,
-   "seg": "🚌 Puente la Reina → Burgos（跳過 Rioja 酒鄉段）",
+   "blk": 2,
+   "seg": "🚌 跳 Rioja 酒鄉 → Santo Domingo → 🙏Grañón",
    "km": "",
-   "md": "🚌",
-   "th": "進城歇腳（詩 27:4 一件事）",
-   "ph": "⭐Burgos 主教座堂（世界遺產）、米血腸 morcilla",
-   "st": "🏛⭐Casa del Cubo（16 世紀古宅鄰大教堂）",
-   "sb": "✓莎賓娜'24 特別推薦 Casa del Cubo（10€·CP超高·鄰大教堂·附拋棄式床包）——跟你同款",
-   "tr": "不喝酒取捨：巴士跳過 Estella–Logroño 的 Rioja 葡萄園段；Puente la Reina→Burgos ALSA／火車約 2–3h，先查班次"
+   "md": "🚌🙏",
+   "th": "同席共餐的愛（徒 2:46 擘餅交通）",
+   "ph": "⭐Santo Domingo 母雞大教堂傳說、Grañón 聖約翰教堂鐘樓夕照、堂區庇護所朝聖者共煮共餐＋教堂晚禱",
+   "st": "🙏⭐San Juan Bautista 堂區庇護所（教堂閣樓通鋪·自由奉獻·朝聖者共餐＋教堂晚禱，全程最溫暖一夜·現場登記不可預訂早到卡位）",
+   "sb": "不喝酒取捨：巴士跳過 Estella–Logroño 整段 Rioja 葡萄園；保留西側 Santo Domingo→Grañón 的靈性段（4 靈性點之一）",
+   "tr": "Pamplona／Puente la Reina→Santo Domingo de la Calzada 巴士（Rioja 段約 2–3h，Renfe geo-block 台灣→改 Busbud／Omio 訂），再走或搭短程到 Grañón"
   },
   {
    "d": "2026-07-03",
    "w": "五",
    "day": "",
    "blk": 2,
-   "seg": "🚌 Burgos → Castrojeriz（跳 Meseta 入口·省一天）",
+   "seg": "🚌 Grañón → Burgos（同日 Correos 寄大背包 Burgos→León）",
    "km": "",
-   "md": "🚌",
-   "th": "進入曠野（出 13:17-22 火柱雲柱）",
-   "ph": "城堡山村、Meseta 入口",
-   "st": "🏨A Cien Leguas",
-   "sb": "莎賓娜'24 選 Albergue Municipal San Esteban（9€·乾淨·小廚房·有吹風機脫水機·她評推薦）",
-   "tr": "6/25 出發省的這一天就靠這段巴士；隔天走出 Castrojeriz 就是 Alto Mostelares"
+   "md": "🚌⭐",
+   "th": "進城歇腳（詩 27:4 一件事）",
+   "ph": "⭐Burgos 主教座堂（世界遺產）尖塔森林立面、米血腸 morcilla、Correos 寄送大背包到 León 待領",
+   "st": "🏛⭐Casa del Cubo（16 世紀古宅鄰大教堂·10€·CP超高·附拋棄式床包；莎賓娜'24 同款激賞·先到先得早到卡位）",
+   "sb": "✓莎賓娜'24 特別推薦 Casa del Cubo（10€·CP超高·鄰大教堂·附拋棄式床包）——跟你同款",
+   "tr": "Grañón→Burgos ALSA／火車約 1.5–2h；行李用 Correos Paq Mochila 寄 Burgos→León 待領郵局（憑護照·C/ Jardín de San Francisco 2, 24004 León），跳乏味草原時身輕"
   },
   {
    "d": "2026-07-04",
    "w": "六",
    "day": "",
-   "blk": 3,
-   "seg": "跳 Meseta：Castrojeriz → Burgos（寄行李）→ Pamplona → Tafalla",
+   "blk": 2,
+   "seg": "🚌 Burgos → Frómista（坐車跳乏味大草原 Meseta）",
    "km": "",
-   "md": "🚌🐂",
-   "th": "進入曠野（出 13:17-22 火柱雲柱）",
-   "ph": "奔牛城暖身、勘奔牛路線",
-   "st": "Tafalla（Sercotel Hola Tafalla 9.2）",
-   "tr": "Castrojeriz→Burgos 接駁約1h；行李用 Paq Peregrino 寄 Burgos→León 領（憑護照·含15天）；Burgos→Pamplona ALSA 約3h15；Pamplona→Tafalla Renfe 27分"
+   "md": "🚌⭐",
+   "th": "曠野中的同在（出 13:21 雲柱火柱）",
+   "ph": "⭐Frómista San Martín de Tours 羅馬式教堂（1066 年·教科書範本）、黃昏石材轉金",
+   "st": "🏨Frómista 鎮上庇護所（San Martín／Betania·先到先得或前一天訂）",
+   "sb": "只跳「無聊大草原 Burgos→Frómista」這段坐車，保留 Frómista 羅馬式經典與隔天 Carrión 修女院",
+   "tr": "Burgos→Frómista 無直達大眾運輸：建議 Burgos→Palencia 火車（約 45 分）再轉 Frómista 短程巴士／計程車；或包車直達"
   },
   {
    "d": "2026-07-05",
    "w": "日",
    "day": "",
-   "blk": 3,
-   "seg": "Tafalla 基地 · 白天玩 Pamplona 暖身、勘奔牛路線",
-   "km": "",
-   "md": "🐂🛌",
-   "th": "安息預備（詩 46:10 你們要休息，知道我是神）",
-   "ph": "海明威 Café Iruña、城堡廣場、勘奔牛路線（Estafeta 街、死亡彎角 La Curva）、舊城 pintxos",
-   "st": "Tafalla",
-   "tr": "Tafalla↔Pamplona 火車30分；想遠玩→San Sebastián 一日遊（火車~1h）；想養腳→Tafalla 純休息"
+   "blk": 2,
+   "seg": "Frómista → Carrión de los Condes（🙏修女院共餐獻唱）",
+   "km": "~19",
+   "md": "🥾🙏⭐",
+   "th": "修女的祝福晚餐（路 24:30 主擘餅）",
+   "ph": "⭐⭐Carrión 修女院 Parroquial Santa María 修女抱吉他帶朝聖者唱歌、一一祝福、共融晚餐——全程最感人一夜，出書必收",
+   "st": "🙏⭐⭐Albergue Parroquial Santa María（修女院·捐獻·現場登記·傍晚修女吉他獻唱＋祝福晚餐，4 靈性點之一）",
+   "sb": "修哥點名必留：Carrión 修女共餐獻唱是這趟靈性主軸高點，不可為奔牛犧牲",
+   "tr": "Frómista→Carrión 多為平坦好走的 ~19km（半天）；不想走可搭短程巴士。今晚務必趕上修女院傍晚的共餐與晚禱"
   },
   {
    "d": "2026-07-06",
    "w": "一",
    "day": "",
    "blk": 3,
-   "seg": "奔牛節開幕 Chupinazo 12:00（市政廳廣場）",
+   "seg": "Carrión → Pamplona（折返東行）· 奔牛節開幕 Chupinazo 12:00",
    "km": "",
-   "md": "🐂🎆⭐",
+   "md": "🚌🐂🎆⭐",
    "th": "眾人的城（耶 29:7 為那城求平安）",
    "ph": "⭐市政廳廣場紅白人海＋香檳沖天炮、紅領巾儀式、巨人遊行、海明威雕像；23:00 Ciudadela 國際煙火（免費）",
-   "st": "Pamplona（開幕夜必住·最搶要早訂）",
-   "tr": "07–08:00 進市政廳廣場卡位（10:30 後擠不進）；穿包鞋、舊衣可丟、貴重物留旅館。看完煙火回不了 Tafalla → 今晚住 Pamplona"
+   "st": "✅Home and CoLiving Pamplona（開幕夜·已訂 €288.26·確認碼 5238227696·PIN 2407·不可退）",
+   "sb": "地圖上往東折返的 V 字：奔牛是 add-on 塞進朝聖框架，不犧牲前面修女院",
+   "tr": "Carrión→Pamplona 公共約 4h（經 Palencia 轉）或包車約 3h（~€280）；務必中午前到市政廳廣場卡位（10:30 後擠不進）。穿包鞋、舊衣可丟、貴重物留旅館"
   },
   {
    "d": "2026-07-07",
    "w": "二",
    "day": "",
    "blk": 3,
-   "seg": "奔牛 Encierro 08:00（鬥牛場看終點）→ 下午車到 León",
+   "seg": "奔牛 Encierro 08:00（鬥牛場看終點）→ 13:08 火車 → León 16:53",
    "km": "",
-   "md": "🐂🚌",
+   "md": "🐂🚆🙏",
    "th": "過約旦河 · 再出發（書 3 過河）",
-   "ph": "⭐08:00 奔牛衝進鬥牛場＋小牛嬉鬧（鬥牛場 €12 票✅已訂）、10:00 聖費爾明聖人大遊行（最隆重）",
-   "st": "León（領回寄存行李）",
-   "tr": "06:30 鬥牛場排隊入場；下午 Pamplona→León Renfe 約3h46（每天僅3班·要先搶）；晚上 León 大教堂、Barrio Húmedo tapas"
+   "ph": "⭐08:00 奔牛衝進鬥牛場＋小牛嬉鬧（鬥牛場 €25.80 票✅已訂 GP020050-249211834）、10:00 聖費爾明聖人大遊行、León 領回寄存行李、🙏Benedictinas 修女院晚禱",
+   "st": "🙏León Benedictinas 修女院庇護所（Santa María de Carbajal·修女晚禱祝福·朝聖者通鋪，4 靈性點之一）",
+   "sb": "✅Pamplona→León Renfe Alvia 13:08→16:53 已訂（Busbud 26085814·PNR KB7BSR·諒哥 Youth＋修哥 Adult）",
+   "tr": "06:30 鬥牛場排隊入場；13:08 Pamplona 上車、16:53 抵 León；傍晚 León 大教堂彩繪玻璃＋Benedictinas 修女院晚禱，到 Correos 領回寄存行李"
   },
   {
    "d": "2026-07-08",
@@ -545,6 +549,16 @@
    "shot": "11 世紀羅馬式拱橋倒映 Arga 河，明信片畫面。清晨平靜水面有倒影。"
   },
   {
+   "n": "Grañón 堂區庇護所共餐",
+   "en": "Albergue Parroquial San Juan Bautista",
+   "town": "Grañón（7/2 · 4 靈性點之一）",
+   "sd": "2026-07-02",
+   "date": "7/2",
+   "stars": 3,
+   "q": "Albergue Parroquial San Juan Bautista Granon",
+   "shot": "教堂閣樓通鋪＋朝聖者圍坐共煮共餐、飯後教堂內燭光晚禱與分享——全程最溫暖的一夜。先徵得同意再拍、以情緒光影為主。"
+  },
+  {
    "n": "Irache 免費酒泉",
    "en": "Fuente del Vino, Bodegas Irache",
    "town": "Rioja（巴士跳段·選擇性下車拍）",
@@ -580,22 +594,32 @@
   {
    "n": "Alto de Mostelares 日出回望",
    "en": "Castrojeriz 後制高點",
-   "town": "方案B 巴士跳過·未停（選擇性）",
+   "town": "Castrojeriz（本版坐車跳過·未停）",
    "sd": "2026-07-04",
    "date": "7/4",
-   "stars": 2,
+   "stars": 1,
    "q": "Alto de Mostelares",
-   "shot": "陡上後回望 Castrojeriz 城堡山村＋麥田曲線，Meseta 代表性日出點（旅遊網站公認）。清晨抵達正好。"
+   "shot": "陡上後回望 Castrojeriz 城堡山村＋麥田曲線，Meseta 代表性日出點。⚠️本版坐車跳過 Burgos→Frómista，不停 Castrojeriz；想拍要自行安排。"
   },
   {
    "n": "Frómista 羅馬式教堂",
    "en": "Iglesia de San Martín de Tours",
-   "town": "方案B 巴士跳過·未停（選擇性）",
+   "town": "Frómista（7/4 坐車抵達）",
    "sd": "2026-07-04",
    "date": "7/4",
-   "stars": 1,
+   "stars": 2,
    "q": "Iglesia de San Martín de Tours Frómista",
-   "shot": "1066 年羅馬式教堂教科書範本，黃昏石材轉金色。"
+   "shot": "1066 年羅馬式教堂教科書範本，黃昏石材轉金色。本版坐車跳乏味草原後在此落腳，是 Meseta 段保留的經典。"
+  },
+  {
+   "n": "Carrión 修女院祝福晚餐",
+   "en": "Albergue Parroquial Santa María, Carrión",
+   "town": "Carrión de los Condes（7/5 · 4 靈性點之一）",
+   "sd": "2026-07-05",
+   "date": "7/5",
+   "stars": 3,
+   "q": "Albergue Parroquial Santa Maria Carrion de los Condes",
+   "shot": "修女抱吉他帶朝聖者唱歌、一一祝福、共融晚餐——全程最催淚的一夜，出書核心場景。徵得修女同意後以手持暖光側拍，重情緒勿擾。"
   },
   {
    "n": "Pamplona 市政廳廣場",
